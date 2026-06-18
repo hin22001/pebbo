@@ -1,0 +1,157 @@
+.dropdown-button {
+	position: relative;
+	width: fit-content;
+	height: fit-content;
+
+	$width-expand-icon: 2rem;
+	$offset: 0.5rem;
+
+	&.dropdown.disabled {
+		button {
+			padding-right: 1.5rem !important;
+		}
+		.MuiSvgIcon-root {
+			display: block;
+		}
+	}
+
+	button:not(.MuiIconButton-root) {
+		padding-right: calc(#{$offset} + #{$width-expand-icon}) !important;
+		position: relative;
+
+		display: flex;
+		align-items: center;
+
+		font-weight: 600;
+    font-size: 1.1rem;
+
+
+		svg {
+			width: $width-expand-icon;
+			position: absolute;
+			right: $offset;
+		}
+	}
+
+	.MuiIconButton-root:hover {
+		background-color: unset;
+	}
+	.dropdown {
+		&-item {
+			position: absolute;
+			background-color: white;
+			border: 1px solid #ddd;
+			border-radius: 1rem;
+			top: calc(100% + 0.1rem);
+
+			&.position {
+				&-right {
+					right: 0;
+				}
+				&-left {
+					left: 0;
+
+					&.pd-custom {
+						padding: 1rem;
+						button {
+							margin: 1rem auto;
+							padding: 0.5rem 1rem;
+						}
+
+						.MuiFormControlLabel-root {
+							gap: 0.5rem;
+						}
+					}
+				}
+			}
+
+			&.offset-header {
+				top: calc(100% + 1.1rem);
+
+				@include max($breakpoint-md) {
+					top: calc(100% + 1.7rem);
+				}
+			}
+			&.active {
+				// z-index: 6;
+				z-index: 20;
+			}
+
+			.menu {
+				&-item {
+					z-index: 6;
+					z-index: 100;
+					border-radius: 1rem;
+					column-gap: 1rem;
+
+					span {
+						color: $color-grey-dark !important;
+					}
+
+					&.disable-select {
+						cursor: context-menu;
+						&:hover {
+							background-color: inherit;
+						}
+						.menu-text:hover {
+							background-color: inherit;
+						}
+						.MuiTouchRipple-root {
+							display: none;
+						}
+					}
+				}
+				&-profile {
+					z-index: 6;
+					z-index: 100;
+					border-radius: 1rem;
+					display: flex;
+					flex-direction: row;
+
+					.flex {
+						&-start {
+							display: flex;
+							grid-column-gap: 1rem;
+							column-gap: 1rem;
+							justify-content: space-between;
+
+							img {
+								width: 24px;
+								height: 24px;
+								border-radius: 50%;
+							}
+						}
+
+						&-end {
+							min-width: 200px;
+							display: flex;
+							justify-content: flex-end;
+							.span {
+								&-green {
+									color: #00be2a;
+									font-weight: bold;
+								}
+								&-red {
+									color: #fc2c29;
+									font-weight: bold;
+								}
+							}
+						}
+					}
+				}
+				&-icon {
+					min-width: unset;
+				}
+			}
+		}
+		&-backdrop {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			z-index: 3;
+			cursor: context-menu;
+		}
+	}
+}

@@ -1,0 +1,155 @@
+[2026-01-09T11:33:36.747Z] === Image Generation Script Started ===
+[2026-01-09T11:33:36.748Z] Year: 2
+[2026-01-09T11:33:36.748Z] Force Mode: false
+[2026-01-09T11:33:36.748Z] Resume context: Last processed ID: 0
+[2026-01-09T11:33:36.748Z] Already generated: 0
+[2026-01-09T11:33:36.748Z] Skipped so far: 0
+[2026-01-09T11:33:36.748Z] Fetching eligible questions from database...
+[2026-01-09T11:33:42.678Z] Found 1000 eligible questions.
+[2026-01-09T11:33:42.679Z] Questions remaining to process: 1000
+[2026-01-09T11:33:42.679Z] 
+--- Processing Question 7 (1/1000) ---
+[2026-01-09T11:33:42.884Z] Loaded question object from: draft table
+[2026-01-09T11:33:42.886Z] Generated Prompt: "Create a colorful, engaging, educational illustration for a primary school math question. The scene ..."
+[2026-01-09T11:33:42.886Z] Calling OpenAI API...
+[2026-01-09T11:33:43.940Z] API Error: 400 Unknown parameter: 'response_format'.. Retrying in 1000ms...
+[2026-01-09T11:33:46.044Z] API Error: 400 Unknown parameter: 'response_format'.. Retrying in 2000ms...
+[2026-01-09T11:33:48.327Z] ERROR processing question 7: 400 Unknown parameter: 'response_format'.
+[2026-01-09T11:33:48.327Z] 
+--- Processing Question 50 (2/1000) ---
+[2026-01-09T11:33:48.522Z] Loaded question object from: draft table
+[2026-01-09T11:33:48.523Z] Generated Prompt: "Create a colorful, engaging, educational illustration for a primary school math question. The scene ..."
+[2026-01-09T11:33:48.523Z] Calling OpenAI API...
+[2026-01-09T11:33:49.730Z] API Error: 400 Unknown parameter: 'response_format'.. Retrying in 1000ms...
+[2026-01-09T11:33:51.790Z] API Error: 400 Unknown parameter: 'response_format'.. Retrying in 2000ms...
+[2026-01-09T11:33:54.089Z] ERROR processing question 50: 400 Unknown parameter: 'response_format'.
+[2026-01-09T11:33:54.089Z] 
+--- Processing Question 54 (3/1000) ---
+[2026-01-09T11:33:54.257Z] Loaded question object from: draft table
+[2026-01-09T11:33:54.258Z] Generated Prompt: "Create a colorful, engaging, educational illustration for a primary school math question. The scene ..."
+[2026-01-09T11:33:54.258Z] Calling OpenAI API...
+[2026-01-09T11:33:54.548Z] API Error: 400 Unknown parameter: 'response_format'.. Retrying in 1000ms...
+[2026-01-09T11:39:54.354Z] === Image Generation Script Started ===
+[2026-01-09T11:39:54.355Z] Year: 2
+[2026-01-09T11:39:54.355Z] Force Mode: false
+[2026-01-09T11:39:54.355Z] Resume context: Last processed ID: 0
+[2026-01-09T11:39:54.355Z] Already generated: 0
+[2026-01-09T11:39:54.355Z] Skipped so far: 0
+[2026-01-09T11:39:54.355Z] Fetching eligible questions from database...
+[2026-01-09T11:39:54.941Z] Found 1000 eligible questions.
+[2026-01-09T11:39:54.941Z] Questions remaining to process: 1000
+[2026-01-09T11:39:54.941Z] 
+--- Processing Question 7 (1/1000) ---
+[2026-01-09T11:39:55.092Z] Loaded question object from: draft table
+[2026-01-09T11:39:55.093Z] Generated Prompt: "Create a colorful, engaging, educational illustration for a primary school math question. The scene ..."
+[2026-01-09T11:39:55.093Z] Calling OpenAI API...
+[2026-01-09T11:39:55.486Z] API Error: 400 Unknown parameter: 'response_format'.. Retrying in 1000ms...
+[2026-01-09T11:39:57.222Z] API Error: 400 Unknown parameter: 'response_format'.. Retrying in 2000ms...
+[2026-01-09T11:43:07.135Z] === Image Generation Script Started ===
+[2026-01-09T11:43:07.136Z] Year: 2
+[2026-01-09T11:43:07.136Z] Force Mode: false
+[2026-01-09T11:43:07.136Z] Resume context: Last processed ID: 0
+[2026-01-09T11:43:07.136Z] Already generated: 0
+[2026-01-09T11:43:07.136Z] Skipped so far: 0
+[2026-01-09T11:43:07.136Z] Fetching eligible questions from database...
+[2026-01-09T11:43:07.964Z] Found 1000 eligible questions.
+[2026-01-09T11:43:07.964Z] Questions remaining to process: 1000
+[2026-01-09T11:43:07.964Z] 
+--- Processing Question 7 (1/1000) ---
+[2026-01-09T11:43:08.087Z] Loaded question object from: draft table
+[2026-01-09T11:43:08.088Z] Generated Prompt: "Create a colorful, engaging, educational illustration for a primary school math question. The scene ..."
+[2026-01-09T11:43:08.089Z] Calling OpenAI API...
+[2026-01-09T11:43:10.158Z] API Error: 403 Your organization must be verified to use the model `gpt-image-1.5`. Please go to: https://platform.openai.com/settings/organization/general and click on Verify Organization. If you just verified, it can take up to 15 minutes for access to propagate.. Retrying in 1000ms...
+[2026-01-09T11:43:11.452Z] API Error: 403 Your organization must be verified to use the model `gpt-image-1.5`. Please go to: https://platform.openai.com/settings/organization/general and click on Verify Organization. If you just verified, it can take up to 15 minutes for access to propagate.. Retrying in 2000ms...
+[2026-01-09T11:43:14.531Z] ERROR processing question 7: 403 Your organization must be verified to use the model `gpt-image-1.5`. Please go to: https://platform.openai.com/settings/organization/general and click on Verify Organization. If you just verified, it can take up to 15 minutes for access to propagate.
+[2026-01-09T11:43:14.531Z] 
+--- Processing Question 50 (2/1000) ---
+[2026-01-09T11:43:14.669Z] Loaded question object from: draft table
+[2026-01-09T11:43:14.670Z] Generated Prompt: "Create a colorful, engaging, educational illustration for a primary school math question. The scene ..."
+[2026-01-09T11:43:14.670Z] Calling OpenAI API...
+[2026-01-09T12:20:34.976Z] === Image Generation Script Started ===
+[2026-01-09T12:20:34.977Z] Year: 2
+[2026-01-09T12:20:34.977Z] Force Mode: false
+[2026-01-09T12:20:34.977Z] Resume context: Last processed ID: 0
+[2026-01-09T12:20:34.977Z] Already generated: 0
+[2026-01-09T12:20:34.977Z] Skipped so far: 0
+[2026-01-09T12:20:34.977Z] Fetching eligible questions from database...
+[2026-01-09T12:20:37.391Z] Found 1000 eligible questions.
+[2026-01-09T12:20:37.392Z] Questions remaining to process: 1000
+[2026-01-09T12:20:37.392Z] 
+--- Processing Question 7 (1/1000) ---
+[2026-01-09T12:20:37.532Z] Loaded question object from: draft table
+[2026-01-09T12:20:37.533Z] Generated Prompt: "Create a colorful, engaging, educational illustration for a primary school math question. The scene ..."
+[2026-01-09T12:20:37.534Z] Calling OpenAI API...
+[2026-01-09T12:20:38.313Z] API Error: 403 Your organization must be verified to use the model `gpt-image-1.5`. Please go to: https://platform.openai.com/settings/organization/general and click on Verify Organization. If you just verified, it can take up to 15 minutes for access to propagate.. Retrying in 1000ms...
+[2026-01-09T12:20:39.929Z] API Error: 403 Your organization must be verified to use the model `gpt-image-1.5`. Please go to: https://platform.openai.com/settings/organization/general and click on Verify Organization. If you just verified, it can take up to 15 minutes for access to propagate.. Retrying in 2000ms...
+[2026-01-09T12:39:50.979Z] === Image Generation Script Started ===
+[2026-01-09T12:39:50.980Z] Year: 2
+[2026-01-09T12:39:50.980Z] Force Mode: false
+[2026-01-09T12:39:50.980Z] Resume context: Last processed ID: 0
+[2026-01-09T12:39:50.980Z] Already generated: 0
+[2026-01-09T12:39:50.980Z] Skipped so far: 0
+[2026-01-09T12:39:50.980Z] Fetching eligible questions from database...
+[2026-01-09T12:39:50.980Z] Fetching eligible questions (batch size: 1000)...
+[2026-01-09T12:39:53.430Z] Fetched 1000 questions (total so far: 1000)
+[2026-01-09T12:39:54.017Z] Fetched 1000 questions (total so far: 2000)
+[2026-01-09T12:39:54.570Z] Fetched 1000 questions (total so far: 3000)
+[2026-01-09T12:39:54.917Z] Fetched 627 questions (total so far: 3627)
+[2026-01-09T12:39:54.917Z] Found 3627 eligible questions.
+[2026-01-09T12:39:54.917Z] Questions remaining to process: 3627
+[2026-01-09T12:39:54.917Z] 
+--- Processing Question 7 (1/3627) ---
+[2026-01-09T12:39:55.120Z] Loaded question object from: draft table
+[2026-01-09T12:39:55.120Z] Generated Prompt: "Create a colorful, engaging, educational illustration for a primary school math question. The scene ..."
+[2026-01-09T12:39:55.121Z] Calling OpenAI API...
+[2026-01-09T12:39:55.784Z] API Error: 403 Your organization must be verified to use the model `gpt-image-1.5`. Please go to: https://platform.openai.com/settings/organization/general and click on Verify Organization. If you just verified, it can take up to 15 minutes for access to propagate.. Retrying in 1000ms...
+[2026-01-09T12:39:57.691Z] API Error: 403 Your organization must be verified to use the model `gpt-image-1.5`. Please go to: https://platform.openai.com/settings/organization/general and click on Verify Organization. If you just verified, it can take up to 15 minutes for access to propagate.. Retrying in 2000ms...
+[2026-01-09T12:40:01.064Z] ERROR processing question 7: 403 Your organization must be verified to use the model `gpt-image-1.5`. Please go to: https://platform.openai.com/settings/organization/general and click on Verify Organization. If you just verified, it can take up to 15 minutes for access to propagate.
+[2026-01-09T12:40:01.064Z] 
+--- Processing Question 50 (2/3627) ---
+[2026-01-09T12:40:01.255Z] Loaded question object from: draft table
+[2026-01-09T12:40:01.256Z] Generated Prompt: "Create a colorful, engaging, educational illustration for a primary school math question. The scene ..."
+[2026-01-09T12:40:01.256Z] Calling OpenAI API...
+[2026-01-09T12:40:02.068Z] API Error: 403 Your organization must be verified to use the model `gpt-image-1.5`. Please go to: https://platform.openai.com/settings/organization/general and click on Verify Organization. If you just verified, it can take up to 15 minutes for access to propagate.. Retrying in 1000ms...
+[2026-01-11T03:32:24.316Z] === Image Generation Script Started ===
+[2026-01-11T03:32:24.317Z] Year: 2
+[2026-01-11T03:32:24.317Z] Force Mode: false
+[2026-01-11T03:32:24.317Z] Resume context: Last processed ID: 0
+[2026-01-11T03:32:24.317Z] Already generated: 0
+[2026-01-11T03:32:24.317Z] Skipped so far: 0
+[2026-01-11T03:32:24.317Z] Fetching eligible questions from database...
+[2026-01-11T03:32:24.317Z] Fetching eligible questions (batch size: 1000)...
+[2026-01-11T03:32:30.843Z] Fetched 1000 questions (total so far: 1000)
+[2026-01-11T03:32:34.112Z] Fetched 1000 questions (total so far: 2000)
+[2026-01-11T03:32:37.365Z] Fetched 1000 questions (total so far: 3000)
+[2026-01-11T03:32:38.663Z] Fetched 627 questions (total so far: 3627)
+[2026-01-11T03:32:38.663Z] Found 3627 eligible questions.
+[2026-01-11T03:32:38.665Z] Questions remaining to process: 3627
+[2026-01-11T03:32:38.665Z] 
+--- Processing Question 7 (1/3627) ---
+[2026-01-11T03:32:38.903Z] Loaded question object from: draft table
+[2026-01-11T03:32:38.905Z] Generated Prompt: "Create a colorful, engaging, educational illustration for a primary school math question. The scene ..."
+[2026-01-11T03:32:38.905Z] Calling OpenAI API...
+[2026-01-11T03:32:40.439Z] API Error: 403 Your organization must be verified to use the model `gpt-image-1.5`. Please go to: https://platform.openai.com/settings/organization/general and click on Verify Organization. If you just verified, it can take up to 15 minutes for access to propagate.. Retrying in 1000ms...
+[2026-01-11T03:32:42.688Z] API Error: 403 Your organization must be verified to use the model `gpt-image-1.5`. Please go to: https://platform.openai.com/settings/organization/general and click on Verify Organization. If you just verified, it can take up to 15 minutes for access to propagate.. Retrying in 2000ms...
+[2026-01-12T05:35:47.925Z] === Image Generation Script Started ===
+[2026-01-12T05:35:47.926Z] Year: 2
+[2026-01-12T05:35:47.926Z] Force Mode: false
+[2026-01-12T05:35:47.926Z] Resume context: Last processed ID: 0
+[2026-01-12T05:35:47.926Z] Already generated: 0
+[2026-01-12T05:35:47.926Z] Skipped so far: 0
+[2026-01-12T05:35:47.927Z] Fetching eligible questions from database...
+[2026-01-12T05:35:47.927Z] Fetching eligible questions (batch size: 1000)...
+[2026-01-12T05:35:55.143Z] Fetched 1000 questions (total so far: 1000)
+[2026-01-12T05:35:58.574Z] Fetched 1000 questions (total so far: 2000)
+[2026-01-12T05:36:01.848Z] Fetched 1000 questions (total so far: 3000)
+[2026-01-12T05:36:03.077Z] Fetched 627 questions (total so far: 3627)
+[2026-01-12T05:36:03.078Z] Found 3627 eligible questions.
+[2026-01-12T05:36:03.079Z] Questions remaining to process: 3627
+[2026-01-12T05:36:03.079Z] 
+--- Processing Question 7 (1/3627) ---
+[2026-01-12T05:36:03.272Z] Loaded question object from: draft table
+[2026-01-12T05:36:03.273Z] Generated Prompt: "Create a colorful, engaging, educational illustration for a primary school math question. The scene ..."
+[2026-01-12T05:36:03.273Z] Calling OpenAI API...
+[2026-01-12T05:36:04.481Z] API Error: 403 Your organization must be verified to use the model `gpt-image-1.5`. Please go to: https://platform.openai.com/settings/organization/general and click on Verify Organization. If you just verified, it can take up to 15 minutes for access to propagate.. Retrying in 1000ms...
+[2026-01-12T05:36:06.677Z] API Error: 403 Your organization must be verified to use the model `gpt-image-1.5`. Please go to: https://platform.openai.com/settings/organization/general and click on Verify Organization. If you just verified, it can take up to 15 minutes for access to propagate.. Retrying in 2000ms...

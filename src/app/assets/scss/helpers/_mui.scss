@@ -1,0 +1,232 @@
+body {
+	// ==> used to override the initial style
+
+	.MuiRadio-root,
+	.MuiCheckbox-root {
+
+		.PrivateRadioButtonIcon-layer-10,
+		.PrivateSwitchBase-input-8 {
+			position: absolute !important;
+			opacity: 0 !important;
+		}
+	}
+
+	.MuiAutocomplete-popper {
+		font-family: $font-primary;
+
+		* {
+			font-family: $font-primary;
+		}
+	}
+
+	.MuiChip-label {
+		font-family: $font-primary;
+	}
+
+	.MuiTabs-flexContainerVertical {
+		.PrivateTabIndicator-colorSecondary-31 {
+			display: none;
+		}
+	}
+
+	.MuiIconButton-label {
+		input {
+			position: absolute !important;
+			opacity: 0 !important;
+		}
+	}
+
+	.MuiSlider-track {
+		box-sizing: border-box;
+	}
+
+	.MuiCheckbox-root,
+	.MuiRadio-root {
+		padding: unset !important;
+
+		&.Mui-checked {
+			color: $color-green !important;
+		}
+
+		&.Mui-disabled {
+			color: #adadad !important;
+		}
+
+	}
+
+	.MuiMenuItem-root {
+		white-space: normal !important;
+	}
+
+	.MuiPopover-paper {
+		max-width: 700px !important;
+	}
+
+	.MuiTooltip {
+		// &-popper {
+		// 	.MuiTooltip {
+		// 		&-tooltip {
+		// 			font-size: 1rem;
+		// 			background-color: $color-grey-dark;
+		// 			padding: 0.5rem 1rem;
+		// 		}
+
+		// 		&-arrow {
+		// 			color: $color-grey-dark;
+		// 		}
+		// 	}
+		// }
+	}
+
+	.MuiTabs-root,
+	.MuiDataGrid-root,
+	.MuiPickersPopper-root {
+
+		&,
+		* {
+			font-family: $font-primary;
+		}
+
+	}
+
+	.MuiPaper-root {
+		&:before {
+			height: 0;
+		}
+	}
+
+	.MuiPickersPopper-root {
+		.Mui-selected {
+			font-weight: 700;
+
+			&:focus {
+				background-color: $color-primary;
+			}
+		}
+
+	}
+
+	.MuiMenuItem-root {
+		font-family: $font-primary;
+
+	}
+
+	.MuiFormLabel-root {
+		font-family: $font-primary;
+		box-sizing: border-box;
+		font-weight: 600;
+		margin-bottom: 0.5rem;
+		color: $color-black;
+
+	}
+
+	.MuiFormControlLabel-root {
+		margin: unset;
+	}
+
+	.MuiFormControlLabel-label {
+		line-height: initial;
+	}
+
+	.MuiFormHelperText-root {
+		font-family: $font-primary;
+	}
+
+	.MuiSnackbar-root {
+		.MuiSnackbarContent-message {
+			font-family: $font-primary;
+		}
+
+		.MuiSnackbarContent-action {
+			font-family: $font-primary;
+		}
+	}
+
+	.MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked+.MuiSwitch-track {
+		color: $color-green !important;
+	}
+
+	.MuiSwitch-switchBase {
+		&.Mui-checked {
+			color: white !important;
+		}
+	}
+
+	.MuiInputBase-root {
+		border-radius: 0.5rem;
+		font-family: $font-primary;
+
+		&.MuiInputBase-adornedStart{
+			.MuiInputBase-input {
+				padding-left: unset;
+			}
+
+		}
+		&.MuiInputBase-adornedEnd{
+			.MuiInputBase-input {
+				padding-right: unset;
+			}
+
+		}
+
+		.MuiInputBase-input {
+			padding: 1rem;
+			// background: #F5F9FF;
+
+			&::placeholder {
+				color: #6b7488;
+				opacity: 1;
+				/* Firefox */
+			}
+
+			&::-ms-input-placeholder {
+				/* Edge 12 -18 */
+				color: #6b7488;
+			}
+		}
+
+		.MuiOutlinedInput-notchedOutline {
+			border-color: $color-border;
+
+		}
+
+	}
+
+	.MuiDivider-root {
+		// align-self: center;
+	}
+
+	.MuiListItemText-root {
+		font-family: $font-primary;
+	}
+
+	.MuiTypography-root {
+		font-family: $font-primary;
+		line-height: normal;
+	}
+
+	.MuiButton-root {
+		&.card-button {
+			text-transform: unset;
+			color: $color-black;
+
+			.MuiTypography-root {}
+
+
+		}
+	}
+
+	.MuiButton-startIcon {
+		margin-left: unset;
+	}
+
+	.MuiTextField-root {
+		.MuiInputBase-root.Mui-disabled {
+			background-color: #f7f7f7f7;
+
+			input {
+				-webkit-text-fill-color: #737373;
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+.paginations {
+	margin-top: 3rem;
+	.MuiPagination-ul {
+		justify-content: flex-start;
+		padding: 1rem 0;
+	}
+
+	.MuiPaginationItem-page.Mui-selected {
+		color: white;
+		background-color: #fa9c5e !important;
+		border-radius: 1rem;
+	}
+}

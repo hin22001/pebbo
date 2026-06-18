@@ -1,0 +1,20 @@
+.paragraph{
+  .wrap-paragraph{
+    white-space: pre-line;
+    font-weight: 600;
+    line-height: 21px;
+
+  }
+  .title{
+    color: $color-grey-dark-3;
+    font-weight: 600;
+    line-height: 21px;
+
+
+  }
+  ol.wrap-number{
+    list-style-position: inside;
+    padding-left: 0;
+    @include grid-gap(1rem);
+  }
+}

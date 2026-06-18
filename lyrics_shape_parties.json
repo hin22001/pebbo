@@ -1,0 +1,433 @@
+{
+  "title": "Shape Parties 🔷",
+  "duration_ms": 159280,
+  "total_lyrics": 85,
+  "note": "Timecodes without explicit values were estimated via linear interpolation between surrounding timestamps",
+  "lyrics": [
+    {
+      "text": "Four straight equal sides",
+      "start_ms": 10060,
+      "end_ms": 12000
+    },
+    {
+      "text": "Square's staring back at me",
+      "start_ms": 12000,
+      "end_ms": 13840
+    },
+    {
+      "text": "Long",
+      "start_ms": 13840,
+      "end_ms": 13840
+    },
+    {
+      "text": "Long",
+      "start_ms": 13840,
+      "end_ms": 13840
+    },
+    {
+      "text": "Short",
+      "start_ms": 13840,
+      "end_ms": 13840
+    },
+    {
+      "text": "Short",
+      "start_ms": 13840,
+      "end_ms": 13840
+    },
+    {
+      "text": "That's a rectangle's style",
+      "start_ms": 13840,
+      "end_ms": 17480
+    },
+    {
+      "text": "Same four corners",
+      "start_ms": 17480,
+      "end_ms": 21920
+    },
+    {
+      "text": "Just stretched out a while",
+      "start_ms": 21920,
+      "end_ms": 21920
+    },
+    {
+      "text": "It's a shape party",
+      "start_ms": 21920,
+      "end_ms": 25180
+    },
+    {
+      "text": "Count it out (count it out!)",
+      "start_ms": 25912,
+      "end_ms": 26644
+    },
+    {
+      "text": "Corners",
+      "start_ms": 27193,
+      "end_ms": 27742
+    },
+    {
+      "text": "Sides",
+      "start_ms": 28108,
+      "end_ms": 28474
+    },
+    {
+      "text": "Go shout it out (shout it out!)",
+      "start_ms": 28657,
+      "end_ms": 28840
+    },
+    {
+      "text": "Spin the world like A-B-C",
+      "start_ms": 28840,
+      "end_ms": 32320
+    },
+    {
+      "text": "We got shapes in geometry",
+      "start_ms": 32320,
+      "end_ms": 34680
+    },
+    {
+      "text": "Circle",
+      "start_ms": 34680,
+      "end_ms": 39020
+    },
+    {
+      "text": "Triangle",
+      "start_ms": 39580,
+      "end_ms": 40140
+    },
+    {
+      "text": "Hexagon (hey!)",
+      "start_ms": 40606,
+      "end_ms": 41072
+    },
+    {
+      "text": "Name those angles",
+      "start_ms": 41445,
+      "end_ms": 41818
+    },
+    {
+      "text": "Sing along",
+      "start_ms": 42098,
+      "end_ms": 42378
+    },
+    {
+      "text": "Measure",
+      "start_ms": 42565,
+      "end_ms": 42752
+    },
+    {
+      "text": "Count",
+      "start_ms": 42846,
+      "end_ms": 42940
+    },
+    {
+      "text": "Come learn with me",
+      "start_ms": 42940,
+      "end_ms": 44840
+    },
+    {
+      "text": "We got shapes in geometry",
+      "start_ms": 44840,
+      "end_ms": 47760
+    },
+    {
+      "text": "Three sides",
+      "start_ms": 47760,
+      "end_ms": 54160
+    },
+    {
+      "text": "Three corners",
+      "start_ms": 54160,
+      "end_ms": 54160
+    },
+    {
+      "text": "Triangle's so neat",
+      "start_ms": 54160,
+      "end_ms": 54160
+    },
+    {
+      "text": "If one angle's ninety",
+      "start_ms": 54160,
+      "end_ms": 57880
+    },
+    {
+      "text": "Right triangle's on its feet",
+      "start_ms": 57880,
+      "end_ms": 57880
+    },
+    {
+      "text": "All sides same length",
+      "start_ms": 57880,
+      "end_ms": 61360
+    },
+    {
+      "text": "Equilateral crew",
+      "start_ms": 61360,
+      "end_ms": 61360
+    },
+    {
+      "text": "One side looks different",
+      "start_ms": 61360,
+      "end_ms": 65200
+    },
+    {
+      "text": "Scalene's standing with you",
+      "start_ms": 65200,
+      "end_ms": 65200
+    },
+    {
+      "text": "It's a shape party",
+      "start_ms": 65200,
+      "end_ms": 68260
+    },
+    {
+      "text": "Count it out (count it out!)",
+      "start_ms": 69004,
+      "end_ms": 69748
+    },
+    {
+      "text": "Corners",
+      "start_ms": 70306,
+      "end_ms": 70864
+    },
+    {
+      "text": "Sides",
+      "start_ms": 71236,
+      "end_ms": 71608
+    },
+    {
+      "text": "Go shout it out (shout it out!)",
+      "start_ms": 71794,
+      "end_ms": 71980
+    },
+    {
+      "text": "Spin the world like A-B-C",
+      "start_ms": 71980,
+      "end_ms": 75360
+    },
+    {
+      "text": "We got shapes in geometry",
+      "start_ms": 75360,
+      "end_ms": 77740
+    },
+    {
+      "text": "Circle",
+      "start_ms": 77740,
+      "end_ms": 82200
+    },
+    {
+      "text": "Triangle",
+      "start_ms": 82748,
+      "end_ms": 83296
+    },
+    {
+      "text": "Hexagon (hey!)",
+      "start_ms": 83753,
+      "end_ms": 84210
+    },
+    {
+      "text": "Name those angles",
+      "start_ms": 84576,
+      "end_ms": 84942
+    },
+    {
+      "text": "Sing along",
+      "start_ms": 85216,
+      "end_ms": 85490
+    },
+    {
+      "text": "Measure",
+      "start_ms": 85673,
+      "end_ms": 85856
+    },
+    {
+      "text": "Count",
+      "start_ms": 85948,
+      "end_ms": 86040
+    },
+    {
+      "text": "Come learn with me",
+      "start_ms": 86040,
+      "end_ms": 87880
+    },
+    {
+      "text": "We got shapes in geometry",
+      "start_ms": 87880,
+      "end_ms": 90840
+    },
+    {
+      "text": "Circle's got a center",
+      "start_ms": 90840,
+      "end_ms": 96440
+    },
+    {
+      "text": "Every point same space",
+      "start_ms": 96440,
+      "end_ms": 96440
+    },
+    {
+      "text": "That distance is the radius",
+      "start_ms": 96440,
+      "end_ms": 100160
+    },
+    {
+      "text": "From middle to the place",
+      "start_ms": 100160,
+      "end_ms": 100160
+    },
+    {
+      "text": "Twice that is the diameter",
+      "start_ms": 100160,
+      "end_ms": 103780
+    },
+    {
+      "text": "All the way across",
+      "start_ms": 103780,
+      "end_ms": 103780
+    },
+    {
+      "text": "Round and round the edge we go",
+      "start_ms": 103780,
+      "end_ms": 106320
+    },
+    {
+      "text": "That edge is called the \"circumference\" (woah)",
+      "start_ms": 106320,
+      "end_ms": 108320
+    },
+    {
+      "text": "Lines that never meet",
+      "start_ms": 108320,
+      "end_ms": 114800
+    },
+    {
+      "text": "We call that parallel",
+      "start_ms": 114800,
+      "end_ms": 114800
+    },
+    {
+      "text": "Lines that cross each other",
+      "start_ms": 114800,
+      "end_ms": 118920
+    },
+    {
+      "text": "Intersect",
+      "start_ms": 118920,
+      "end_ms": 118920
+    },
+    {
+      "text": "You can tell",
+      "start_ms": 118920,
+      "end_ms": 118920
+    },
+    {
+      "text": "Angle opens wider",
+      "start_ms": 118920,
+      "end_ms": 122680
+    },
+    {
+      "text": "We can make a guess",
+      "start_ms": 122680,
+      "end_ms": 122680
+    },
+    {
+      "text": "Smaller than a right angle",
+      "start_ms": 122680,
+      "end_ms": 126800
+    },
+    {
+      "text": "We call that \"acute\" yes",
+      "start_ms": 126800,
+      "end_ms": 126800
+    },
+    {
+      "text": "Bigger than a right one",
+      "start_ms": 126800,
+      "end_ms": 131160
+    },
+    {
+      "text": "\"Obtuse\" is the name",
+      "start_ms": 131160,
+      "end_ms": 131160
+    },
+    {
+      "text": "Exactly ninety degrees",
+      "start_ms": 131160,
+      "end_ms": 136340
+    },
+    {
+      "text": "Right angle in the game",
+      "start_ms": 136340,
+      "end_ms": 136340
+    },
+    {
+      "text": "It's a shape party",
+      "start_ms": 136340,
+      "end_ms": 139500
+    },
+    {
+      "text": "Count it out (count it out!)",
+      "start_ms": 140252,
+      "end_ms": 141004
+    },
+    {
+      "text": "Corners",
+      "start_ms": 141568,
+      "end_ms": 142132
+    },
+    {
+      "text": "Sides",
+      "start_ms": 142508,
+      "end_ms": 142884
+    },
+    {
+      "text": "Go shout it out (shout it out!)",
+      "start_ms": 143072,
+      "end_ms": 143260
+    },
+    {
+      "text": "Spin the world like A-B-C",
+      "start_ms": 143260,
+      "end_ms": 146920
+    },
+    {
+      "text": "We got shapes in geometry",
+      "start_ms": 146920,
+      "end_ms": 149400
+    },
+    {
+      "text": "Circle",
+      "start_ms": 149400,
+      "end_ms": 153280
+    },
+    {
+      "text": "Triangle",
+      "start_ms": 153780,
+      "end_ms": 154280
+    },
+    {
+      "text": "Hexagon (hey!)",
+      "start_ms": 154780,
+      "end_ms": 155280
+    },
+    {
+      "text": "Name those angles",
+      "start_ms": 155780,
+      "end_ms": 156280
+    },
+    {
+      "text": "Sing along",
+      "start_ms": 156780,
+      "end_ms": 157280
+    },
+    {
+      "text": "Measure",
+      "start_ms": 157780,
+      "end_ms": 158280
+    },
+    {
+      "text": "Count",
+      "start_ms": 158780,
+      "end_ms": 159280
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "baseUrl": ".",
+    "paths": {
+      "@/src/*": ["src/*"],
+      "@/api/*": ["src/app/api/*"],
+      "@/app/*": ["src/app/*"],
+      "@/components": ["src/app/components"],
+      "@/components/*": ["src/app/components/*"],
+      "@/elements": ["src/app/components/elements"],
+      "@/elements/*": ["src/app/components/elements/*"],
+      "@/modules": ["src/app/components/modules"],
+      "@/modules/*": ["src/app/components/modules/*"],
+      "@/templates": ["src/app/components/templates"],
+      "@/templates/*": ["src/app/components/templates/*"],
+      "@/sections": ["src/app/components/sections"],
+      "@/sections/*": ["src/app/components/sections/*"],
+      "@/layouts": ["src/app/components/layouts"],
+      "@/layouts/*": ["src/app/components/layouts/*"],
+      "@/assets/*": ["src/app/assets/*"],
+      "@/contexts": ["src/app/contexts"],
+      "@/contexts/*": ["src/app/contexts/*"],
+      "@/locale": ["src/app/data/locale"],
+      "@/images/*": ["public/images/*"]
+    },
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
+  },
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.js",
+    "src/**/*.jsx"
+  ],
+  "exclude": ["node_modules", "pebbo-teacher-portal"]
+}

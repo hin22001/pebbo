@@ -1,0 +1,938 @@
+[
+  {
+    "id": 44,
+    "location": "options",
+    "text": "全选  A.11  B.9  C.1  D.20  E.6  F.17  G.10  H.3  全选  A.11  B.9  C.1  D.20  E.6  F.17  G.10  H.3 ",
+    "chineseSample": "全选全选"
+  },
+  {
+    "id": 1339,
+    "location": "answer",
+    "text": "0.7, B, 1.3, 一點三, A, C, 1.06, 零點七八",
+    "chineseSample": "一點三零點七八"
+  },
+  {
+    "id": 1383,
+    "location": "question",
+    "text": "(PIC) How many axes of symmetry does the pattern in the picture have?\n\nA. 1條\n\nB. 2條\n\nC. 3條\n\nD. 4條",
+    "chineseSample": "條條條條"
+  },
+  {
+    "id": 1411,
+    "location": "answer",
+    "text": "一, 五, 170, 二, 15, 50, 80, 3/4, 六",
+    "chineseSample": "一五二六"
+  },
+  {
+    "id": 1528,
+    "location": "answer",
+    "text": "零點七零六, 1, 950, 162",
+    "chineseSample": "零點七零六"
+  },
+  {
+    "id": 2011,
+    "location": "question",
+    "text": "觀察下面的立體圖形，依你看圖的方向，回答問題。\n\nThere are ____ corner columns and cylinders in total.\n\nThe difference between a pyramid and a cone is ____.\n\nThe three-dimensional figure between the two balls is called ____.",
+    "chineseSample": "觀察下面的立體圖形依你看圖的方向回答問題"
+  },
+  {
+    "id": 2216,
+    "location": "question",
+    "text": "(pic)右圖最大的正方形的邊長是8厘米。用線段連接四邊中間的位置，得出另一個正方形，餘此類推，共有6個正方形。6個正方形的總面積是____平方厘米。",
+    "chineseSample": "右圖最大的正方形的邊長是厘米用線段連接四邊中間的位置得出另一個正方形餘此類推共有個正方形個正方形的總"
+  },
+  {
+    "id": 2234,
+    "location": "explanation",
+    "text": "Together with the decimal point, at least 5 number cards are needed to form three decimal places. Move all 6 decimal points in the above question one place to the left to get all 6 different two decim",
+    "chineseSample": "把上題的個一位小數點都向左移一個位可得出全部個不同的兩位小數以上數卡只能組成一位小數和兩位小數"
+  },
+  {
+    "id": 2269,
+    "location": "answer",
+    "text": "543, 540, 781, 780, 495, 664, 660, 176, 180, 讀者最喜愛的旅遊國家所屬大洲, 100,200,300,400,500,600,700,800, 亞洲,歐洲,北美洲,南美洲,非洲",
+    "chineseSample": "讀者最喜愛的旅遊國家所屬大洲亞洲歐洲北美洲南美洲非洲"
+  },
+  {
+    "id": 2448,
+    "location": "answer",
+    "text": "展覽各天的參觀人次, 10,20,30,40,50,60,70,80,90,100, 3,5,7,8",
+    "chineseSample": "展覽各天的參觀人次"
+  },
+  {
+    "id": 2535,
+    "location": "explanation",
+    "text": "12和20的H.C.F.是4, 所以邊長最長是4 (20÷4)×(12÷4)=15",
+    "chineseSample": "和的是所以邊長最長是"
+  },
+  {
+    "id": 2607,
+    "location": "explanation",
+    "text": "18的最初5個倍數是18,36,54,72,90",
+    "chineseSample": "的最初個倍數是"
+  },
+  {
+    "id": 2698,
+    "location": "answer",
+    "text": "northwestern, 南",
+    "chineseSample": "南"
+  },
+  {
+    "id": 2702,
+    "location": "answer",
+    "text": "Beach, vacation rentals, 度假屋, East, north",
+    "chineseSample": "度假屋"
+  },
+  {
+    "id": 2717,
+    "location": "answer",
+    "text": "300, 280, 380, 500, 280, 260, 志芬一家過去半年的用電量, 3, 2.8, 3.8, 5, 2.8, 2.6, ten, 260, B, 80, D",
+    "chineseSample": "志芬一家過去半年的用電量"
+  },
+  {
+    "id": 3861,
+    "location": "question",
+    "text": "同學利用三角形硬卡紙來砌出1個長方形，作書桌上的枱墊。\n\n(PIC)\n\nWhich of the following figures can be constructed from 4 \"equilateral triangles\"?\n\nA. Rectangle\n\nB. Parallelogram\n\nWhich of the following figures can be constructed",
+    "chineseSample": "同學利用三角形硬卡紙來砌出個長方形作書桌上的枱墊"
+  },
+  {
+    "id": 5822,
+    "location": "question",
+    "text": "Which of the following Chinese characters does not have parallel lines?\n\nA. 日\n\nB. 月\n\nC. 土\n\nD. 木",
+    "chineseSample": "日月土木"
+  },
+  {
+    "id": 6016,
+    "location": "explanation",
+    "text": "500-(278+136)=86元 100-(94-29)=35 dollars.",
+    "chineseSample": "元"
+  },
+  {
+    "id": 6330,
+    "location": "explanation",
+    "text": "A pentagonal prism (五角柱) has 7 faces: 5 rectangular faces around the sides and 2 pentagonal faces at the top and bottom.",
+    "chineseSample": "五角柱"
+  },
+  {
+    "id": 6331,
+    "location": "explanation",
+    "text": "The base of a pyramid (角錐) is typically the shape of the flat face it stands on; if we specify a pentagonal pyramid, its base is a pentagon. The side faces of a pyramid (角錐) are always triangular, reg",
+    "chineseSample": "角錐角錐"
+  },
+  {
+    "id": 6337,
+    "location": "explanation",
+    "text": "C represents 五千四百三十二, which is 5432 in Arabic numerals.\\nA represents 5275.\\nB represents 4518.\\nSo, arranged from largest to smallest, it is 5432 (C), 5275 (A), 4518 (B). C represents 五千四百三十二, which ",
+    "chineseSample": "五千四百三十二五千四百三十二五千四百三十二"
+  },
+  {
+    "id": 6498,
+    "location": "question",
+    "text": "Use Chinese numerals to write the numbers represented by the columns on the right.\n\nA.二十四十 B.二百零四十 C.二千零四十\n\nThe thousands digit of this number is 1.____, which stands for 2.____.",
+    "chineseSample": "二十四十二百零四十二千零四十"
+  },
+  {
+    "id": 7786,
+    "location": "question",
+    "text": "(圖片) Uncle was sorting out the bookcases and taking note of the number of various books.\n\nThere are 22 fewer science books than recipes, and there are ____ science books.\n\nSheet music is ____ than exe",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 7822,
+    "location": "question",
+    "text": "(圖片) Tim measured the length of a piece of cardboard with his hands and fingers.\n\nThe cardboard is about ____ fingers long.\n\nThat is, about ____ cm long.\n\nTim then measured the cardboard with his hand",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 7825,
+    "location": "question",
+    "text": "(圖片) What is the value of the coin?",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 7826,
+    "location": "question",
+    "text": "(圖片) Enter the value of the coin.",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 7827,
+    "location": "question",
+    "text": "(圖片) What is the value of the coin?",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 7828,
+    "location": "question",
+    "text": "(圖片) What is the value of the coin?",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 7830,
+    "location": "question",
+    "text": "(圖片) What is the value of the coins?",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 7831,
+    "location": "question",
+    "text": "(圖片) What is the value of the coins?",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 7837,
+    "location": "question",
+    "text": "(圖片) Sister took out all the coins from the cash box.\n\nThe above coins are worth a total of ____.\n\nWhat is the total value of the smallest round coin in the cash box?\n\nThe total value of all the siste",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 7844,
+    "location": "question",
+    "text": "(圖片) How much is the apple?",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 7845,
+    "location": "question",
+    "text": "(圖片) How much does the ruler cost?",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 7847,
+    "location": "question",
+    "text": "(圖片) How much is the ice pop?",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 7848,
+    "location": "question",
+    "text": "(圖片) How much is the notebook?",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 7850,
+    "location": "question",
+    "text": "(圖片) Buy biscuits with the least coins.",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 7851,
+    "location": "question",
+    "text": "(圖片) Buy marshmallows with the least coins.",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 7852,
+    "location": "question",
+    "text": "Melody and Tim went to a fast food restaurant for tea. (圖片)\n\nMelody buys a bag of French fries. She only pays with two dollars and five cents. She needs the least coins to pay ____ two dollars and ___",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 7856,
+    "location": "question",
+    "text": "(圖片)Snack shop clerks are putting up tags on their goods.\n\n(圖片)On the right is the price tag of seaweed, which sells for ____ dollars ____ cents.\n\nBiscuits are priced at 7 dollars and 9 cents per pack",
+    "chineseSample": "圖片圖片圖片"
+  },
+  {
+    "id": 7880,
+    "location": "question",
+    "text": "The above is the calendar for November of a given year. Ming Ming's birthday is on October 16th and his birth date for this year is on the week ____.\n\nA.二\n\nB.三\n\nC.四\n\nD.五",
+    "chineseSample": "二三四五"
+  },
+  {
+    "id": 7901,
+    "location": "question",
+    "text": "Use Chinese numerals to write the numbers represented by the columns in the diagram above.\n\nA. 二千五\n\nB. 二千零五\n\nC. 二千零零五",
+    "chineseSample": "二千五二千零五二千零零五"
+  },
+  {
+    "id": 8104,
+    "location": "explanation",
+    "text": "一個典型的角錐有一個正方形底面（一個正方形）和三角形面，這些三角形面將正方形底面的每一邊連接到角錐的頂點。 有2個正方形和4個三角形，其中一個正方形是多餘的，因為角錐只需要一個正方形作為底面。",
+    "chineseSample": "一個典型的角錐有一個正方形底面一個正方形和三角形面這些三角形面將正方形底面的每一邊連接到角錐的頂點有"
+  },
+  {
+    "id": 8105,
+    "location": "explanation",
+    "text": "A. 圓柱：圓柱有兩個圓形底面，一個在頂部，一個在底部。 B. 圓錐：圓錐在其底部有一個圓形底面。 C. 球：球沒有底面，因為它是一個完美的圓形三維形狀，就像一個球",
+    "chineseSample": "圓柱圓柱有兩個圓形底面一個在頂部一個在底部圓錐圓錐在其底部有一個圓形底面球球沒有底面因為它是一個完美"
+  },
+  {
+    "id": 8113,
+    "location": "explanation",
+    "text": "第一個數字應盡可能接近7，最接近的是6。 第二個數字應盡可能大，最大的是8。第三個數字應盡可能大。最大的是4。第四個數字應盡可能大。剩下最大的是2。因此，使用這些數字卡最接近7300的數字是6842。",
+    "chineseSample": "第一個數字應盡可能接近最接近的是第二個數字應盡可能大最大的是第三個數字應盡可能大最大的是第四個數字應"
+  },
+  {
+    "id": 8233,
+    "location": "explanation",
+    "text": "要將這些數字從大到小排列，比較每個數字並相應排序：  805在所有數字中最大。 接著，628比805小，但比其他兩個數字大。 然後，513比471大，但比805和628都小。 最後，471是最小的數字。 因此，從大到小的順序是805，628，513，471。 要將這些數字從大到小排列，比較每個數字並相應排序：  805在所有數字中最大。 接著，628比805小，但比其他兩個數字大。 然後，513比",
+    "chineseSample": "要將這些數字從大到小排列比較每個數字並相應排序在所有數字中最大接著比小但比其他兩個數字大然後比大但比"
+  },
+  {
+    "id": 8258,
+    "location": "question",
+    "text": "(圖片)The hour hand below shows the time when the tour bus departs from point A and arrives at point B.\n\nThe travel time of the tour bus is ____ hours.",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 8259,
+    "location": "question",
+    "text": "(圖片)The clock on the left shows the time when the movie starts. If the movie is 2 hours long, the movie ends at ____ hour and a half.",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 8260,
+    "location": "question",
+    "text": "(圖片) Write the time shown on the clock.\n\n____ o'clock.",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 8261,
+    "location": "question",
+    "text": "(圖片) Write the time shown on the clock face.\n\nHalf past ____ and more.",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 8262,
+    "location": "question",
+    "text": "(圖片)Write the time shown on the clock.\n\n____ o'clock.",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 8263,
+    "location": "question",
+    "text": "(圖片) Write the time shown on the clock.\n\n____ o'clock.",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 8264,
+    "location": "question",
+    "text": "(圖片) Write the time shown on the clock.\n\n____ o'clock.",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 8265,
+    "location": "question",
+    "text": "(圖片) Write the time shown on the clock face.\n\n____ o'clock.",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 8267,
+    "location": "question",
+    "text": "(圖片)The clock below shows the time when the first ferry departs from Pier A and arrives at Pier B.\n\nThe first ferry sailed for ____ hours.\n\nThe second ferry departs at 1 o'clock and arrives at Pier B ",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 8270,
+    "location": "question",
+    "text": "(圖片) The clock on the left, which shows the time when the plane was scheduled to arrive, is now 1 hour late, and the plane arrives at ____:30 a.m.",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 8280,
+    "location": "question",
+    "text": "(圖片)The clock below shows the time when Melody left the library. She stayed in the library for 1 hour. How will the clock show the time when she walked into the library?\n\nThe hour hand points between ",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 8281,
+    "location": "question",
+    "text": "(圖片) The clock below shows the time when Melody walked into the library, where she stayed for 2 hours. What will the clock show when she left the library?\n\nThe hour hand points between 6 and ____.",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 8282,
+    "location": "question",
+    "text": "(圖片) The table below records the weather conditions for the previous week.\n\nLast Sunday was ____.\n\nThere were ____ sunny days last week.\n\nLast week, only ____ was a cloudy day.\n\nMonday and ____ were r",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 8295,
+    "location": "question",
+    "text": "(圖片) Tim wears a T-shirt every day, and the following table records the color of the T-shirt that he wore on each day of the previous week. According to the table below, answer the question.\n\nTim wore",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 8297,
+    "location": "question",
+    "text": "(圖片) The table below records Melody's activities during the summer vacation, and she does two activities every day. According to the table below, answer the questions.\n\nMelody read a book on ____ days",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 8304,
+    "location": "question",
+    "text": "(圖片) The exam is approaching, and the following table records the revision arrangements for each subject in the coming week for Tim.\n\nOn the first day, Tim should study ____ and ____ subjects.\n\nTim's ",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 8313,
+    "location": "question",
+    "text": "(圖片)Answer the question based on the calendar for June below.\n\nThe third Sunday in June is Father's Day, which falls on June ____.\n\nThe Dragon Boat Festival falls on June 23, which is the week of ____",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 8318,
+    "location": "question",
+    "text": "(圖片) Answer the questions according to the calendar in December below.\n\nChristmas Day falls on December 25, which is the day of ____.\n\nThe TV program \"Speak to Know\" is broadcast on every Tuesday and ",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 8326,
+    "location": "question",
+    "text": "(圖片) Answer the questions based on the following calendar for May 2021.\n\nMay 1 is Labor Day, and that day is the ____ week.\n\nThe third Thursday in May was grandfather's birthday, and it was May ____.\n",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 8333,
+    "location": "question",
+    "text": "(圖片) According to the calendar for July below, answer the questions.\n\nThere were ____ Saturdays in July of this year.\n\nJuly 1 is the anniversary of the establishment of the HKSAR, and that day is the ",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 8479,
+    "location": "answer",
+    "text": "A, B, 下午, 12, 25, B, 下午, 4, 14, B",
+    "chineseSample": "下午下午"
+  },
+  {
+    "id": 8479,
+    "location": "options",
+    "text": "A  B  C  D  A  B  上午  下午  A  B  上午  下午  A  B  C ",
+    "chineseSample": "上午下午上午下午"
+  },
+  {
+    "id": 9405,
+    "location": "question",
+    "text": "(圖片) Which of the following 3-D shapes is different?\n\n(圖片)\n\n(圖片)\n\n(圖片)\n\n(圖片)",
+    "chineseSample": "圖片圖片圖片圖片圖片"
+  },
+  {
+    "id": 9406,
+    "location": "question",
+    "text": "(圖片) Link the similar objects with correct letters.\n\n(圖片)\n\n(圖片)\n\n(圖片)\n\n(圖片)",
+    "chineseSample": "圖片圖片圖片圖片圖片"
+  },
+  {
+    "id": 9407,
+    "location": "question",
+    "text": "(圖片) The objects below are divided into two parts. Write down the correct letters.\n\nThe first kind: ____\n\nThe second kind: ____",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9408,
+    "location": "question",
+    "text": "(圖片) Look at the pictures and choose the similar 3-D shapes.\n\n(圖片)\n\n(圖片)\n\n(圖片)\n\n(圖片)",
+    "chineseSample": "圖片圖片圖片圖片圖片"
+  },
+  {
+    "id": 9409,
+    "location": "question",
+    "text": "(圖片) Select the correct name of the 3-D shape.\n\n(圖片)\n\n(圖片)\n\n(圖片)\n\n(圖片)\n\n(圖片)\n\n(圖片)",
+    "chineseSample": "圖片圖片圖片圖片圖片圖片圖片"
+  },
+  {
+    "id": 9410,
+    "location": "question",
+    "text": "(圖片) Write down the number of each 3-D shape.\n\nPrism: ____\n\nPyramid: ____\n\nSphere: ____",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9411,
+    "location": "question",
+    "text": "(圖片) Name the 3-D shapes below.\n\n(圖片)\n\n(圖片)\n\n(圖片)",
+    "chineseSample": "圖片圖片圖片圖片"
+  },
+  {
+    "id": 9412,
+    "location": "question",
+    "text": "(圖片) Write down the answer in correct letters.\n\nPrism: ____\n\nPyramid: ____\n\nSphere: ____",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9413,
+    "location": "answer",
+    "text": "D.  (圖片)",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9413,
+    "location": "options",
+    "text": "A.  (圖片)   B.  (圖片)   C.  (圖片)   D.  (圖片) ",
+    "chineseSample": "圖片圖片圖片圖片"
+  },
+  {
+    "id": 9414,
+    "location": "question",
+    "text": "(圖片) Which of the following 3-D shapes is built only by pyramids?",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9414,
+    "location": "answer",
+    "text": "C.  (圖片)",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9414,
+    "location": "options",
+    "text": "A.  (圖片)   B.  (圖片)   C.  (圖片)   D.  (圖片) ",
+    "chineseSample": "圖片圖片圖片圖片"
+  },
+  {
+    "id": 9418,
+    "location": "question",
+    "text": "Write down the name of the 3-D shape.\n\n(圖片)\n\n(圖片)",
+    "chineseSample": "圖片圖片"
+  },
+  {
+    "id": 9419,
+    "location": "question",
+    "text": "(圖片) Which of the following looks like a cylinder?",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9419,
+    "location": "answer",
+    "text": "D.(圖片)",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9419,
+    "location": "options",
+    "text": "A.(圖片)  B.(圖片)  C.(圖片)  D.(圖片) ",
+    "chineseSample": "圖片圖片圖片圖片"
+  },
+  {
+    "id": 9421,
+    "location": "question",
+    "text": "(圖片) Answer the question with correct letters.\n\nHow many cylinders are there?\n\nHow many prisms are there?\n\nIn Picture ____, a cylinder is on top of the prism.\n\nIn picture ____, a cylinder is below a p",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9422,
+    "location": "question",
+    "text": "(圖片) Write down the name of the 3-D shape.\n\n(圖片)\n\n(圖片)",
+    "chineseSample": "圖片圖片圖片"
+  },
+  {
+    "id": 9423,
+    "location": "question",
+    "text": "(圖片) There are several solids on the shelves below. Answer the questions.\n\nThere is/are ____ cone.\n\nThere is/are ____ pyramid.\n\nThere is/are ____ prism and cylinder.\n\nPrism and cylinder are ____ more ",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9424,
+    "location": "question",
+    "text": "(圖片) According to the picture below, write down the answer with letters.\n\n____ is cone.\n\n____ is pyramid.\n\n____ is prism.\n\n____ can scroll.\n\nHow many solids can stack up?\n\nThere are ____ more solids t",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9426,
+    "location": "question",
+    "text": "They are all ____.\n\n(圖片)\n\n(圖片)",
+    "chineseSample": "圖片圖片"
+  },
+  {
+    "id": 9426,
+    "location": "answer",
+    "text": "A.直線 , B.曲線",
+    "chineseSample": "直線曲線"
+  },
+  {
+    "id": 9426,
+    "location": "options",
+    "text": "A.直線   B.曲線  A.直線   B.曲線 ",
+    "chineseSample": "直線曲線直線曲線"
+  },
+  {
+    "id": 9428,
+    "location": "question",
+    "text": "(圖片) Which of the following can help to draw a curved line?",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9428,
+    "location": "answer",
+    "text": "B.(圖片)",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9428,
+    "location": "options",
+    "text": "A.(圖片)  B.(圖片)  C.(圖片)  D.(圖片) ",
+    "chineseSample": "圖片圖片圖片圖片"
+  },
+  {
+    "id": 9429,
+    "location": "question",
+    "text": "(圖片) Look at the picture and write down the correct letters.\n\nShape(s) with only straight line:____\n\nShape(s) with only curved line:____\n\nShape(s) with only straight line and curved line:____",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9430,
+    "location": "question",
+    "text": "(圖片)Which of the following does not contain a curved line?",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9430,
+    "location": "answer",
+    "text": "C.(圖片)",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9430,
+    "location": "options",
+    "text": "A.(圖片)  B.(圖片)  C.(圖片)  D.(圖片) ",
+    "chineseSample": "圖片圖片圖片圖片"
+  },
+  {
+    "id": 9432,
+    "location": "question",
+    "text": "(圖片) Look at the above picture. What are the objects that look alike? Write down the name of the alike plane figures.\n\n(圖片)\n\n(圖片)\n\n(圖片)\n\n(圖片)\n\n(圖片)\n\n(圖片)",
+    "chineseSample": "圖片圖片圖片圖片圖片圖片圖片"
+  },
+  {
+    "id": 9434,
+    "location": "answer",
+    "text": "A.(圖片)",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9434,
+    "location": "options",
+    "text": "A.(圖片)  B.(圖片)  C.(圖片)  D.(圖片) ",
+    "chineseSample": "圖片圖片圖片圖片"
+  },
+  {
+    "id": 9435,
+    "location": "question",
+    "text": "(圖片) According to the pattern, the next 3-D shape is ____.",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9436,
+    "location": "question",
+    "text": "(圖片) Write down the number of each shape.\n\nThere is/are ____ circle(s).\n\nThere is/are ____ triangle(s).\n\nThere is/are ____ quadrilateral(s).\n\nThere is/are ____ pentagon(s).",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9437,
+    "location": "question",
+    "text": "(圖片)Which of the following is a triangle?",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9437,
+    "location": "answer",
+    "text": "C.(圖片)",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9437,
+    "location": "options",
+    "text": "A.(圖片)  B.(圖片)  C.(圖片)  D.(圖片) ",
+    "chineseSample": "圖片圖片圖片圖片"
+  },
+  {
+    "id": 9438,
+    "location": "answer",
+    "text": "D.(圖片)",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9438,
+    "location": "options",
+    "text": "A.(圖片)  B.(圖片)  C.(圖片)  D.(圖片) ",
+    "chineseSample": "圖片圖片圖片圖片"
+  },
+  {
+    "id": 9439,
+    "location": "answer",
+    "text": "B.（圖片)",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9439,
+    "location": "options",
+    "text": "A.（圖片)  B.（圖片)  C.（圖片)  D.（圖片) ",
+    "chineseSample": "圖片圖片圖片圖片"
+  },
+  {
+    "id": 9440,
+    "location": "question",
+    "text": "(圖片) Look at the plane figures below and write down all the answers in letters accordingly.\n\nCircle: ____\n\nTriangle: ____\n\nQuadrilateral: ____\n\nHexagon: ____",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9445,
+    "location": "question",
+    "text": "Which of the following is not a rectangle?\n\n(圖片)",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9446,
+    "location": "question",
+    "text": "(圖片) Which of the following objects looks like a prism?",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9446,
+    "location": "answer",
+    "text": "C.(圖片)",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9446,
+    "location": "options",
+    "text": "A.(圖片)  B.(圖片)  C.(圖片)  D.(圖片) ",
+    "chineseSample": "圖片圖片圖片圖片"
+  },
+  {
+    "id": 9447,
+    "location": "question",
+    "text": "(圖片) Which of the following shapes is different from the others?",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9447,
+    "location": "answer",
+    "text": "D.(圖片)",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9447,
+    "location": "options",
+    "text": "A.(圖片)  B.(圖片)  C.(圖片)  D.(圖片) ",
+    "chineseSample": "圖片圖片圖片圖片"
+  },
+  {
+    "id": 9448,
+    "location": "question",
+    "text": "(圖片)Which of the following pictures has the circle on the left side of the triangle?",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9448,
+    "location": "answer",
+    "text": "C.(圖片)",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9448,
+    "location": "options",
+    "text": "A. (圖片)  B.(圖片)  C.(圖片)  D.(圖片) ",
+    "chineseSample": "圖片圖片圖片圖片"
+  },
+  {
+    "id": 9449,
+    "location": "question",
+    "text": "(圖片) Write down the number of each 3-D shape.\n\nPrism: ____\n\nPyramid: ____\n\nSphere: ____",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9450,
+    "location": "answer",
+    "text": "B.(圖片)",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9450,
+    "location": "options",
+    "text": "A.(圖片)  B.(圖片)  C.(圖片)  D.(圖片) ",
+    "chineseSample": "圖片圖片圖片圖片"
+  },
+  {
+    "id": 9451,
+    "location": "question",
+    "text": "(圖片) Which of the following shapes are different from the others?",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9451,
+    "location": "answer",
+    "text": "B. (圖片)",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9451,
+    "location": "options",
+    "text": "A. (圖片)  B. (圖片)  C.(圖片)  D.(圖片) ",
+    "chineseSample": "圖片圖片圖片圖片"
+  },
+  {
+    "id": 9456,
+    "location": "answer",
+    "text": "B. (圖片)",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9456,
+    "location": "options",
+    "text": "A. (圖片)  B. (圖片)  C. (圖片)  D. (圖片) ",
+    "chineseSample": "圖片圖片圖片圖片"
+  },
+  {
+    "id": 9457,
+    "location": "question",
+    "text": "(圖片) Look at the plane figure cards on the shelves and answer the question.\n\nThere are ____ shapes composed of curves only.\n\nThere are ____ circle(s).\n\nThe circle is _____ the star shape.\n\nThe heart s",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9461,
+    "location": "question",
+    "text": "(圖片) Look at the following picture and answer the question.\n\n5 + 4 = ____\n\nThere are ____ dragonflies.",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 9963,
+    "location": "explanation",
+    "text": "5400×2-120=90（m） ;  100×（150 +120+90）=36000（元）",
+    "chineseSample": "元"
+  },
+  {
+    "id": 10310,
+    "location": "answer",
+    "text": "餐廳",
+    "chineseSample": "餐廳"
+  },
+  {
+    "id": 10429,
+    "location": "question",
+    "text": "小明收集的各國明信片數量 (英國:20張; 加拿大:40張; 韓國:30張; 中國:50張)\n\nJack collected ____ fewer Korean stamps than Chinese postcards.",
+    "chineseSample": "小明收集的各國明信片數量英國張加拿大張韓國張中國張"
+  },
+  {
+    "id": 10438,
+    "location": "answer",
+    "text": "向日葵, 600",
+    "chineseSample": "向日葵"
+  },
+  {
+    "id": 10819,
+    "location": "question",
+    "text": "(手工紙A) (手工紙B) (手工紙C)\n\n小明把一張手工紙A和一張手工紙C重疊，如下圖所示。手工紙C的周界是多少？",
+    "chineseSample": "手工紙手工紙手工紙小明把一張手工紙和一張手工紙重疊如下圖所示手工紙的周界是多少"
+  },
+  {
+    "id": 11949,
+    "location": "answer",
+    "text": "West, Southwest, South, 南, North, Park",
+    "chineseSample": "南"
+  },
+  {
+    "id": 11963,
+    "location": "answer",
+    "text": "西南, 西北",
+    "chineseSample": "西南西北"
+  },
+  {
+    "id": 11969,
+    "location": "answer",
+    "text": "豆奶, 蘋果汁, 500",
+    "chineseSample": "豆奶蘋果汁"
+  },
+  {
+    "id": 11969,
+    "location": "options",
+    "text": "菊花茶  豆奶  檸檬茶  蘋果汁 ",
+    "chineseSample": "菊花茶豆奶檸檬茶蘋果汁"
+  },
+  {
+    "id": 11975,
+    "location": "answer",
+    "text": "西藏布達拉宮",
+    "chineseSample": "西藏布達拉宮"
+  },
+  {
+    "id": 11975,
+    "location": "options",
+    "text": "敦煌石窟  西藏布達拉宮  四川九寨溝   萬里長城  西安兵馬俑   北京故宮 ",
+    "chineseSample": "敦煌石窟西藏布達拉宮四川九寨溝萬里長城西安兵馬俑北京故宮"
+  },
+  {
+    "id": 11982,
+    "location": "explanation",
+    "text": "四年級有參加投票的學生人數:38+22+30+54=144人; 總人數=144+16=160",
+    "chineseSample": "四年級有參加投票的學生人數人總人數"
+  },
+  {
+    "id": 12116,
+    "location": "explanation",
+    "text": "大正方形邊長:48÷4=12(cm); 小正方形邊長:12÷4=6(cm); 圖形周界:12×4+×6×4=72(cm)",
+    "chineseSample": "大正方形邊長小正方形邊長圖形周界"
+  },
+  {
+    "id": 12151,
+    "location": "explanation",
+    "text": "每個小正方形邊長:25÷5=5cm; 圖片的周界是:5×12=60cm",
+    "chineseSample": "每個小正方形邊長圖片的周界是"
+  },
+  {
+    "id": 12153,
+    "location": "explanation",
+    "text": "推邊還原原來的圖形,再比較,發現餘下的畫紙比原來的多了2條長6cm的邊,所以周界比原來的多12cm。",
+    "chineseSample": "推邊還原原來的圖形再比較發現餘下的畫紙比原來的多了條長的邊所以周界比原來的多"
+  },
+  {
+    "id": 12209,
+    "location": "explanation",
+    "text": "在這個數字卡中，最小的偶數組合是20345796。 在這個數字卡中，最接近四千萬的數是39765420。 如果多加1張數字卡，則組成最接近十億的數是9。 組成的數是99754320 在這個數字卡中，最大的奇數組合是9754203。",
+    "chineseSample": "在這個數字卡中最小的偶數組合是在這個數字卡中最接近四千萬的數是如果多加張數字卡則組成最接近十億的數是"
+  },
+  {
+    "id": 12248,
+    "location": "explanation",
+    "text": "大正方形邊長:96÷4=24(cm); 每個小正方形p的邊長:24÷3=8(cm); 正方形Q的邊長是8×2=16(cm); 正方形Q的面積:16×16=256(cm^2)",
+    "chineseSample": "大正方形邊長每個小正方形的邊長正方形的邊長是正方形的面積"
+  },
+  {
+    "id": 12943,
+    "location": "question",
+    "text": "9×12(PIC)的結果是偶數，(PIC)不可能是下列哪一個數？\n\nA. 0            B. 4            C. 5            D. 8",
+    "chineseSample": "的結果是偶數不可能是下列哪一個數"
+  },
+  {
+    "id": 14548,
+    "location": "explanation",
+    "text": "先找出七喜的數量：88-19，再算檸檬茶和七喜相差多少罐：95-（88-19）",
+    "chineseSample": "先找出七喜的數量再算檸檬茶和七喜相差多少罐"
+  },
+  {
+    "id": 15428,
+    "location": "question",
+    "text": "(圖片) Look at the following picture and answer the questions.\n\n8 + 3 = ____\n\nThere are ____ butterflies.",
+    "chineseSample": "圖片"
+  },
+  {
+    "id": 15523,
+    "location": "question",
+    "text": "以下是2A班每天留校參加課外活動的學生人數。\n\n(PIC)\n\nOn A. Monday/ B. Tuesday/ C. Wednesday/ D. Thursday/ E. Friday, the fewest number of students stayed at school to participate in extracurricular activities, with 2. ____",
+    "chineseSample": "以下是班每天留校參加課外活動的學生人數"
+  },
+  {
+    "id": 16682,
+    "location": "answer",
+    "text": "正方形, 梯形, 菱形, 長方形",
+    "chineseSample": "正方形梯形菱形長方形"
+  },
+  {
+    "id": 16949,
+    "location": "answer",
+    "text": "西北, Northeast, southwestern, Southeast",
+    "chineseSample": "西北"
+  },
+  {
+    "id": 16959,
+    "location": "answer",
+    "text": "東",
+    "chineseSample": "東"
+  },
+  {
+    "id": 16960,
+    "location": "answer",
+    "text": "東南",
+    "chineseSample": "東南"
+  }
+]

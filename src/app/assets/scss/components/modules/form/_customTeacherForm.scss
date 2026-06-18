@@ -1,0 +1,122 @@
+.custom-form-teacher {
+  &-form-input {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 45px;
+  }
+
+  &-form-input-select {
+    width: 100%;
+    border: none !important;
+    border-width: 0px;
+    height: 1px !important;
+    margin-top: -50px;
+    z-index: 0;
+  }
+
+  &-form-input-select-front-wrapper {
+    background-color: #fff;
+    height: 55px;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  &-form-input-select-front {
+    height: 39px;
+    border: 1px solid #C7C7C7;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    z-index: 1;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+  }
+
+  &-form-input-select-front-no-pointer {
+    height: 39px;
+    border: 1px solid #C7C7C7;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+  }
+
+  &-ico-down {
+    width: 27px;
+    height: 27px;
+  }
+
+  &-form-input-select-front-inner-wrapper-start {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  &-form-input-select-front-inner-wrapper-center {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  &-form-input-select-front-inner-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &-form-input-select-front-inner {
+    box-shadow: 3px 4px 4px 0px #D9D9D9 inset;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #EBEBEB;
+    padding: 0px 20px 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-form-input-select-front-placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    color: #C7C7C7;
+    text-align: center;
+  }
+
+  &-form-input-select-front-value {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14.52px;
+    color: #565656;
+  }
+
+  &-btn-gradient {
+    background: linear-gradient(180deg, #D1CFFF 0%, #FFD5E5 100%);
+    width: 27px;
+    height: 27px;
+    border-radius: 13.5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &-btn-cursor {
+    cursor: pointer;
+  }
+
+  @media (max-width: 800px) {
+    &-form-input-select-front-placeholder {
+      font-size: 11px;
+    }
+  }
+}

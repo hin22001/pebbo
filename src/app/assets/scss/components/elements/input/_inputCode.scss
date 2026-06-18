@@ -1,0 +1,45 @@
+.elements-input-code {
+
+  &-input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &-label {
+    margin-bottom: 16px;
+  }
+
+  &-inputs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
+
+
+    input {
+      border: none;
+      background-image: none;
+      background-color: transparent;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      text-align: center;
+
+      height: 40px;
+      width: 100%;
+      max-width: 40px;
+
+      border-radius: 10px;
+      margin: 0 4px;
+      border: 2px solid #ddd;
+      font-size: 30px;
+
+      &:focus {
+        outline: none;
+      }
+
+    }
+
+  }
+}

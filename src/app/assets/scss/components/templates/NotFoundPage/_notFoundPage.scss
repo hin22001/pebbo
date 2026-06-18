@@ -1,0 +1,14 @@
+.templates-not-found-page{
+  background-color: white;
+  .card{
+    margin: 2rem;
+
+    .wrap-text{
+      .text{
+        &-1{
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}

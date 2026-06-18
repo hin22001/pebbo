@@ -1,0 +1,77 @@
+.section-card-verification-code {
+
+  @include grid-gap(0rem);
+  align-content: baseline;
+  height: 100%;
+
+  .block {
+    
+    &-content {
+      @include grid-gap(2rem);
+      text-align: center;
+      padding-bottom: 1rem;
+      box-sizing: border-box;
+      padding: 0rem 1rem;
+      box-sizing: border-box;
+
+      .elements-alert {
+        text-align: left;
+      }
+
+      &-image {
+        max-width: 300px;
+        margin: auto;
+        object-fit: contain;
+        height: fit-content;
+        width: 100%;
+      }
+
+      &-text {
+        max-width: 400px;
+        margin: auto;
+      }
+
+      &-form {
+        @include grid-gap(2rem);
+        padding-bottom: 1rem;
+        box-sizing: border-box;
+
+
+        .text {
+          &-detail-message {
+            justify-content: center;
+            text-align: center;
+            @include grid-gap(.5rem);
+
+          }
+
+          &-link {
+            color: $color-primary;
+            cursor: pointer;
+            font-weight: 600;
+            b{
+              font-weight: 600;
+
+            }
+
+            &.disabled {
+              color: #b7b7b7;
+              cursor: context-menu;
+            }
+          }
+
+          &-resend {
+            justify-content: center;
+            display: flex;
+            gap: .3rem;
+          }
+        }
+
+
+      }
+
+    }
+
+  }
+
+}

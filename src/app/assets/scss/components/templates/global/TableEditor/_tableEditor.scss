@@ -1,0 +1,21 @@
+.template-global-table-editor {
+
+  &-header {}
+
+  &-table {
+    display: grid;
+    overflow: auto;
+
+    .MuiDataGrid {
+      &-root {
+
+        overflow: auto;
+        display: grid;
+        grid-template-rows: 1fr auto;
+      }
+    }
+  }
+
+
+
+}

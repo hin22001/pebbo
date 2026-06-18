@@ -1,0 +1,9 @@
+export { default as headTableEditorQuestions } from "./TableEditorQuestions";
+export { default as headModalFormQuestions } from "./ModalFormQuestions";
+export { default as headTableEditorDailyReports } from "./TableEditorDailyReports";
+export { default as headTableEditorWeeklyReports } from "./TableEditorWeeklyReports";
+export { default as headTableQuizList } from "./TableQuizList";
+export { default as headTableQuizEdit } from "./TableQuizEdit";
+export { default as headTableQuizAddClass } from "./TableQuizAddClass";
+export { default as headTableQuizClassList } from "./TableQuizClassList";
+export { default as headTableQuizClassListStudent } from "./TableQuizClassListStudent";

@@ -1,0 +1,73 @@
+.template-landing-page-section-about {
+  // background: $color-lilac-gradient;
+
+
+  &-content {
+    position: relative;
+    height: 45rem;
+    display: grid;
+    align-items: flex-start;
+    align-content: start;
+    padding: 0rem 3rem;
+    gap: 1.5rem;
+    padding-top: 3rem;
+
+  }
+
+  &-text-wrapper {
+    gap: 1rem;
+
+    &-title {
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      justify-items: center;
+      height: fit-content;
+      flex-wrap: wrap;
+
+      color: $color-primary;
+    }
+  }
+
+  &-text-subtitle {
+    color: $color-purple;
+    font-size: 1.5rem;
+  }
+
+  &-image-logo {
+    height: fit-content;
+    float: inline-start;
+  }
+
+  &-list {
+    gap: 1rem;
+    display: grid;
+    max-width: 25rem;
+
+    &-wrapper {}
+
+    &-item {
+      color: $color-primary;
+
+    }
+  }
+
+  &-image-decor {
+    position: absolute;
+    left: 1rem;
+    width: 25%;
+    bottom: 21%;
+
+    img {
+      width: 100%;
+      object-position: bottom;
+    }
+
+    &.right {
+      left: unset;
+      right: 1rem;
+    }
+
+  }
+
+}

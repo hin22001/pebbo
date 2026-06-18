@@ -1,0 +1,55 @@
+.content-layout {
+	display: grid;
+	height: 100%;
+	width: 100%;
+	// padding: 1rem;
+	box-sizing: border-box;
+	align-content: start;
+	gap: 1rem;
+	grid-template-rows: auto 1fr;
+
+	&-header {
+		height: fit-content;
+		align-items: center;
+
+		&-title {
+			&.MuiTypography-root {
+				font-weight: 700;
+			}
+		}
+
+	}
+
+	&-main {
+		&.overflow {
+			overflow: auto;
+		}
+
+		&>main {
+			height: 100%;
+		}
+	}
+
+	&.full {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		overflow: auto;
+		@include scroll-custom;
+	}
+
+	&.light-grey {
+		background-color: $color-grey;
+	}
+
+	&.bg-image {
+
+		background-repeat: no-repeat;
+		background-size: 30%;
+		background-position: bottom;
+	}
+
+}

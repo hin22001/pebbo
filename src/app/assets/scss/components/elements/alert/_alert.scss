@@ -1,0 +1,39 @@
+.elements-alert{
+  box-sizing: border-box;
+  z-index: 10;
+  
+  &.open.MuiCollapse-root{
+    margin-bottom: 1rem;
+  }
+  
+  &.hollow{
+    background-color: unset;
+    .MuiAlert-message {
+      padding: unset;
+    }
+  }
+  &.float{
+    position: fixed;
+    margin: auto;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    top: 1rem;
+    max-width: unset;
+  }
+  &.float-absolute{
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    // max-width: unset;
+    max-width: 50vw;
+    align-self: center;
+    display: flex;
+  }
+
+}

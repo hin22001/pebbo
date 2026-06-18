@@ -1,0 +1,58 @@
+.modules-list-nested {
+	.list {
+		.label span {
+			font-family: 'Nunito Sans';
+		}
+		.clickable-text{
+			cursor: pointer;
+			&:hover{
+				color: orange;
+			}
+		}
+
+		&:not(.level-0) {
+			margin-left: 2rem;
+		}
+
+		&.open-yellow {
+			&.open {
+				background-color: $color-orange-light-2;
+				border-radius: 1rem;
+				margin-bottom: 0.5rem;
+				margin-top: 0.5rem;
+
+				.list-item.level-0 .label span {
+					font-weight: 700;
+				}
+			}
+		}
+		&.border-bottom-on-close {
+			&:not(.open) {
+				border-bottom: 1px solid $color-grey-light;
+			}
+		}
+
+		&.open-orange {
+			margin-bottom: 0.5rem;
+			margin-top: 0.5rem;
+			&.open {
+				.list-item.level-0 {
+					background: #fa9c5e;
+					border-radius: 100px;
+					color: white;
+				}
+			}
+		}
+
+		&.open-light {
+			background-color: #fffbeb;
+			border-radius: 1rem;
+			margin-bottom: 0.5rem;
+			margin-top: 0.5rem;
+
+			.list-item.level-1 .label span {
+				font-weight: 700;
+			}
+		}
+	}
+}

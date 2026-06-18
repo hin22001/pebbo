@@ -1,0 +1,46 @@
+.modules-modal-screen {
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .MuiBackdrop-root {
+    // background-color: rgba(0, 0, 0, 0.7);
+    background-color: #ebebebb3;
+    backdrop-filter: blur(2px);
+  }
+
+  &>* {
+    outline: none;
+
+  }
+
+  &-content {
+    overflow: auto;
+    max-height: 85vh;
+    @include scroll-custom;
+
+    &:focus-visible {
+      outline: unset;
+    }
+  }
+
+  &.paper {
+    .modules-modal-screen-content {
+      max-width: 90vw;
+      @include card;
+      padding: 2rem;
+      @include grid-gap(1.5rem);
+
+      &-header {
+        @include grid-column;
+        justify-content: space-between;
+
+        .MuiTypography-root {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+}

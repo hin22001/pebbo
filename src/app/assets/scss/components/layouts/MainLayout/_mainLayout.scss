@@ -1,0 +1,160 @@
+.main-layout {
+	$className: 'main-layout';
+
+	position: fixed;
+	height: 100%;
+	width: 100%;
+
+	@import 'sections';
+
+	&-content {
+		position: relative;
+
+		// === Adding Max Width For Development Mobile Purposes ===
+		// max-width: $width-media-mobile;
+		margin: auto;
+		transition: ease 0.5s;
+
+
+		display: grid;
+		grid-template-areas: '_header _header' '_content _content';
+		// grid-template-columns: $width-navigation 1fr;
+		grid-template-rows: $height-header 1fr;
+		height: 100%;
+		border-radius: 1px solid white;
+
+		.elements-alert {
+			z-index: 10;
+		}
+
+		&.content-only {
+			display: block;
+		}
+
+
+		.main-layout-section-navigation {
+
+			.content {
+				height: 100%;
+				top: 0;
+				left: 0;
+			}
+		}
+
+		.backdrop {
+			display: none;
+		}
+
+		&-main {
+			grid-area: _content;
+			height: 100%;
+			overflow: auto;
+			@include scroll-custom;
+			box-sizing: border-box;
+
+			width: 100%;
+
+			transition: ease 0.5s;
+			margin-left: auto;
+
+			&-notice-card {
+				display: grid;
+				margin: 1rem;
+
+			}
+		}
+	}
+
+	&-section-header {
+		grid-area: _header;
+
+	}
+
+	&-teacher-section-header {
+		grid-area: _header;
+
+	}
+
+	&-admin-section-header {
+		grid-area: _header;
+
+	}
+
+	&-block-navigation {
+		transition: ease 0.5s;
+		position: absolute;
+		height: 100%;
+		width: $width-navigation ;
+
+		transform: translateX(calc(#{$width-navigation} * -1));
+		left: 0;
+		top: calc(#{$height-header} + 2px);
+		height: 100%;
+
+		.main-layout-section-navigation {
+			height: 100%;
+
+		}
+	}
+
+	&-block-navigation-student {
+		transition: ease 0.5s;
+		position: absolute;
+		height: 100%;
+		width: $width-navigation ;
+
+		transform: translateX(calc(#{$width-navigation} * -1));
+		left: 0;
+		height: 100%;
+		background-color: #fff;
+		z-index: 1;
+
+		.main-layout-section-navigation {
+			height: 100%;
+
+		}
+	}
+
+	&-block-navigation-student-mini {
+		transition: ease 0.5s;
+		position: absolute;
+		height: 100%;
+		width: $side-nav-bar-collapsed-width ;
+
+		transform: translateX(calc(#{$width-navigation} * -1));
+		left: 0;
+		height: 100%;
+		background-color: #fff;
+		z-index: 1;
+
+		.main-layout-section-navigation {
+			height: 100%;
+
+		}
+	}
+
+	&.show-navigation {
+		.main-layout {
+			&-content {
+				.main-layout-content-main {
+					width: calc(100% - $side-nav-bar-collapsed-width);
+
+					@media (max-width: 1000px) {
+						width: calc(100%);
+					}
+				}
+			}
+		}
+
+		.main-layout-block-navigation, .main-layout-block-navigation-student, .main-layout-block-navigation-student-mini {
+			transform: translateX(0);
+
+			.main-layout-section-navigation {}
+		}
+	}
+
+}
+
+.teacher-layout {
+	background: linear-gradient(158.47deg, #FFFAE9 0%, #E4E3FF 39.86%, #E4FDFF 83.92%);
+}

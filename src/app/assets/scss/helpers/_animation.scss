@@ -1,0 +1,42 @@
+@mixin setTransition {
+  transition: all 0.25s ease-out;
+}
+
+@mixin fadeIn {
+  opacity: 1;
+  @include setTransition;
+}
+
+@mixin fadeOut {
+  opacity: 0;
+  position: absolute;
+  @include setTransition;
+}
+
+.animation-duration-fast {
+  animation-duration: .5s !important;
+}
+
+// @keyframes out {
+//   0% {
+//     top: 0;
+//     width: inherit;
+//     height: inherit;
+//   }
+
+//   100% {
+//     top: 100vh;
+//     width: 0;
+//     height: 0;
+//   }
+// }
+
+// .animation-out {
+//   position: absolute;
+//   animation: out;
+//   animation-duration: 0.5s;
+//   animation-delay: 1s;
+//   animation-fill-mode: forwards;
+//   @include setTransition;
+
+// }

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 6330,
+    "location": "explanation",
+    "text": "A pentagonal prism (五角柱) has 7 faces: 5 rectangular faces around the sides and 2 pentagonal faces at the top and bottom.",
+    "chineseSample": "五角柱"
+  },
+  {
+    "id": 6331,
+    "location": "explanation",
+    "text": "The base of a pyramid (角錐) is typically the shape of the flat face it stands on; if we specify a pentagonal pyramid, its base is a pentagon. The side faces of a pyramid (角錐) are always triangular, reg",
+    "chineseSample": "角錐角錐"
+  },
+  {
+    "id": 6337,
+    "location": "explanation",
+    "text": "C represents 五千四百三十二, which is 5432 in Arabic numerals.\\nA represents 5275.\\nB represents 4518.\\nSo, arranged from largest to smallest, it is 5432 (C), 5275 (A), 4518 (B). C represents 五千四百三十二, which ",
+    "chineseSample": "五千四百三十二五千四百三十二五千四百三十二"
+  },
+  {
+    "id": 6498,
+    "location": "question",
+    "text": "Use Chinese numerals to write the numbers represented by the columns on the right.\n\nA.二十四十 B.二百零四十 C.二千零四十\n\nThe thousands digit of this number is 1.____, which stands for 2.____.",
+    "chineseSample": "二十四十二百零四十二千零四十"
+  },
+  {
+    "id": 7880,
+    "location": "question",
+    "text": "The above is the calendar for November of a given year. Ming Ming's birthday is on October 16th and his birth date for this year is on the week ____.\n\nA.二\n\nB.三\n\nC.四\n\nD.五",
+    "chineseSample": "二三四五"
+  },
+  {
+    "id": 7901,
+    "location": "question",
+    "text": "Use Chinese numerals to write the numbers represented by the columns in the diagram above.\n\nA. 二千五\n\nB. 二千零五\n\nC. 二千零零五",
+    "chineseSample": "二千五二千零五二千零零五"
+  },
+  {
+    "id": 8104,
+    "location": "explanation",
+    "text": "一個典型的角錐有一個正方形底面（一個正方形）和三角形面，這些三角形面將正方形底面的每一邊連接到角錐的頂點。 有2個正方形和4個三角形，其中一個正方形是多餘的，因為角錐只需要一個正方形作為底面。",
+    "chineseSample": "一個典型的角錐有一個正方形底面一個正方形和三角形面這些三角形面將正方形底面的每一邊連接到角錐的頂點有"
+  },
+  {
+    "id": 8105,
+    "location": "explanation",
+    "text": "A. 圓柱：圓柱有兩個圓形底面，一個在頂部，一個在底部。 B. 圓錐：圓錐在其底部有一個圓形底面。 C. 球：球沒有底面，因為它是一個完美的圓形三維形狀，就像一個球",
+    "chineseSample": "圓柱圓柱有兩個圓形底面一個在頂部一個在底部圓錐圓錐在其底部有一個圓形底面球球沒有底面因為它是一個完美"
+  },
+  {
+    "id": 8113,
+    "location": "explanation",
+    "text": "第一個數字應盡可能接近7，最接近的是6。 第二個數字應盡可能大，最大的是8。第三個數字應盡可能大。最大的是4。第四個數字應盡可能大。剩下最大的是2。因此，使用這些數字卡最接近7300的數字是6842。",
+    "chineseSample": "第一個數字應盡可能接近最接近的是第二個數字應盡可能大最大的是第三個數字應盡可能大最大的是第四個數字應"
+  },
+  {
+    "id": 8233,
+    "location": "explanation",
+    "text": "要將這些數字從大到小排列，比較每個數字並相應排序：  805在所有數字中最大。 接著，628比805小，但比其他兩個數字大。 然後，513比471大，但比805和628都小。 最後，471是最小的數字。 因此，從大到小的順序是805，628，513，471。 要將這些數字從大到小排列，比較每個數字並相應排序：  805在所有數字中最大。 接著，628比805小，但比其他兩個數字大。 然後，513比",
+    "chineseSample": "要將這些數字從大到小排列比較每個數字並相應排序在所有數字中最大接著比小但比其他兩個數字大然後比大但比"
+  }
+]

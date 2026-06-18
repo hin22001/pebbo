@@ -1,0 +1,89 @@
+.custom-editor-quill {
+	border: 1px solid #2e2e2e;
+	box-sizing: border-box;
+	border-radius: 10px;
+	.quill {
+		padding: 2rem;
+
+		div > .ql-editor {
+			// height: 50vh;
+			border: unset;
+			padding: unset;
+			// padding: 2rem 0;
+			overflow-x: auto;
+		}
+
+		.ql-toolbar.ql-snow,
+		.ql-container.ql-snow {
+			border: unset;
+			padding: 1rem 0;
+		}
+	}
+
+	.slide-image {
+		height: 20vh;
+		padding: 0 2rem 2rem 2rem;
+		display: flex;
+		grid-column-gap: 0.5rem;
+		column-gap: 0.5rem;
+		img {
+			height: 100%;
+			object-fit: fill;
+		}
+
+		.overlay-delete {
+			position: relative;
+			border: 1px solid #a09898;
+			.icon {
+				position: absolute;
+				top: 0;
+				height: 100%;
+				width: 100%;
+				display: flex;
+				opacity: 0;
+				img {
+					width: 30px;
+					height: 30px;
+					margin: auto;
+				}
+			}
+		}
+
+		.overlay-delete:hover .icon {
+			opacity: 1;
+			background: rgba(0, 0, 0, 0.5);
+			cursor: pointer;
+		}
+	}
+
+	&.noneToolbar {
+		.quill {
+			.ql-toolbar.ql-snow .ql-formats:nth-child(5) {
+				display: none;
+			}
+		}
+	}
+
+	&.noneAll {
+		.quill {
+			.ql-toolbar.ql-snow {
+				display: none;
+			}
+		}
+	}
+}
+
+@include max($breakpoint-sm) {
+	.custom-editor-quill {
+		.quill {
+			padding: 1rem;
+		}
+		.slide-image {
+			height: 13vh;
+			padding: 0 1rem 1rem 1rem;
+			// img {
+			// 	width: 114px;
+			// }
+		}
+	}
+}

@@ -1,0 +1,141 @@
+@mixin elements-icon-custom-icon-size($size) {
+  // ===== Notice =======
+  // => This function could be used in other scss files.
+  // => becareful for a rectangular icon, with different height and width,
+  // => it will resize the icon smaller
+
+  &-square {
+    //=> will applied to height and width
+
+    &.elements-icon-custom,
+    .elements-icon-custom {
+      font-size: $size;
+      width: $size;
+      height: $size;
+
+      .elements-image-handler {
+        &-content,
+        &-image {
+          width: $size;
+          height: $size;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  &.elements-icon-custom,
+  .elements-icon-custom {
+    //=> only applied to width
+    font-size: $size;
+    width: $size;
+    height: fit-content;
+
+    .elements-image-handler {
+      &-content,
+      &-image {
+        width: $size;
+        height: fit-content;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.elements-icon-custom {
+  &.icon-custom-image {
+    // ===> not mui, custom from img
+    $size: 1.5rem;
+    width: $size;
+    // height: $size;
+    object-fit: contain;
+  }
+
+  &-icon-custom-image-nav {
+    // ===> not mui, custom from img
+
+    max-width: 1.5rem;
+    width: 1.5rem;
+  }
+
+  &-icon-custom-image-top-bar {
+    // ===> not mui, custom from img
+
+    max-width: 20px;
+    width: 20px;
+    margin: 5px;
+  }
+
+  &-math-library-nav-icon {
+    width: 2.22rem; // Slightly larger to compensate for PNG padding
+    max-width: 2.22rem;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  &.size {
+    &-small {
+      @include elements-icon-custom-icon-size(1rem);
+    }
+
+    &-sm {
+      @include elements-icon-custom-icon-size(1.5rem);
+    }
+
+    &-medium {
+      @include elements-icon-custom-icon-size(2.2rem);
+    }
+
+    &-large {
+      @include elements-icon-custom-icon-size(3rem);
+    }
+
+    &-xl {
+      @include elements-icon-custom-icon-size(4.2rem);
+    }
+
+    &-xxl {
+      @include elements-icon-custom-icon-size(7rem);
+    }
+
+    &-unconstraint {
+      @include elements-icon-custom-icon-size(100%);
+    }
+  }
+
+  // === TRANSFORM ===
+
+  &.rotate-right {
+    transform: rotate(-90deg);
+  }
+
+  &.rotate-left {
+    transform: rotate(180deg);
+  }
+
+  // =========================
+  // ======== THEME ==========
+  // =========================
+
+  @mixin circle-border($color: #ddd) {
+    &.circle-border {
+      border-radius: 100%;
+      border: 2px solid $color;
+      padding: 0.5rem;
+    }
+  }
+
+  @include circle-border;
+
+  &.color {
+    &-primary {
+      color: $color-primary;
+      @include circle-border($color-primary);
+    }
+
+    &-secondary {
+      color: $color-secondary;
+      @include circle-border($color-secondary);
+    }
+  }
+}

@@ -1,0 +1,349 @@
+.element-button {
+  @mixin buttonTheme(
+    $colorPrimary: $color-primary,
+    $colorSecondary: white,
+    $type: "filled"
+  ) {
+    background-color: $colorPrimary;
+    border: 1px solid $colorPrimary;
+    color: $colorSecondary;
+
+    &:hover {
+      // background-color: $colorSecondary;
+      // color: $colorPrimary;
+      background-color: $colorPrimary;
+      color: $colorSecondary;
+
+      img {
+        // background: $colorPrimary;
+      }
+    }
+
+    .elements-chip {
+      border: unset;
+      padding: 0.1rem 0.4rem !important;
+
+      span {
+        color: $colorPrimary;
+        font-size: 0.8rem !important;
+      }
+    }
+
+    &.no-hover {
+      &:hover {
+        background-color: $colorPrimary;
+        color: $colorSecondary;
+      }
+    }
+
+    @if $type== "hollow" {
+      background-color: transparent;
+      border: 1px solid $color-border;
+      color: $color-black;
+
+      &:hover {
+        color: $color-black;
+        background-color: $color-light-accent;
+      }
+    }
+
+    &.hollow {
+      background-color: transparent;
+      border: 1px solid $colorPrimary;
+      color: $color-border;
+
+      &:hover {
+        background-color: $color-light-accent;
+        color: $color-black;
+      }
+    }
+
+    &.outline,
+    &-outline {
+      // => for outline theme
+      background-color: $colorSecondary;
+      border: 1px solid $colorPrimary;
+      color: $colorPrimary;
+
+      &:hover,
+      &:focus {
+        // background-color: $colorPrimary;
+        // color: $colorSecondary;
+      }
+    }
+
+    &.outline-revert {
+      background-color: $colorSecondary;
+      border: 1px solid $colorPrimary;
+      color: $colorPrimary;
+
+      &:hover,
+      &:focus {
+        // background-color: $colorPrimary;
+        // color: $colorSecondary;
+      }
+    }
+
+    //==============================
+    //======== Disabled Theme ======
+    //==============================
+
+    &.disabled {
+      &.Mui-disabled {
+        cursor: context-menu;
+        background-color: #d3d3d3;
+        border: 1px solid transparent;
+        color: #ffffff;
+
+        &:hover {
+          background-color: #d3d3d3;
+          border: 1px solid transparent;
+          color: #ffffff;
+        }
+
+        // === Disabled Theme ===
+
+        &.disabled-dark-grey {
+          background-color: $color-grey-4;
+          color: white;
+          border: unset;
+
+          &:hover {
+            border: unset;
+          }
+        }
+
+        &.disabled-theme-hollow {
+          background-color: white;
+          border: 1px solid $color-grey-2;
+          color: #b5b5b5;
+
+          &:hover {
+            color: #b5b5b5;
+            background-color: white;
+            border: 1px solid $color-grey-2;
+          }
+        }
+      }
+    }
+  }
+
+  // ========================
+  // === Reset Mui Button ===
+  // ========================
+
+  &.MuiButton-root {
+    text-transform: unset;
+    margin-bottom: 0;
+    outline: none;
+
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+
+    font-family: $font-title;
+    letter-spacing: 0.05rem;
+    cursor: pointer;
+    border-radius: 10px;
+
+    //== default theme ===
+    @include buttonTheme($color-primary);
+
+    .MuiTouchRipple-root {
+      .MuiTouchRipple-child {
+        background-color: rgba(0, 0, 0, 0.353);
+      }
+    }
+  }
+
+  // ========================
+  // ========= THEME ========
+  // ========================
+
+  &.border {
+    background-color: white;
+    border: 1px solid $color-grey-dark-3;
+    color: $color-grey;
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    &:hover {
+      border: 1px solid $color-grey-dark-3;
+    }
+  }
+
+  &.circle {
+    border-radius: 50%;
+    width: 1.4rem;
+    height: 1.4rem;
+    padding: 0.6rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  &.primary {
+    @include buttonTheme($color-primary);
+  }
+
+  &.secondary {
+    @include buttonTheme($color-primary, "", "hollow");
+    background-color: white;
+
+    .MuiButton-endIcon {
+      .mui-circular-progress {
+        color: $color-primary;
+      }
+    }
+  }
+
+  &.orange {
+    @include buttonTheme($color-orange);
+  }
+
+  &.yellow {
+    @include buttonTheme($color-yellow);
+  }
+
+  &.red {
+    @include buttonTheme($color-red);
+  }
+
+  &.red-dark {
+    @include buttonTheme($color-red-dark);
+  }
+
+  &.brown {
+    @include buttonTheme($color-secondary);
+  }
+
+  &.green {
+    @include buttonTheme($color-green);
+  }
+
+  &.dark-grey {
+    @include buttonTheme($color-grey-4);
+  }
+
+  &.light-yellow {
+    @include buttonTheme($color-yellow-light-4, $color-black);
+  }
+
+  &.light-blue {
+    @include buttonTheme(#3f51b5);
+  }
+
+  &.white-pills {
+    @include buttonTheme(white);
+    border-radius: 10rem;
+    @include box-shadow("primary-2");
+    color: $color-primary;
+    text-align: center;
+    justify-content: center;
+    display: grid;
+    font-weight: 700;
+    align-items: center;
+
+    &:hover {
+      @include box-shadow("inset-primary");
+      color: $color-primary;
+      border-color: transparent;
+    }
+
+    &:active {
+      background-color: $color-primary;
+      color: white;
+      border-color: $color-primary;
+    }
+  }
+
+  @mixin button-gradient($color1, $color-2) {
+    background: $color1;
+    border: unset;
+    color: white;
+    border-radius: 10rem;
+    @include box-shadow;
+    transition: ease 1s;
+
+    font-size: 2rem;
+
+    &:hover {
+      background: $color-2;
+
+      img {
+      }
+    }
+  }
+
+  &.gradient-purple {
+    @include button-gradient(
+      $color-secondary-gradient,
+      $color-secondary-gradient-2
+    );
+  }
+
+  &.gradient-orange {
+    @include button-gradient(
+      $color-orange-gradient-2,
+      $color-orange-gradient-2b
+    );
+  }
+
+  //==============================
+  //======== SIZE ================
+  //==============================
+
+  &.small {
+    padding: 0.2rem 0.5rem;
+    width: fit-content;
+    height: fit-content;
+
+    font-size: 0.9rem;
+  }
+
+  &.smaller {
+    padding: 0.2rem 0.5rem;
+    width: fit-content;
+    height: fit-content;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  &.wide-md {
+    min-width: 11rem;
+  }
+
+  &.wide {
+    min-width: 15rem;
+  }
+
+  &.thick {
+    padding: 1rem;
+  }
+
+  &.max {
+    width: 100%;
+  }
+
+  &.size-medium,
+  &.medium {
+    padding: 0.3rem 2rem;
+    font-size: 0.9;
+  }
+
+  .MuiButton-endIcon {
+    .mui-circular-progress {
+      color: white;
+      width: 1rem !important;
+      height: 1rem !important;
+      position: absolute;
+      right: 1rem;
+    }
+  }
+
+  &-number {
+    &.element-chip.MuiChip-root span {
+      font-weight: 700;
+    }
+  }
+}

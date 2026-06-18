@@ -1,0 +1,884 @@
+{
+  "applied": [
+    439,
+    476,
+    479,
+    496,
+    497,
+    501,
+    507,
+    515,
+    1149,
+    1586,
+    1590,
+    1621,
+    3996,
+    4024,
+    4059,
+    5077,
+    5079,
+    5093,
+    5098,
+    5105,
+    5141,
+    5142,
+    5150,
+    5162,
+    5173,
+    5180,
+    5190,
+    5286,
+    5292,
+    5295,
+    5297,
+    5310,
+    5320,
+    5376,
+    5384,
+    5386,
+    5405,
+    5445,
+    5583,
+    5592,
+    5598,
+    5600,
+    5634,
+    5639,
+    5662,
+    5664,
+    5676,
+    5695,
+    5696,
+    5700,
+    5707,
+    5709,
+    5712,
+    5716,
+    5718,
+    5736,
+    5740,
+    5743,
+    6111,
+    6113,
+    6136,
+    6138,
+    6141,
+    6149,
+    6993,
+    6994,
+    7003,
+    7005,
+    7009,
+    7013,
+    7015,
+    7016,
+    7018,
+    7019,
+    7021,
+    7025,
+    7027,
+    7043,
+    7045,
+    7069,
+    7070,
+    7071,
+    7073,
+    7089,
+    7100,
+    7102,
+    7107,
+    7150,
+    7153,
+    7222,
+    7223,
+    7225,
+    7226,
+    7230,
+    7235,
+    7245,
+    7259,
+    7261,
+    7262,
+    7284,
+    7298,
+    7322,
+    7334,
+    7338,
+    7340,
+    7344,
+    7353,
+    7355,
+    7363,
+    7485,
+    7502,
+    7988,
+    7989,
+    8017,
+    8018,
+    8020,
+    8410,
+    8411,
+    8417,
+    8418,
+    8424,
+    8425,
+    8429,
+    8441,
+    8453,
+    8529,
+    8531,
+    8532,
+    9114,
+    9143,
+    9155,
+    9159,
+    9163,
+    9168,
+    9183,
+    9498,
+    9503,
+    9504,
+    9508,
+    9511,
+    9514,
+    9553,
+    9561,
+    9565,
+    9569,
+    9570,
+    9572,
+    9580,
+    9581,
+    9648,
+    9673,
+    9674,
+    9675,
+    9686,
+    9709,
+    9710,
+    9715,
+    9720,
+    9721,
+    9777,
+    9781,
+    9785,
+    9787,
+    9839,
+    9859,
+    9861,
+    9864,
+    9865,
+    9866,
+    9873,
+    9884,
+    9885,
+    9905,
+    9908,
+    9923,
+    9925,
+    9929,
+    9941,
+    9942,
+    9943,
+    9953,
+    9960,
+    9962,
+    9972,
+    10002,
+    10033,
+    10034,
+    10036,
+    10045,
+    10048,
+    10172,
+    10191,
+    10193,
+    10197,
+    10204,
+    10212,
+    10227,
+    10228,
+    10244,
+    10248,
+    10345,
+    10350,
+    10354,
+    10375,
+    10379,
+    10382,
+    10389,
+    10419,
+    10420,
+    10421,
+    10422,
+    10423,
+    10434,
+    10467,
+    10552,
+    10553,
+    10554,
+    10555,
+    10559,
+    10574,
+    10588,
+    10591,
+    10597,
+    10600,
+    10602,
+    10605,
+    10609,
+    10611,
+    10613,
+    10626,
+    10628,
+    10690,
+    10700,
+    10701,
+    10706,
+    10718,
+    10719,
+    10722,
+    10730,
+    10737,
+    10738,
+    10757,
+    10838,
+    10852,
+    10860,
+    10880,
+    11060,
+    11062,
+    11156,
+    11176,
+    11186,
+    11198,
+    11205,
+    11212,
+    11217,
+    11232,
+    11242,
+    11284,
+    11286,
+    11289,
+    11291,
+    11292,
+    11321,
+    11454,
+    11460,
+    11468,
+    11469,
+    11481,
+    11585,
+    11594,
+    11595,
+    11596,
+    11602,
+    11607,
+    11620,
+    11630,
+    11637,
+    11714,
+    11753,
+    11763,
+    11770,
+    11780,
+    11781,
+    11782,
+    11783,
+    11784,
+    11802,
+    11807,
+    11813,
+    11812,
+    11810,
+    11816,
+    11990,
+    11997,
+    12009,
+    12013,
+    12220
+  ],
+  "failed": [
+    {
+      "questionId": 484,
+      "error": "Failed to apply change at path content[0].content[7].content[1].attrs.answers: Cannot use 'in' operator to search for 'answers' in null",
+      "timestamp": "2026-01-08T09:52:14.356Z"
+    },
+    {
+      "questionId": 508,
+      "error": "Failed to apply change at path content[0].content[1].content[0].text: Cannot set critical field 'text' to empty or whitespace-only string at content[0].content[1].content[0].text. Setting critical component fields to empty/whitespace breaks UI rendering. If you need to remove a component, it must be done through structural changes (not supported). Mark this fix for manual review.",
+      "timestamp": "2026-01-08T10:00:12.581Z"
+    },
+    {
+      "questionId": 4038,
+      "error": "Failed to apply change at path content[0].content[3].content: Cannot replace entire 'content' array at content[0].content[3].content. This is a structural change. Modify individual elements within the array instead (e.g., content[0], content[1]). Mark this fix for manual review.",
+      "timestamp": "2026-01-08T10:11:19.786Z"
+    },
+    {
+      "questionId": 5090,
+      "error": "Failed to apply change at path content[0].content[3].content: Cannot replace entire 'content' array at content[0].content[3].content. This is a structural change. Modify individual elements within the array instead (e.g., content[0], content[1]). Mark this fix for manual review.",
+      "timestamp": "2026-01-08T10:14:37.004Z"
+    },
+    {
+      "questionId": 5104,
+      "error": "Failed to apply change at path content[0].content[5].content: Cannot replace entire 'content' array at content[0].content[5].content. This is a structural change. Modify individual elements within the array instead (e.g., content[0], content[1]). Mark this fix for manual review.",
+      "timestamp": "2026-01-08T10:21:49.652Z"
+    },
+    {
+      "questionId": 5318,
+      "error": "Structural change detected after applying fixes: Object structure lost at root.content[0].content[5]. This should not happen with targeted changes.",
+      "timestamp": "2026-01-08T10:32:54.374Z"
+    },
+    {
+      "questionId": 5382,
+      "error": "Failed to apply change at path content[0].content[1].content[0].text: Cannot set critical field 'text' to empty or whitespace-only string at content[0].content[1].content[0].text. Setting critical component fields to empty/whitespace breaks UI rendering. If you need to remove a component, it must be done through structural changes (not supported). Mark this fix for manual review.",
+      "timestamp": "2026-01-08T10:41:26.660Z"
+    },
+    {
+      "questionId": 5399,
+      "error": "Failed to apply change at path content[0].content: Invalid structure at content[0].content[0]: 'attrs' is missing or null. Original has attrs object (e.g., {\"level\":3}), you must preserve it. Provide: {\"attrs\":{\"level\":3}} not {\"attrs\":null}.",
+      "timestamp": "2026-01-08T11:43:52.836Z"
+    },
+    {
+      "questionId": 6110,
+      "error": "Failed to apply change at path content[0].content[1].content[2].content[5].content[0].attrs.answers: Cannot use 'in' operator to search for 'attrs' in Select",
+      "timestamp": "2026-01-08T13:57:11.239Z"
+    },
+    {
+      "questionId": 7048,
+      "error": "Invalid structural change: Array elements converted to strings at root.content[0].content[0].content - this changes structure. Structural changes must preserve critical keys and types.",
+      "timestamp": "2026-01-08T14:16:38.089Z"
+    },
+    {
+      "questionId": 7051,
+      "error": "Invalid structural change: Array elements converted to strings at root.content[0].content[1].content[1].content - this changes structure. Structural changes must preserve critical keys and types.",
+      "timestamp": "2026-01-08T14:20:17.521Z"
+    },
+    {
+      "questionId": 7063,
+      "error": "Failed to apply change at path content[0].content[2].content[4].content: Type mismatch at content[0].content[2].content[4].content: Cannot replace array with string \"[{\"type\":\"DropdownReactComponent\",\"attrs\":{\"unit\":...\". This is a structural change. Modify individual fields instead. Mark this fix for manual review.",
+      "timestamp": "2026-01-08T14:24:37.555Z"
+    },
+    {
+      "questionId": 7067,
+      "error": "Failed to apply change at path content[0].content[1].content[6].attrs.answers: Cannot use 'in' operator to search for 'answers' in unitlabelanswers[{\"label\":\"D \",\"id\":\"236\",\"checked\":true}]options[{\"id\":\"233\",\"label\":\"A \"},{\"id\":\"234\",\"label\":\"B \"},{\"id\":\"235\",\"label\":\"C \"},{\"id\":\"236\",\"label\":\"D \"}]explanationplaceholderSelect",
+      "timestamp": "2026-01-08T14:27:17.879Z"
+    },
+    {
+      "questionId": 7095,
+      "error": "Failed to apply change at path content[0].content[4].content[2].attrs.answers: Field does not exist at path content[0].content[4].content[2].attrs.answers. Parent path content[0].content[4].content[2].attrs does not exist. Cannot add new fields - only modify existing ones.",
+      "timestamp": "2026-01-08T14:33:45.669Z"
+    },
+    {
+      "questionId": 7105,
+      "error": "Failed to apply change at path content[0].content[1].content[5].content[4].content[3].attrs.answers: Cannot use 'in' operator to search for 'content' in B. shorter",
+      "timestamp": "2026-01-08T14:47:38.402Z"
+    },
+    {
+      "questionId": 7159,
+      "error": "Failed to apply change at path content[0].content[6].content[0].attrs.options: Cannot use 'in' operator to search for 'attrs' in {\"type\":\"DropdownReactComponent\",\"attrs\":{\"unit\":\"\",\"label\":\"\",\"answers\":\"[{\\\"label\\\":\\\"C\\\",\\\"id\\\":\\\"40\\\",\\\"checked\\\":true}]\",\"options\":\"[{\\\"id\\\":\\\"38\\\",\\\"label\\\":\\\"A \\\"},{\\\"id\\\":\\\"39\\\",\\\"label\\\":\\\"B \\\"},{\\\"id\\\":\\\"40\\\",\\\"label\\\":\\\"C \\\"},{\\ \"id\\\":\\\"41\\\",\\\"label\\\":\\\"D \\\"}]\",\"explanation\":\"\",\"placeholder\":\"Select\"}}",
+      "timestamp": "2026-01-08T14:50:32.782Z"
+    },
+    {
+      "questionId": 7183,
+      "error": "Invalid structural change: Array elements converted to strings at root.content[0].content[1].content[0].content - this changes structure. Structural changes must preserve critical keys and types.",
+      "timestamp": "2026-01-08T14:59:48.078Z"
+    },
+    {
+      "questionId": 7292,
+      "error": "Failed to apply change at path content[0].content[1].content: Invalid change instruction at path content[0].content[1].content: newValue is undefined. The AI must provide a valid value for this change. This is likely an AI error in generating the fix.",
+      "timestamp": "2026-01-08T15:08:44.514Z"
+    },
+    {
+      "questionId": 7336,
+      "error": "Invalid structural change: Array elements converted to strings at root.content[0].content[1].content[1].content - this changes structure. Structural changes must preserve critical keys and types.",
+      "timestamp": "2026-01-08T15:20:55.143Z"
+    },
+    {
+      "questionId": 7484,
+      "error": "Failed to apply change at path content[0].content[1].content[5].content[0].attrs.options: Cannot use 'in' operator to search for 'attrs' in DropdownReactComponent",
+      "timestamp": "2026-01-08T15:23:39.132Z"
+    },
+    {
+      "questionId": 7496,
+      "error": "Failed to apply change at path content[0].content: Invalid change instruction at path content[0].content: newValue is undefined. The AI must provide a valid value for this change. This is likely an AI error in generating the fix.",
+      "timestamp": "2026-01-08T15:28:50.246Z"
+    },
+    {
+      "questionId": 7981,
+      "error": "Failed to apply change at path content[0].content[1].content[0].content: Invalid change instruction at path content[0].content[1].content[0].content: newValue is undefined. The AI must provide a valid value for this change. This is likely an AI error in generating the fix.",
+      "timestamp": "2026-01-08T15:30:42.198Z"
+    },
+    {
+      "questionId": 8443,
+      "error": "Cannot read properties of null (reading 'type')",
+      "timestamp": "2026-01-08T15:43:43.493Z"
+    },
+    {
+      "questionId": 8454,
+      "error": "Failed to apply change at path content[0].content[1].content[1].content[6].content[0].attrs.options: Cannot use 'in' operator to search for 'attrs' in {\\\"type\\\":\\\"DropdownReactComponent\\\",\\\"attrs\\\":{\\\"unit\\\":\\\"\\\",\\\"label\\\":\\\"\\\",\\\"answers\\\":\\\"[{\\\\\\\"label\\\\\\\":\\\\\\\"B\\\\\\\",\\\\\\\"id\\\\\\\":\\\\\\\"304\\\\\\\",\\\\\\\"checked\\\\\\\":true}]\\\",\\\"options\\\":\\\"[{\\\\\\\"id\\\\\\\":\\\\\\\"303\\\\\\\",\\\\\\\"label\\\\\\\":\\\\\\\"A \\\\\\\"},{\\\\\\\"id\\\\\\\":\\\\\\\"304\\\\\\\",\\\\\\\"label\\\\\\\":\\\\\\\"B \\\\\\\"},{\\\\\\\"id\\\\\\\":\\\\\\\"305\\\\\\\",\\\\\\\"label\\\\\\\":\\\\\\\"C \\\\\\\"},{\\\\\\\"id\\\\\\\":\\\\\\\"306\\\\\\\",\\\\\\\"label\\\\\\\":\\\\\\\"D \\\\\\\"}]\\\",\\\"explanation\\\":\\\"\\\",\\\"placeholder\\\":\\\"Select\\\"}}",
+      "timestamp": "2026-01-08T15:48:12.122Z"
+    },
+    {
+      "questionId": 10111,
+      "error": "Failed to apply change at path content[0].content[1].attrs.answer: Cannot use 'in' operator to search for 'answer' in null",
+      "timestamp": "2026-01-08T17:01:11.426Z"
+    },
+    {
+      "questionId": 10612,
+      "error": "Failed to apply change at path content[0].content: Invalid change instruction at path content[0].content: newValue is undefined. The AI must provide a valid value for this change. This is likely an AI error in generating the fix.",
+      "timestamp": "2026-01-08T17:27:28.449Z"
+    },
+    {
+      "questionId": 10699,
+      "error": "Cannot read properties of null (reading 'type')",
+      "timestamp": "2026-01-08T17:37:43.757Z"
+    },
+    {
+      "questionId": 10734,
+      "error": "Failed to apply change at path content[0].content[7].content[0].attrs.answers: Cannot use 'in' operator to search for 'attrs' in Select",
+      "timestamp": "2026-01-08T17:41:09.061Z"
+    },
+    {
+      "questionId": 11237,
+      "error": "Failed to apply change at path content[0].content[2].content[1].attrs.answer: Field does not exist at path content[0].content[2].content[1].attrs.answer. Parent path content[0].content[2].content[1].attrs does not exist. Cannot add new fields - only modify existing ones.",
+      "timestamp": "2026-01-08T17:46:00.588Z"
+    },
+    {
+      "questionId": 11582,
+      "error": "Failed to apply change at path content[0].content[5].attrs: Cannot modify field at path content[0].content[5].attrs - the component at this path is null (was removed). If you need to modify this component, ensure it exists in the replacement array.",
+      "timestamp": "2026-01-08T18:05:30.664Z"
+    }
+  ],
+  "skipped": [
+    4004,
+    5102,
+    5387,
+    5621,
+    5623,
+    5637,
+    5641,
+    11812
+  ],
+  "needsReview": [
+    {
+      "questionId": 3971,
+      "reason": "Too many changes detected (11 changes). Expected minimal changes only.",
+      "changeCount": 11,
+      "changes": [
+        "content[0].content[1].content[0].content[0].text: changed",
+        "content[0].content[1].content[0].content[2].text: changed",
+        "content[0].content[1].content[0].content[4].text: changed",
+        "content[0].content[1].content[1].content[0].content[0].text: changed",
+        "content[0].content[1].content[1].content[1].content[0].text: changed",
+        "content[0].content[1].content[1].content[1].content[1].attrs.originalString: changed",
+        "content[0].content[1].content[1].content[1].content[2].text: changed",
+        "content[0].content[1].content[1].content[2].content[0].text: changed",
+        "content[0].content[1].content[1].content[2].content[2].text: changed",
+        "content[0].content[1].content[1].content[3].content[0].text: changed"
+      ],
+      "timestamp": "2026-01-08T10:05:30.251Z"
+    },
+    {
+      "questionId": 5091,
+      "reason": "Fix verification failed after 3 attempts. Attempt 1: The fix is incorrect because option B still lacks a value, and while the text label for the last option was changed to 'E', the dropdown's internal options array was not updated to include 'E', creating a mismatch between the displayed options and the selectable options. The other two issues (incorrect selected answer and malformed fraction answer component) were correctly addressed. | Attempt 2: The fix correctly addressed the duplicate option labels (D changed to E), updated the dropdown options, changed the selected answer to D, and fixed the malformed fraction answer component. However, the fix failed to provide a value for option B, which was a specific instruction in the 'Suggested Fix' and an identified issue. | Critiques: The fix did not provide a value for option B, as suggested. Option B still appears without a corresponding mathematical expression.; While the display label for the last option was changed from 'D' to 'E', the 'options' array within the 'DropdownReactComponent' was not updated to include 'E'. This creates an inconsistency where 'E' is displayed but not available as a selectable option in the dropdown.; The fix did not provide a value for option B, as explicitly stated in the 'Suggested Fix'. Option B remains empty in the fixed question. | Final critiques: The fix did not provide a value for option B, as suggested in the fix description. Option B is still present as text without a corresponding mathematical expression.",
+      "timestamp": "2026-01-08T10:18:19.072Z"
+    },
+    {
+      "questionId": 5200,
+      "reason": "Too many changes detected (11 changes). Expected minimal changes only.",
+      "changeCount": 11,
+      "changes": [
+        "content[0].content[0].content[0].text: changed",
+        "content[0].content[3].content[1].attrs.originalString: changed",
+        "content[0].content[3].content[2].text: changed",
+        "content[0].content[3].content[3].attrs.originalString: changed",
+        "content[0].content[3].content[4].text: changed",
+        "content[0].content[4].content[2].text: changed",
+        "content[0].content[5].content[1].attrs.originalString: changed",
+        "content[0].content[5].content[2].text: changed",
+        "content[0].content[6].content[1].attrs.originalString: changed",
+        "content[0].content[6].content[2].text: changed"
+      ],
+      "timestamp": "2026-01-08T10:25:06.554Z"
+    },
+    {
+      "questionId": 5202,
+      "reason": "No changes identified: No changes identified - current state may already match the fix, or the issue may be a false positive. Marking for review.. Current state may already match the fix, or the audit may be incorrect.",
+      "timestamp": "2026-01-08T10:25:55.514Z"
+    },
+    {
+      "questionId": 5315,
+      "reason": "No changes identified: No changes identified - current state may already match the fix, or the issue may be a false positive. Marking for review.. Current state may already match the fix, or the audit may be incorrect.",
+      "timestamp": "2026-01-08T10:28:52.695Z"
+    },
+    {
+      "questionId": 5619,
+      "reason": "Too many changes detected (11 changes). Expected minimal changes only.",
+      "changeCount": 11,
+      "changes": [
+        "content[0].content[0].content[0].text: changed",
+        "content[0].content[0].content[1].originalString: added",
+        "content[0].content[0].content[2].text: changed",
+        "content[0].content[0].content[3].originalString: added",
+        "content[0].content[0].content[4].text: changed",
+        "content[0].content[1].content: array length changed (3 -> 2)",
+        "content[0].content[1].content[0].text: changed",
+        "content[0].content[1].content[1].originalString: added",
+        "content[0].content[1].content[2]: removed",
+        "content[0].content[2].content[0].text: changed"
+      ],
+      "timestamp": "2026-01-08T11:57:18.393Z"
+    },
+    {
+      "questionId": 5645,
+      "reason": "Too many changes detected (11 changes). Expected minimal changes only.",
+      "changeCount": 11,
+      "changes": [
+        "content[0].content: array length changed (5 -> 3)",
+        "content[0].content[0].content: array length changed (7 -> 4)",
+        "content[0].content[0].content[0].text: changed",
+        "content[0].content[0].content[1].attrs.originalString: changed",
+        "content[0].content[0].content[2].text: changed",
+        "content[0].content[0].content[3].attrs.originalString: changed",
+        "content[0].content[0].content[4]: removed",
+        "content[0].content[0].content[5]: removed",
+        "content[0].content[0].content[6]: removed",
+        "content[0].content[2].content: array length changed (1 -> 2)"
+      ],
+      "timestamp": "2026-01-08T12:27:38.919Z"
+    },
+    {
+      "questionId": 5648,
+      "reason": "Too many changes detected (11 changes). Expected minimal changes only.",
+      "changeCount": 11,
+      "changes": [
+        "content[0].content: array length changed (8 -> 9)",
+        "content[0].content[1].type: changed",
+        "content[0].content[1].attrs: removed",
+        "content[0].content[1].content[0].text: changed",
+        "content[0].content[1].content[2].text: changed",
+        "content[0].content[2].type: changed",
+        "content[0].content[2].attrs: removed",
+        "content[0].content[2].content[0].text: changed",
+        "content[0].content[2].content[2].text: changed",
+        "content[0].content[3].type: changed"
+      ],
+      "timestamp": "2026-01-08T12:35:29.114Z"
+    },
+    {
+      "questionId": 5693,
+      "reason": "Too many changes detected (11 changes). Expected minimal changes only.",
+      "changeCount": 11,
+      "changes": [
+        "content[0].content[0].content: array length changed (8 -> 6)",
+        "content[0].content[0].content[1].originalString: added",
+        "content[0].content[0].content[2].originalString: added",
+        "content[0].content[0].content[3].text: removed",
+        "content[0].content[0].content[3].type: changed",
+        "content[0].content[0].content[3].attrs: added",
+        "content[0].content[0].content[3].originalString: added",
+        "content[0].content[0].content[4].type: changed",
+        "content[0].content[0].content[4].attrs: removed",
+        "content[0].content[0].content[4].text: added"
+      ],
+      "timestamp": "2026-01-08T12:36:38.737Z"
+    },
+    {
+      "questionId": 5706,
+      "reason": "Too many changes detected (16 changes). Expected minimal changes only.",
+      "changeCount": 16,
+      "changes": [
+        "content[0].content[0].content[0].text: changed",
+        "content[0].content[1].content[2].text: changed",
+        "content[0].content[2].content[0].attrs.originalString: changed",
+        "content[0].content[2].content[1].text: removed",
+        "content[0].content[3].content[0].attrs.originalString: changed",
+        "content[0].content[3].content[1].text: removed",
+        "content[0].content[4].content[0].attrs.originalString: changed",
+        "content[0].content[4].content[1].text: removed",
+        "content[0].content[5].content[0].attrs.originalString: changed",
+        "content[0].content[5].content[1].type: changed"
+      ],
+      "timestamp": "2026-01-08T13:36:47.142Z"
+    },
+    {
+      "questionId": 6134,
+      "reason": "Fix verification failed after 3 attempts. Attempt 1: The fix correctly addressed the mathematical contradiction and incompleteness in the definition of R by changing 'If R = 3 - 18 = 12\\div' to 'If R = 3 - 18, then 3R = ?'. However, the issue of the duplicate option 'D. 270' was not resolved. The question still presents 'D. 270' as a standalone paragraph and again as a paragraph containing the dropdown component. | Attempt 2: The fix successfully corrected the mathematical contradiction in the definition of R by changing 'If R = 3 - 18 = 12\\div' to 'If R = 3 - 18'. It also removed the duplicate 'D. 270' text option. However, the critical issue is that the DropdownReactComponent, which serves as the answer input, was replaced by a plain text node containing its serialized JSON attributes. This breaks the question's interactivity and makes it impossible for a user to select an answer. The dropdown component should have been preserved and associated with the correct set of options. | Critiques: The duplicate option 'D. 270' was not removed. The fixed question still contains two instances of 'D. 270' in the options list.; The fix incorrectly removed the interactive DropdownReactComponent, which is essential for answering the question. Instead of preserving the dropdown, its attributes were serialized into a plain text string and inserted into the content, rendering the question unanswerable.; While the duplicate 'D. 270' text was removed, the actual answer input (the dropdown) was not handled correctly, leading to a loss of functionality. | Final critiques: The fix incorrectly converted the 'DropdownReactComponent' into a plain 'text' component, embedding its attributes as a string. This breaks the interactive functionality of the question, making it unanswerable.; The original issue of a duplicate option 'D. 270' was addressed by removing one instance, but the remaining option 'D. 270' now contains a non-functional text representation of the dropdown instead of an actual dropdown component.",
+      "timestamp": "2026-01-08T14:01:31.895Z"
+    },
+    {
+      "questionId": 7053,
+      "reason": "Too many changes detected (16 changes). Expected minimal changes only.",
+      "changeCount": 16,
+      "changes": [
+        "content[0].content[1].content[0].text: changed",
+        "content[0].content[1].content[1].attrs.originalString: changed",
+        "content[0].content[1].content[2].text: changed",
+        "content[0].content[1].content[3].attrs.originalString: changed",
+        "content[0].content[1].content[4].text: changed",
+        "content[0].content[2].content[0].text: changed",
+        "content[0].content[2].content[1].attrs.originalString: changed",
+        "content[0].content[2].content[2].text: changed",
+        "content[0].content[2].content[3].attrs.originalString: changed",
+        "content[0].content[2].content[4].text: changed"
+      ],
+      "timestamp": "2026-01-08T14:22:03.640Z"
+    },
+    {
+      "questionId": 7253,
+      "reason": "Too many changes detected (16 changes). Expected minimal changes only.",
+      "changeCount": 16,
+      "changes": [
+        "content[0].content[1].content[0].content[0].text: changed",
+        "content[0].content[1].content[1].content[1].attrs.originalString: changed",
+        "content[0].content[1].content[1].content[2].text: changed",
+        "content[0].content[1].content[2].content[1].attrs.originalString: changed",
+        "content[0].content[1].content[2].content[2].text: changed",
+        "content[0].content[1].content[3].content[1].attrs.originalString: changed",
+        "content[0].content[1].content[3].content[2].text: changed",
+        "content[0].content[1].content[4].content[1].attrs.originalString: changed",
+        "content[0].content[1].content[4].content[2].text: changed",
+        "content[0].content[1].content[4].content[3].attrs.originalString: removed"
+      ],
+      "timestamp": "2026-01-08T15:05:08.854Z"
+    },
+    {
+      "questionId": 7490,
+      "reason": "Fix verification failed after 3 attempts. Attempt 1: The fix successfully addresses the ambiguity and contradiction in the fraction labeling (A, B, C). Each fraction is now uniquely assigned a label. However, the fix incorrectly removes the interactive TextFieldReactComponent inputs and their associated answers, replacing them with static text. The original problem was about clarifying the fractions to enable verification of the answer, not about removing the answer mechanism itself. This constitutes an unjustified removal of core interactive components and changes the question type. | Attempt 2: The fix successfully clarified the labeling of the fractions (A, B, C), resolving the ambiguity described in the issue. However, it incorrectly removed the interactive TextFieldReactComponent inputs that were originally present for the user to provide their answer. This changes the question from an interactive input type to a static text display, which is a breaking change and not part of the intended fix. The question now lacks any mechanism for a student to input their answer. | Critiques: The fix removes the interactive input fields (TextFieldReactComponent) where the user was expected to provide the ordered fractions. This changes the question from an interactive input-based question to a static display.; The fix also removes the 'answer' attributes associated with the input fields, which contained the correct solution. This was not part of the described issue or suggested fix.; While the ambiguity in fraction labeling is resolved, the removal of the answer input mechanism is an unjustified and unrelated change that alters the fundamental nature of the question.; The fix removed the interactive input fields (TextFieldReactComponent) where the user was supposed to enter the arranged fractions. This fundamentally changes the question from an interactive input type to a static display.; The question now lacks any mechanism for a student to input their answer, which is a breaking change to the question's functionality. | Final critiques: The fix correctly addresses the ambiguity in the fraction labeling by uniquely assigning A, B, and C to the fractions, resolving the conflicting labels and empty slots.; However, the fix introduces a critical new issue: it completely removes the answer input fields (TextFieldReactComponent) from the question. The original question had three input fields for the answer, but the fixed version only contains text '1.', '2.', '3.' within a heading, without any interactive components for the user to provide an answer.",
+      "timestamp": "2026-01-08T15:27:01.484Z"
+    },
+    {
+      "questionId": 8003,
+      "reason": "Fix verification failed after 3 attempts. Attempt 1: The fix successfully separated options B and C, removed the extraneous operator, clarified the ambiguous phrasing for the father's age, and consolidated the redundant sub-questions for both the father and grandfather. However, the fix did not address the logical issue of having two mathematically correct options (A and C) for the first multiple-choice sub-question, which typically expects only one correct answer. This leaves the first sub-question flawed. | Attempt 2: The fix introduced new 'text' nodes and an unrequested change to the mathematical equation of option C. It also did not fully address the multiple-correct-answer issue for the first sub-question. While some consolidation occurred, the specific instruction to change the dropdown input type was not followed, instead opting for removal. | Critiques: The fix did not address the issue of having multiple mathematically correct options (A and C) for the first sub-question. A standard multiple-choice question typically expects only one correct answer, making the current question ambiguous or flawed.; Unjustified 'text' nodes were added before each option (A, B, C, D) in the first sub-question, introducing extraneous content.; The mathematical equation for option C in the first sub-question was changed from 'k - 11 = 4' to 'k + 11 = 4'. This alters the question's content and was not requested by the suggested fix.; The fix did not address the issue of having multiple mathematically correct options (A and C in the original, and potentially A and the modified C in the fix) for the first sub-question, which typically expects a single correct answer.; While the dropdown for the grandfather's age question was removed, the suggested fix was to 'change the answer input type... to a numerical input field', not to remove the component entirely and rely on a duplicate question. | Final critiques: The mathematical expression for option C in the first sub-question was changed from \"k - 11 = 4\" to \"k + 11 = 4\". This is an unjustified modification of the question's content, as the suggested fix only requested correcting the formatting and separation of options B and C, not altering their mathematical meaning. The original \"k - 11 = 4\" is a valid equation for the brother's age, while \"k + 11 = 4\" is not in this context.",
+      "timestamp": "2026-01-08T15:36:19.192Z"
+    },
+    {
+      "questionId": 8403,
+      "reason": "Fix verification failed after 3 attempts. Attempt 1: The fix correctly added the missing answer option (7/10 kg) and updated the correct answer ID in one of the dropdowns. However, it failed to properly format all options, introduced a critical structural error by replacing a Katex component with a raw string, and incorrectly placed multiple dropdown components within answer options, which is a fundamental structural flaw for a single-choice question. | Attempt 2: The fix correctly added 7/10 kg as a new option (C) and updated the main dropdown's answer. It also corrected the formatting for option B and the new option E. However, the formatting for the new option D (which was the original option C, 41/20 kg) is still incorrect. It still contains a `DropdownReactComponent` within its content and is missing the 'kg' unit. | Critiques: The fix introduces new structural issues by having two dropdown components instead of one, and by embedding these dropdowns within answer options (D and E in the fixed version). A dropdown should be a single, separate component for selecting the answer.; The KatexReactComponent for the fraction in option E (originally D) was replaced by a raw string ('\\frac{43}{70}'), which is a structural integrity violation and will likely cause rendering issues.; The content array for option E uses raw strings ('E.', '\\frac{43}{70}', 'kg') instead of proper 'text' and 'KatexReactComponent' nodes, which is a breaking change in the object structure.; Option D (which was original C) is still missing the 'kg' unit at the end. It should be 'D. \\frac{41}{20}kg'.; The `DropdownReactComponent` is still present within the content of option D (which displays \"D. 41/20\"). This component should be removed from this option, as the main dropdown for the question is now in a separate block.; Option D (which displays \"D. 41/20\") is missing the unit \"kg\" after the fraction. | Final critiques: The fix introduces a redundant DropdownReactComponent within option D. There should only be one dropdown for selecting the answer.; Option D (which was originally option C) is still incorrectly formatted; it is missing the unit 'kg' at the end of the fraction.; Option E (which was originally option D) has inconsistent formatting for the text 'E.' and 'kg'. They are represented as plain strings in the content array instead of proper text nodes (e.g., {\"type\": \"text\", \"text\": \"E.\"}). While this might render, it's not structurally consistent with other text elements.",
+      "timestamp": "2026-01-08T15:39:40.037Z"
+    },
+    {
+      "questionId": 8475,
+      "reason": "Too many changes detected (16 changes). Expected minimal changes only.",
+      "changeCount": 16,
+      "changes": [
+        "content[0].content[1].content[0].content[0].text: changed",
+        "content[0].content[1].content[1].content[0].text: changed",
+        "content[0].content[1].content[1].content[1].text: added",
+        "content[0].content[1].content[1].content[2].text: removed",
+        "content[0].content[1].content[2].content[0].text: changed",
+        "content[0].content[1].content[2].content[1].text: added",
+        "content[0].content[1].content[2].content[2].text: removed",
+        "content[0].content[1].content[2].content[3].attrs.originalString: removed",
+        "content[0].content[1].content[2].content[3].attrs.unit: added",
+        "content[0].content[1].content[2].content[3].attrs.label: added"
+      ],
+      "timestamp": "2026-01-08T15:48:33.889Z"
+    },
+    {
+      "questionId": 8477,
+      "reason": "Too many changes detected (16 changes). Expected minimal changes only.",
+      "changeCount": 16,
+      "changes": [
+        "content[0].content[1].content[1].content[0].text: changed",
+        "content[0].content[1].content[1].content[1].attrs.originalString: changed",
+        "content[0].content[1].content[1].content[2].text: added",
+        "content[0].content[1].content[1].content[3].attrs.originalString: changed",
+        "content[0].content[1].content[2].content[0].text: changed",
+        "content[0].content[1].content[2].content[1].attrs.originalString: changed",
+        "content[0].content[1].content[2].content[2].text: added",
+        "content[0].content[1].content[2].content[3].attrs.originalString: changed",
+        "content[0].content[1].content[3].content[0].text: changed",
+        "content[0].content[1].content[3].content[1].attrs.originalString: changed"
+      ],
+      "timestamp": "2026-01-08T15:49:48.346Z"
+    },
+    {
+      "questionId": 8517,
+      "reason": "Too many changes detected (16 changes). Expected minimal changes only.",
+      "changeCount": 16,
+      "changes": [
+        "content[0].content[1].content[2].content[1].text: added",
+        "content[0].content[1].content[2].content[2].attrs.originalString: changed",
+        "content[0].content[1].content[2].content[3].text: changed",
+        "content[0].content[1].content[3].content[0].text: added",
+        "content[0].content[1].content[3].content[1].text: changed",
+        "content[0].content[1].content[3].content[2].attrs.originalString: changed",
+        "content[0].content[1].content[5].content[0].text: removed",
+        "content[0].content[1].content[5].content[0].unit: added",
+        "content[0].content[1].content[5].content[0].label: added",
+        "content[0].content[1].content[5].content[0].answer: added"
+      ],
+      "timestamp": "2026-01-08T15:51:38.917Z"
+    },
+    {
+      "questionId": 9161,
+      "reason": "Too many changes detected (16 changes). Expected minimal changes only.",
+      "changeCount": 16,
+      "changes": [
+        "content[0].content[1].content[1].content[2].text: changed",
+        "content[0].content[1].content[1].content[3].text: added",
+        "content[0].content[1].content[1].content[4].attrs.originalString: removed",
+        "content[0].content[1].content[1].content[4].attrs.unit: added",
+        "content[0].content[1].content[1].content[4].attrs.label: added",
+        "content[0].content[1].content[1].content[4].attrs.answer: added",
+        "content[0].content[1].content[1].content[4].attrs.explanation: added",
+        "content[0].content[1].content[1].content[4].attrs.placeholder: added",
+        "content[0].content[1].content[1].content[4].unit: added",
+        "content[0].content[1].content[1].content[4].label: added"
+      ],
+      "timestamp": "2026-01-08T16:08:42.925Z"
+    },
+    {
+      "questionId": 9180,
+      "reason": "Too many changes detected (16 changes). Expected minimal changes only.",
+      "changeCount": 16,
+      "changes": [
+        "content[0].content[1].content[1].content[0].text: changed",
+        "content[0].content[1].content[1].content[1].attrs.originalString: changed",
+        "content[0].content[1].content[1].content[2].text: changed",
+        "content[0].content[1].content[1].content[3].attrs.originalString: changed",
+        "content[0].content[1].content[1].content[4].text: changed",
+        "content[0].content[1].content[2].content[0].text: changed",
+        "content[0].content[1].content[2].content[1].attrs.originalString: changed",
+        "content[0].content[1].content[2].content[2].text: changed",
+        "content[0].content[1].content[2].content[3].attrs.originalString: changed",
+        "content[0].content[1].content[2].content[4].text: changed"
+      ],
+      "timestamp": "2026-01-08T16:11:11.353Z"
+    },
+    {
+      "questionId": 9181,
+      "reason": "Fix verification failed after 3 attempts. Attempt 1: The fix successfully separated the garbled question text and options into distinct, readable blocks, which addresses the primary issue. However, it introduced a critical regression by setting the 'attrs' of the 'DropdownReactComponent' to 'null'. This will render the dropdown unusable as it loses all its configuration, including the answer and options. This is a breaking change and not justified by the original issue or suggested fix. | Attempt 2: The fix successfully separated the garbled question text and options into distinct, readable blocks, addressing the primary issue of incomprehensibility. However, it inadvertently removed the `DropdownReactComponent`, which is the interactive element for selecting an answer. This makes the question unanswerable, introducing a new critical issue. | Critiques: The 'attrs' property of the 'DropdownReactComponent' was changed from a valid object containing essential information (like 'answers' and 'options') to 'null'. This is a breaking change that will prevent the dropdown from functioning correctly.; The original 'attrs' for the dropdown contained the correct answer and options, which are now lost.; The fix removed the `DropdownReactComponent` which is essential for answering the question. Instead of the functional dropdown, a simple paragraph with the text 'Select' was added, rendering the question unanswerable. | Final critiques: The fix incorrectly removed the functionality of the DropdownReactComponent. Instead of preserving its attributes (like 'answers' and 'options') and placing it in its own block, it was replaced with a simple paragraph containing only the text 'Select'. This renders the question unanswerable as an interactive element.; The original DropdownReactComponent contained the answer choices and the correct answer, which are now completely lost in the fixed version.",
+      "timestamp": "2026-01-08T16:13:14.032Z"
+    },
+    {
+      "questionId": 9512,
+      "reason": "No changes identified: No changes identified - current state may already match the fix, or the issue may be a false positive. Marking for review.. Current state may already match the fix, or the audit may be incorrect.",
+      "timestamp": "2026-01-08T16:15:30.429Z"
+    },
+    {
+      "questionId": 9513,
+      "reason": "No changes identified: No changes identified - current state may already match the fix, or the issue may be a false positive. Marking for review.. Current state may already match the fix, or the audit may be incorrect.",
+      "timestamp": "2026-01-08T16:15:38.857Z"
+    },
+    {
+      "questionId": 9515,
+      "reason": "No changes identified: No changes identified - current state may already match the fix, or the issue may be a false positive. Marking for review.. Current state may already match the fix, or the audit may be incorrect.",
+      "timestamp": "2026-01-08T16:16:26.476Z"
+    },
+    {
+      "questionId": 9555,
+      "reason": "No changes identified: No changes identified - current state may already match the fix, or the issue may be a false positive. Marking for review.. Current state may already match the fix, or the audit may be incorrect.",
+      "timestamp": "2026-01-08T16:17:50.443Z"
+    },
+    {
+      "questionId": 9784,
+      "reason": "Fix requires adding new components (e.g., input fields). Structural additions are not yet supported by the automated fix script. Suggested fix: The mathematical expression needs to be clarified. If the intended expression is P/2 + 2021, the question should be rephrased as: \"If 4P + 13 = 37, then what is the value of P/2 + 2021?\". Additionally...",
+      "timestamp": "2026-01-08T16:33:13.671Z"
+    },
+    {
+      "questionId": 9886,
+      "reason": "Fix verification failed after 3 attempts. Attempt 1: The fix successfully addressed the malformed question text (duplicate options, merged text, incorrect Katex components) and corrected the inconsistent and contradictory explanation. The new explanation is clear, consistent with the cleaned-up question options, and provides the correct calculations and ranking. However, the fix introduced a new issue by removing three of the four required input fields, which is a breaking change to the question's intended interaction and makes it impossible to provide the full ranked answer as requested by the prompt. | Attempt 2: While the malformed/duplicate/merged question text for options A, B, C, D was correctly cleaned up, and the explanation was made consistent with the corrected equations and answer, the fix introduced new issues. There is malformed text and a Katex component in the last paragraph, and the number of input fields was incorrectly reduced from four to one, which changes the question's interaction model and loses parts of the answer. | Critiques: The fix incorrectly reduced the number of input fields from four to one. The question explicitly asks to 'Fill in the blanks with the letters that represent the answers to rank the toys from cheapest to most expensive: __, __, __, __', which requires four distinct input fields.; The single remaining input field has an answer of '\"B\"', which is only the first part of the full ranked answer 'B, D, C, A'. This makes the question unanswerable in its current format.; The fix introduced malformed text and a malformed Katex component in the last paragraph of the question content. Specifically, \"TextFieldReactComponent\" appears as plain text and as the originalString for a Katex component, which is an error.; The fix incorrectly reduced the number of input fields from four to one. The question explicitly asks to \"Fill in the blanks with the letters that represent the answers to rank the toys from cheapest to most expensive: __, __, __, __\", which requires four separate input fields for the four letters. The current single input only captures the first letter of the answer, losing the remaining parts of the solution. | Final critiques: The fix incorrectly reduced the number of input fields from four to one, despite the question explicitly asking to 'Fill in the blanks with the letters that represent the answers to rank the toys from cheapest to most expensive: __, __, __, __', which implies four distinct input fields.; The components that replaced the removed input fields in the last paragraph are malformed (e.g., 'text' components with 'TextFieldReactComponent' as content and a 'KatexReactComponent' with 'originalString: TextFieldReactComponent'), which will render incorrectly or not at all.",
+      "timestamp": "2026-01-08T16:41:59.032Z"
+    },
+    {
+      "questionId": 9946,
+      "reason": "No changes identified: No changes identified - current state may already match the fix, or the issue may be a false positive. Marking for review.. Current state may already match the fix, or the audit may be incorrect.",
+      "timestamp": "2026-01-08T16:46:23.557Z"
+    },
+    {
+      "questionId": 9951,
+      "reason": "No changes identified: No changes identified - current state may already match the fix, or the issue may be a false positive. Marking for review.. Current state may already match the fix, or the audit may be incorrect.",
+      "timestamp": "2026-01-08T16:46:47.337Z"
+    },
+    {
+      "questionId": 10035,
+      "reason": "No changes identified: No changes identified - current state may already match the fix, or the issue may be a false positive. Marking for review.. Current state may already match the fix, or the audit may be incorrect.",
+      "timestamp": "2026-01-08T16:48:53.625Z"
+    },
+    {
+      "questionId": 10042,
+      "reason": "Fix verification failed after 3 attempts. Attempt 1: While the fix correctly adds the missing instruction, it introduces significant structural problems with the input fields. The last heading block is malformed, and the placement of the remaining input field is incorrect, likely breaking the question's interactivity and rendering. | Attempt 2: The fix successfully adds instructions to the question, addressing the original issue of incompleteness. However, it incorrectly removes the TextFieldReactComponent elements, making the question unanswerable. The answers 'A' and 'B' are now static content within a heading, rather than expected inputs. This fundamentally breaks the question's functionality. | Critiques: The fix introduces a structural issue in the last heading block. The content array `[\"__> __\", \"\\\"A\\\"\", \"\\\"B\\\"\"]` contains string literals `\"A\"` and `\"B\"` directly, which are not valid content types (like text nodes or components) for a heading's content, leading to rendering errors.; The placement of the `TextFieldReactComponent` with `answer: \"\\\"B\\\"\"` is incorrect. It is now placed between the two mathematical expressions (A and B) in the second heading block, which alters the intended layout and functionality of the input fields. The original question had two distinct input fields after the expressions.; The fix appears to have lost or broken the second input field. The original question had two `TextFieldReactComponent`s, but the fixed version only explicitly shows one, and the last block is malformed, suggesting the second input is no longer correctly represented.; The fix removes the interactive input fields (TextFieldReactComponent) from the question object. Instead of allowing the user to input answers, the answers (\"A\" and \"B\") are now hardcoded as static text within a heading component.; The question is no longer interactive or answerable by the user, which is a critical breaking change. The original issue was a lack of instructions, not an issue with the input fields themselves. | Final critiques: The fix introduces new critical issues regarding the input fields, making the question unanswerable.; One of the original TextFieldReactComponents (intended for the answer 'A') has been completely removed and replaced by static text within a heading, meaning the user cannot input an answer.; The other TextFieldReactComponent (intended for the answer 'B') has been incorrectly moved and placed between the two mathematical expressions (A and B), which is visually confusing and functionally incorrect.; The final block in the Fixed Question Object, which should contain the input fields, now incorrectly lists the answers '\"A\"' and '\"B\"' as plain text within a heading's content, rather than as interactive input components.",
+      "timestamp": "2026-01-08T16:51:38.401Z"
+    },
+    {
+      "questionId": 10085,
+      "reason": "Fix verification failed after 3 attempts. Attempt 1: The fix partially addressed the issue by removing the confusing 'What is 2 + 2?' text and correcting the format of the answer string from 'null\\frac{441}{444}' to '\\frac{441}{444}'. However, it introduced a critical new error by replacing the mathematical operators ('-', '+', '=') with repeated fractions ('\\frac{443}{444}'), rendering the mathematical expression unreadable and incorrect. Additionally, there are unnecessary and redundant attributes added to several components. | Attempt 2: The fix attempted to remove the unrelated text question and correct the answer format. However, it incorrectly replaced the mathematical operators ('-', '+', '=') with duplicate fraction components, making the mathematical expression incorrect. Additionally, the fixed FractionReactComponent has malformed top-level attributes that conflict with its 'attrs' object, indicating a structural issue. | Critiques: The fix incorrectly replaced the mathematical operators ('-', '+', '=') with repeated instances of the fraction '\\frac{443}{444}'. This completely breaks the original mathematical expression and makes the question unreadable and unanswerable.; The `KatexReactComponent`s that were originally operators now have `originalString: \"\\frac{443}{444}\"` in their `attrs` and also an extraneous `originalString: \"\"` directly on the component, which is structurally incorrect and visually misleading.; The `FractionReactComponent` also has redundant attributes (`unit`, `label`, `answer`, `explanation`, `placeholder`) directly on the component, in addition to being correctly defined within `attrs`.; The mathematical operators ('-', '+', '=') were incorrectly replaced by KatexReactComponents displaying '\\frac{443}{444}'. This fundamentally alters the mathematical expression and makes it nonsensical.; The KatexReactComponents that replaced the operators also have an invalid top-level 'originalString: \"\"' attribute.; The FractionReactComponent has redundant and conflicting top-level attributes (e.g., 'answer: \"null\\\\frac{441}{444}\"') that should only exist within its 'attrs' object. This indicates a structural integrity issue. | Final critiques: The fix introduces new structural errors: several `KatexReactComponent` elements have an `originalString` attribute at the top level of the component, which should be inside the `attrs` object. Additionally, these components have an empty string for `originalString`, making them invalid.; The fix removes the mathematical operators (`-`, `+`, `=`) from the original expression, making the mathematical question incoherent and uninterpretable. It now just displays a series of fractions without any operations.; The fix introduces duplicate `KatexReactComponent` entries for `\\frac{443}{444}` which are not present in the original question and are not justified.; The `FractionReactComponent` still contains duplicate attributes (e.g., `unit`, `label`, `answer`, `explanation`, `placeholder`) at the top level of the component, in addition to being correctly nested within `attrs`. The top-level `answer` attribute is still malformed as `\"null\\\\frac{441}{444}\"`.",
+      "timestamp": "2026-01-08T16:58:11.488Z"
+    },
+    {
+      "questionId": 10094,
+      "reason": "Fix verification failed after 3 attempts. Attempt 1: The fix introduces a new mathematical error by changing the '=' operator to '\\times', which fundamentally changes the question's meaning. The original question was '9 \\times 1\\frac{5}{6} = ?', where '?' was the answer field. The fixed question becomes '9 \\times 1\\frac{5}{6} \\times ? [input]', which is mathematically different and incorrect for the given answer. Additionally, the 'Question Structure' still incorrectly labels '(1 + 5/6)' as an 'operator' instead of a number or expression, failing to address a key part of the issue description. | Attempt 2: The fix correctly removed the ambiguous '?' characters and addressed the mathematical grouping by using '1\\frac{5}{6}'. However, it failed to correct the 'Question Structure' type for '1 + 5/6', which remains 'operator'. Additionally, several unrelated structural changes were introduced, including the removal of a heading component, refactoring of TextFieldReactComponent attributes, and an unnecessary newline in the equals sign's originalString. | Critiques: The fix incorrectly replaces the equals sign (\"=\") with a multiplication sign (\"\\times\") before the input field. This fundamentally alters the mathematical expression from an equation (9 \\times 1\\frac{5}{6} = ?) to an incomplete expression (9 \\times 1\\frac{5}{6} \\times ?), changing the nature of the question and making it mathematically incorrect for the provided answer.; The fix fails to address the issue of the 'Question Structure' incorrectly identifying '1 + 5/6' as an 'operator'. In the 'Fixed Question Structure', it is still categorized as an 'operator' instead of a number or expression, as explicitly stated in the issue description and suggested fix.; The 'Question Structure' still incorrectly identifies '1 + 5/6' as an 'operator' type. The issue description and suggested fix explicitly stated that it should be a number or an expression.; The 'heading' component was removed from the 'Fixed Question Object', changing the visual hierarchy (from a heading to regular text within a segment). This was not part of the issue description or suggested fix.; The 'attrs' property of the 'TextFieldReactComponent' in the 'Fixed Question Object' was changed from an object to 'null', with its contents moved to direct properties of the component. This is an unrelated structural change.; The 'originalString' for the equals sign in the 'Fixed Question Object' was changed from '=' to '=\\n', adding an unnecessary newline character. | Final critiques: The 'Question Structure' still incorrectly identifies '1 + 5/6' as an 'operator' type. The issue description and suggested fix explicitly stated that it should be categorized as a number or expression, not an operator.; The `TextFieldReactComponent` in the fixed object has redundant attributes (answer, explanation, label, placeholder, unit) directly on the component, in addition to being correctly nested within the `attrs` object. This is an unnecessary change.; The `originalString` for the final `KatexReactComponent` changed from `\"=\"` to `\"=\\n\"`, introducing an unnecessary newline character.",
+      "timestamp": "2026-01-08T16:59:52.371Z"
+    },
+    {
+      "questionId": 10118,
+      "reason": "Fix verification failed after 3 attempts. Attempt 1: The fix correctly addressed the reordering of options and the content of options B and C. However, it introduced a critical structural error by removing the 'DropdownReactComponent' and replacing it with an array of its 'answers' attribute value. This breaks the question's renderability and violates structure integrity. | Attempt 2: The fix successfully corrected the options and the selected answer to the mathematically correct state. However, the implementation of the fix did not align with the specific steps outlined in the 'Suggested Fix'. For instance, the suggested fix asked to remove `content[0].content[2]` and modify `content[0].content[3]` to become option B, but the fix instead modified `content[0].content[2]` to become option B and `content[0].content[3]` to become option C. Additionally, the removal of `content[0].content[4]` was not explicitly mentioned in the suggested fix. While the final state is correct, the process deviated from the instructions. | Critiques: The fix incorrectly removed the entire 'DropdownReactComponent' from the question object. Instead of updating the 'answers' attribute within the existing 'DropdownReactComponent', the component itself was replaced by an array containing only the new answer value.; The 'content' array of a 'SegmentReactComponent' cannot directly contain an array like `[{\"label\": \"B\", \"id\": \"226\", \"checked\": true}]`. This is a structural error that will prevent the question from rendering correctly.; The suggested fix instructed to remove the paragraph element at `content[0].content[2]` (which contained 'B.'), but instead, this element was modified to become option B (`B. 1 5/6`).; The suggested fix instructed to modify the paragraph element at `content[0].content[3]` to change its text from 'C.' to 'B.' and its Katex value to `1\\frac{5}{6}`. This was not done; the text remained 'C.' and the Katex value was changed to `1\\frac{1}{6}`.; The suggested fix did not explicitly mention the removal of the paragraph element at `content[0].content[4]` (the duplicate 'C. 1 1/6' option), although this removal was necessary and correct for the final state. | Final critiques: The `DropdownReactComponent` at `content[0].content[5].content[2]` in the original object was incorrectly converted into a plain `text` node containing a JSON string in the fixed object (`content[0].content[3].content[2]`). This will prevent the dropdown from rendering and functioning correctly.; The suggested fix outlined specific modifications to the paragraph element at `content[0].content[3]` (original option C) to become the new option B. However, in the fixed object, the original `content[0].content[3]` and `content[0].content[4]` (the two 'C' options) were completely removed, leading to an unexpected and incomplete set of options (A, B, D instead of A, B, C, D).",
+      "timestamp": "2026-01-08T17:06:18.252Z"
+    },
+    {
+      "questionId": 10214,
+      "reason": "Fix verification failed after 3 attempts. Attempt 1: The fix successfully clarified the ambiguous phrasing and placement of quantities in the question text, aligning it with the intended calculation. However, it introduced a critical regression by changing the answer input field (`TextFieldReactComponent`) into a display component (`KatexReactComponent`), rendering the question unanswerable. This is a breaking change and not part of the intended fix for the question's ambiguity. | Attempt 2: The textual ambiguity regarding the quantities sold and added has been resolved, and the problem statement now correctly leads to the provided answer. However, the `TextFieldReactComponent` (user input) was replaced by a `KatexReactComponent` displaying the answer, which fundamentally changes the question's interactive nature. The original question was designed for user input, and this change alters its intended functionality without justification in the issue description or suggested fix. | Critiques: The fix incorrectly replaced the `TextFieldReactComponent` (an input field for the answer) with a `KatexReactComponent` (a display component). This makes the question unanswerable for the user.; The `originalString` for the answer in the `KatexReactComponent` is `\"2 19/20\"`. If it were intended to be a display of the answer, it should be formatted as a proper LaTeX string for a mixed fraction, e.g., `2\\frac{19}{20}`.; The fix correctly addresses the ambiguity in the problem statement by clarifying which quantity is sold and which is added, making the text consistent with the provided answer.; However, the fix incorrectly replaces the `TextFieldReactComponent` (an input field for the user to provide an answer) with a `KatexReactComponent` that *displays* the answer. This changes the nature of the question from an interactive problem-solving task to a statement that includes the solution, which is a breaking change in functionality and not part of the described issue or suggested fix. | Final critiques: The fix incorrectly changed the answer input field (TextFieldReactComponent) into a display component (KatexReactComponent). The original question required the user to input the answer, but the fixed version now displays the answer as part of the question.; The suggested fix only addressed rewriting the question text for clarity, not altering the type of the answer component.",
+      "timestamp": "2026-01-08T17:11:05.667Z"
+    },
+    {
+      "questionId": 10534,
+      "reason": "Fix requires adding new components (e.g., input fields). Structural additions are not yet supported by the automated fix script. Suggested fix: Add a clear question prompt that instructs the user on what to select from the given list of geometric shapes. Ensure all options in the dropdown correspond to options presented in the question text (...",
+      "timestamp": "2026-01-08T17:19:52.236Z"
+    },
+    {
+      "questionId": 11290,
+      "reason": "Too many changes detected (16 changes). Expected minimal changes only.",
+      "changeCount": 16,
+      "changes": [
+        "content[0].content[0].content[0].text: changed",
+        "content[0].content[1].content[0].text: changed",
+        "content[0].content[1].content[1].attrs.originalString: changed",
+        "content[0].content[1].content[2].text: changed",
+        "content[0].content[1].content[3].attrs.originalString: changed",
+        "content[0].content[2].content[0].text: changed",
+        "content[0].content[2].content[1].attrs.originalString: changed",
+        "content[0].content[2].content[2].text: changed",
+        "content[0].content[2].content[3].attrs.originalString: changed",
+        "content[0].content[3].content[0].text: changed"
+      ],
+      "timestamp": "2026-01-08T17:51:26.208Z"
+    },
+    {
+      "questionId": 11295,
+      "reason": "Too many changes detected (16 changes). Expected minimal changes only.",
+      "changeCount": 16,
+      "changes": [
+        "content[0].content[0].content[0].text: removed",
+        "content[0].content[0].content[0].content: added",
+        "content[0].content[0].content[1].content: added",
+        "content[0].content[0].content[1].KatexReactComponent: added",
+        "content[0].content[0].content[2].text: removed",
+        "content[0].content[0].content[2].content: added",
+        "content[0].content[0].content[2].KatexReactComponent: added",
+        "content[0].content[0].content[3].content: added",
+        "content[0].content[0].content[3].KatexReactComponent: added",
+        "content[0].content[0].content[4].text: removed"
+      ],
+      "timestamp": "2026-01-08T17:59:29.095Z"
+    },
+    {
+      "questionId": 11457,
+      "reason": "Fix verification failed after 3 attempts. Attempt 1: The fix successfully addresses the conflicting information, awkward number insertion, and repeated question text in the main question body. The explanation *within the 'attrs' object* of the TextFieldReactComponent is also correctly updated to match the question and answer. However, the TextFieldReactComponent itself is malformed, containing duplicate attributes outside its 'attrs' object. Crucially, the 'explanation' attribute duplicated outside 'attrs' still holds the *original, incorrect* explanation, making the fix incomplete and introducing a structural error. | Attempt 2: The fix successfully addresses all the issues described in the problem statement, including resolving conflicting information, improving the flow of the question text, removing repetition, and correcting the explanation to match the answer. However, the TextFieldReactComponent in the fixed object introduces redundant attributes (unit, label, answer, explanation, placeholder) directly on the component node, which are already correctly defined within its 'attrs' object. This is an unnecessary structural change not related to the described fix and could potentially lead to rendering issues or invalid JSON schema. | Critiques: The TextFieldReactComponent in the Fixed Question Object contains duplicate attributes (unit, label, answer, explanation, placeholder) directly under the component, in addition to being correctly nested within the 'attrs' object. This creates malformed JSON.; The 'explanation' attribute duplicated outside the 'attrs' object still contains the original, incorrect explanation (\"12 1/3 - 1 2/7 x 5\"), which contradicts the corrected explanation inside 'attrs' (\"(12 1/2) - (1 2/7) * 5\"). This indicates an incomplete application of the fix for the explanation.; The TextFieldReactComponent in the fixed object contains duplicated attributes (unit, label, answer, explanation, placeholder) directly on the component node, in addition to them being correctly placed within the 'attrs' object. These redundant attributes are an unnecessary addition and a structural inconsistency. | Final critiques: The TextFieldReactComponent has redundant attributes (unit, label, answer, explanation, placeholder) directly under its node, in addition to being correctly placed within the 'attrs' object.; The redundant 'explanation' attribute (outside the 'attrs' object) still contains the old, incorrect explanation ('12 1/3 - 1 2/7 x 5'), which conflicts with the corrected explanation inside 'attrs'.",
+      "timestamp": "2026-01-08T18:01:39.747Z"
+    },
+    {
+      "questionId": 11601,
+      "reason": "Fix verification failed after 3 attempts. Attempt 1: The fix correctly added the definition for K. However, it failed to fully clarify the ambiguous notation in options A and B, introduced significant structural errors and a mathematical change in option D, and did not address the incorrect type labeling in the 'Question Structure' for mathematical terms. The question is not renderable as fixed. | Attempt 2: The fix correctly addresses the ambiguity of 'K' by defining it as a positive integer and clarifies the unknown variable as 'x' for options A, B, and C. It also merges the mathematical components into single Katex expressions for options A, B, and C, resolving the inconsistency for those. However, option D remains problematic: the mathematical notation is still ambiguous, the components are still split in both the object and structure, and `K/2` is still incorrectly labeled as an 'operator' in the structure. Therefore, the fix is incomplete. | Critiques: The notation \"K/3x\" in options A and B is still ambiguous. It is unclear whether it represents \"(K/3) * x\" or \"K / (3 * x)\".; Option D in the Fixed Question Object has severe structural issues: \"\\\\frac{K}{2}\" and \" + 5 + x = -4\" are plain strings in the content array of a paragraph, not properly wrapped in KatexReactComponent or text components. This will likely cause rendering issues.; The equation in option D was changed from \"5 + _ = -4\" to \" + 5 + x = -4\", which alters the mathematical problem.; The 'Question Structure' still incorrectly labels \"K/3x\" and \"K/25\" as 'type: \"operator\"' for options A, B, and C. This issue was not addressed.; Option D still has ambiguous mathematical notation because the term `K/2` is presented separately from `5 + x = -4`, making it unclear how they relate to form a single equation (e.g., is it `(K/2)x + 5 = -4` or something else?).; The inconsistency between the 'Question Text' and 'Question Structure' persists for option D, as the mathematical expression is split across a `KatexReactComponent` and a `text` component in the object, and across an `operator` and `text` block in the structure.; The 'Question Structure' still incorrectly labels `K/2` as an \"operator\" in option D, which is a mathematical term or coefficient, not a standard operator. | Final critiques: The fix introduces a severe breaking change in option D. The 'KatexReactComponent' and 'DropdownReactComponent' for option D were completely removed from the 'Fixed Question Object' and replaced by plain text strings. This makes option D unrenderable and removes the interactive answer mechanism.; The 'Question Structure' still incorrectly labels mathematical terms like 'K/3x' and 'K/2x' as 'operator' types. The suggested fix explicitly requested to 'Correct the type labeling in the 'Question Structure' to accurately reflect mathematical terms or expressions instead of incorrect 'operator' types', which was not implemented.",
+      "timestamp": "2026-01-08T18:12:23.300Z"
+    },
+    {
+      "questionId": 11813,
+      "reason": "No changes identified: No changes identified - current state may already match the fix, or the issue may be a false positive. Marking for review.. Current state may already match the fix, or the audit may be incorrect.",
+      "timestamp": "2026-01-09T00:04:35.475Z"
+    }
+  ],
+  "lastUpdated": "2026-01-09T00:06:50.885Z"
+}

@@ -1,0 +1,73 @@
+.element-dropdown-input {
+
+	.MuiInputBase-root {
+		&:not(.Mui-disabled) {
+			.MuiCircularProgress-root {
+				background-color: white;
+			}
+		}
+	}
+
+	.MuiCircularProgress-root {
+		display: flex;
+		justify-self: flex-end;
+		align-self: center;
+		position: absolute;
+		right: 2rem;
+		padding: 0.5rem;
+		z-index: 10;
+		border-radius: 100%;
+	}
+
+	&-options {
+	}
+
+	&-option-select-all {
+		padding: 0.25rem 0rem;
+		padding-left: 16px;
+		box-sizing: border-box;
+		position: static;
+		top: 0;
+		font-weight: 700;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $color-background-hover;
+		}
+	}
+
+	&-float-action{
+		position: absolute;
+		bottom: 1rem;
+
+	}
+
+	&.use-multiple {
+		.MuiInputBase-root {
+			display: grid;
+			row-gap: 0.5rem;
+
+			input {
+				width: 100%;
+			}
+
+			.element-dropdown-input-wrap-chip {
+				display: flex;
+				flex-direction: row;
+				overflow: auto;
+				@include scroll-custom;
+				cursor: context-menu;
+				align-items: center;
+
+				.MuiChip-root {
+					justify-content: space-between;
+				}
+
+				&-length {
+					margin-left: 0.5rem;
+					margin-top: 0rem;
+				}
+			}
+		}
+	}
+}

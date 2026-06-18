@@ -1,0 +1,18 @@
+.calendar-with-activity {
+	background: pink;
+
+	.days {
+		background-color: lightcoral;
+
+		&.selected {
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background: #00be2a;
+		}
+	}
+
+	.tooltip {
+		background: white;
+	}
+}

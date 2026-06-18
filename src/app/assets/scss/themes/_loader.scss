@@ -1,0 +1,28 @@
+#__next-build-watcher {
+  display: none !important;
+}
+
+#nprogress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10 !important;
+
+  .bar {
+    background: $color-primary !important;
+    height: 5px !important;
+  }
+
+  .peg {
+    box-shadow: 0 0 10px $color-primary, 0 0 5px $color-primary !important;
+  }
+
+  .spinner {
+    display: none !important;
+  }
+}
+
+.MuiBackdrop-root {
+  top: 5px !important;
+}

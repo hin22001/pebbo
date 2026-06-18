@@ -1,0 +1,45 @@
+.elements-input-number{
+  &-content{
+
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    background-color: $color-primary;
+    border-radius: 1rem;
+    align-items: center;
+    justify-items: center;
+    border: 1px solid white;
+
+  }
+
+  &-wrap{
+    &-minus{
+      *{
+        color: white;
+
+      }
+
+    }
+    &-input{
+      background-color: white;
+
+      input{
+        text-align: center;
+        @include font-title;
+        font-size: 1.5rem;
+        padding: .5rem 1rem;
+      }
+
+      .MuiOutlinedInput-notchedOutline{
+        border: unset;
+      }
+
+    }
+    &-plus{
+      *{
+        color: white;
+      }
+
+    }
+  }
+
+}

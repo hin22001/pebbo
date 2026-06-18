@@ -1,0 +1,31 @@
+.pagination{
+	justify-content: center;
+	span{
+		
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0rem .2rem;
+
+		width: 5rem;
+		height: 5.5rem;
+
+		background-color: $color-grey-light;
+		font-size: 2rem;
+
+		cursor: pointer;
+
+		&:hover{
+			background-color: $color-grey-light-accent;
+		}
+	}
+	.no{
+		@include font-face($font-primary, 1rem, bold, normal, normal);
+		justify-content: center;
+
+		&.active{
+			color: white;
+			background-color: $color-orange;
+		}
+	}
+}

@@ -1,0 +1,508 @@
+@mixin rich-text-rule {
+  > * + * {
+    margin-top: 0.75em;
+  }
+
+  ul,
+  ol {
+    padding: 0 2rem;
+  }
+
+  ul {
+    list-style: circle;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.1;
+  }
+
+  code {
+    background-color: rgba(#616161, 0.1);
+    color: #616161;
+  }
+
+  pre {
+    background: #0d0d0d;
+    color: #fff;
+    font-family: "JetBrainsMono", monospace;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+
+    code {
+      color: inherit;
+      padding: 0;
+      background: none;
+      font-size: 0.8rem;
+    }
+  }
+
+  img {
+    // max-width: 100%;
+    // height: auto;
+  }
+
+  hr {
+    margin: 1rem 0;
+  }
+
+  blockquote {
+    padding-left: 1rem;
+    border-left: 2px solid rgba(#0d0d0d, 0.1);
+  }
+}
+
+.section-rich-text {
+  max-width: 90vw;
+  width: 100%;
+  height: 100%;
+  &-title {
+    font-weight: 600;
+  }
+  &-content {
+    // @include card;
+    padding: 2rem;
+    // background-color: #f1fbff;
+    height: 100%;
+    margin: 0.5rem !important;
+    background-color: #f6f9ff;
+
+    .element-icon-popover {
+      margin-bottom: 1.5rem;
+    }
+    .Mui-disabled {
+      &.Mui-error {
+        fieldset {
+          border-color: #d32f2f;
+        }
+      }
+      &.MuiInputBase-colorSuccess {
+        .MuiFormHelperText-root {
+          color: green;
+        }
+        fieldset {
+          border-color: green;
+        }
+      }
+    }
+    .helper-text {
+      &-success {
+        color: green;
+      }
+      &-error {
+      }
+    }
+
+    .section-rich-text-extensions-image-svg-component {
+      .image-fit-content img {
+        width: fit-content !important;
+        height: fit-content !important;
+        max-width: 100%;
+      }
+    }
+  }
+
+  &-section-menu-bar {
+    .fraction-input-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .fraction-whole-number {
+      width: 50px; /* Adjust width as necessary */
+    }
+
+    .fraction {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .fraction-numerator,
+    .fraction-denominator {
+      text-align: center;
+      width: 50px; /* Adjust width as necessary */
+    }
+
+    .fraction-bar {
+      width: 50px; /* Adjust width as necessary */
+      border-top: 1px solid black;
+    }
+
+    #fraction-ask-potter-icon {
+      width: 56px !important;
+      height: 56px !important;
+      min-width: 56px !important;
+      min-height: 56px !important;
+      max-width: 56px !important;
+      max-height: 56px !important;
+    }
+  }
+
+  &-editor {
+    @include rich-text-rule;
+    .element-dropdown-input {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+  .ProseMirror {
+    min-height: 15rem;
+    height: auto;
+    overflow: visible;
+    padding-right: 0.3rem; // for scroll bar
+
+    &-focused {
+      border: unset;
+      outline: unset;
+    }
+  }
+
+  &-ico-wrong-question {
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+
+  &-correct-answer {
+    border: 1px solid rgba(0, 205, 210, 0.3) !important;
+    background-color: rgba(0, 205, 210, 0.05) !important;
+    color: #00cdd2 !important;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 48px;
+    min-width: 200px;
+  }
+
+  &-explanation {
+    border: 1px solid rgba(131, 100, 255, 0.3) !important;
+    background-color: rgba(131, 100, 255, 0.05) !important;
+    color: #8264ff !important;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    min-height: 48px;
+    min-width: 200px;
+  }
+
+  &-btn-ai {
+    background-color: #8264ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    min-width: fit-content;
+    border-radius: 28px;
+    cursor: pointer;
+    margin-left: 1rem !important;
+    flex-direction: row;
+  }
+
+  &-modal {
+    &-header {
+      background-color: #ff5000;
+      border-radius: 14.4px 14.4px 0px 0px; // 12 * 1.2
+      display: flex;
+      justify-content: space-between;
+      padding: 0.9rem; // 0.75 * 1.2
+      flex-direction: row;
+    }
+
+    &-chat {
+      &-wrapper {
+        margin: 0.9rem; // 0.75 * 1.2
+        height: 360px; // 300 * 1.2
+        overflow-y: auto;
+      }
+
+      &-wrapper::-webkit-scrollbar {
+        height: 6px; // 5 * 1.2
+        width: 12px; // 10 * 1.2
+      }
+
+      &-wrapper::-webkit-scrollbar-track {
+        background: #fff;
+      }
+
+      &-wrapper::-webkit-scrollbar-thumb {
+        background-color: #e6e6e6;
+        border-radius: 12px; // 10 * 1.2
+        border: 3.6px solid #fff; // 3 * 1.2
+      }
+
+      &-wrapper::-webkit-scrollbar-thumb:hover {
+        background: #e6e6e6;
+      }
+
+      &-buble {
+        max-width: 324px; // 270 * 1.2
+        border-radius: 10.8px; // 9 * 1.2
+        padding: 0.45rem; // 0.375 * 1.2
+        margin-top: 4.5px; // 3.75 * 1.2
+        position: relative;
+
+        // Duolingo-style ponytail for left-side bubbles (pointing to mascot)
+        &-left {
+          &::before {
+            content: "";
+            position: absolute;
+            left: -10px; // Position outside the bubble on the left
+            bottom: 10px; // Position from bottom - adjust to match Duolingo style
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 8px 10px 8px 0; // Creates triangle pointing left
+            border-color: transparent var(--bubble-bg-color) transparent
+              transparent;
+            // The right border gets the bubble color, creating a left-pointing triangle
+          }
+        }
+      }
+
+      &-txt {
+        color: rgba(114, 114, 114, 0.9); // Improved contrast
+        font-size: 16.8px; // 14 * 1.2
+        font-weight: 400;
+        text-align: left;
+        line-height: 1.5; // Improved readability
+
+        // Markdown-specific styling - scaled for better readability
+        p {
+          margin: 0;
+          line-height: 1.6; // Improved line height
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          margin: 0.6em 0 0.3em 0; // 0.5 * 1.2, 0.25 * 1.2
+          line-height: 1.3; // Improved line height
+          color: rgba(64, 64, 64, 0.95); // Better contrast for headers
+        }
+
+        code {
+          background-color: rgba(0, 0, 0, 0.08);
+          padding: 0.15em 0.3em; // 0.125 * 1.2, 0.25 * 1.2
+          border-radius: 0.3em; // 0.25 * 1.2
+          font-size: 0.9em; // Slightly larger for readability
+          border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        pre {
+          background-color: rgba(0, 0, 0, 0.06);
+          padding: 0.6em; // 0.5 * 1.2
+          border-radius: 0.3em; // 0.25 * 1.2
+          margin: 0.6em 0; // 0.5 * 1.2
+          overflow-x: auto;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        ul,
+        ol {
+          margin: 0.6em 0; // 0.5 * 1.2
+          padding-left: 1.8em; // 1.5 * 1.2
+        }
+
+        li {
+          margin: 0.3em 0; // 0.25 * 1.2
+          line-height: 1.4;
+        }
+
+        blockquote {
+          border-left: 3.6px solid rgba(114, 114, 114, 0.4); // 3 * 1.2, better contrast
+          padding-left: 0.9em; // 0.75 * 1.2
+          margin: 0.6em 0; // 0.5 * 1.2
+          font-style: italic;
+          background-color: rgba(114, 114, 114, 0.05);
+          padding: 0.6em 0.9em;
+          border-radius: 0.3em;
+        }
+
+        strong {
+          font-weight: 600;
+          color: rgba(64, 64, 64, 0.95); // Better contrast
+          font-size: inherit !important; // Ensure font size inheritance
+        }
+
+        em {
+          font-style: italic;
+          color: rgba(84, 84, 84, 0.9);
+          font-size: inherit !important; // Ensure font size inheritance
+        }
+
+        // Ensure all child elements inherit font size
+        * {
+          font-size: inherit !important;
+        }
+
+        // Ensure text doesn't break the bubble layout
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+
+      &-send-wrapper {
+        background-color: rgba(255, 80, 0, 0.05);
+        border: 1px solid rgba(255, 80, 0, 0.3);
+        border-radius: 10.8px; // 9 * 1.2
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 0.45rem; // 0.375 * 1.2
+        padding-right: 0.45rem; // 0.375 * 1.2
+        min-height: 54px; // 45 * 1.2
+        justify-content: space-between;
+        margin: 0.9rem; // 0.75 * 1.2
+        margin-top: 0rem;
+      }
+
+      &-btn-send {
+        background-color: #ff5000;
+        width: 39.6px; // 33 * 1.2
+        height: 39.6px; // 33 * 1.2
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 7.2px; // 6 * 1.2
+      }
+
+      &-send-input {
+        border: none;
+        outline: none;
+        background: transparent;
+        width: 100%;
+        font-size: 16px; // Better readability
+        padding: 0.3rem 0; // Added vertical padding
+        color: rgba(64, 64, 64, 0.9); // Better contrast
+
+        &::placeholder {
+          color: rgba(114, 114, 114, 0.7);
+          font-size: 15px;
+        }
+      }
+
+      &-template {
+        &-wrapper {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-end;
+          justify-content: flex-end;
+          margin-bottom: 12px; // 10 * 1.2
+          padding-left: 0.9rem; // 0.75 * 1.2
+          padding-right: 0.9rem; // 0.75 * 1.2
+        }
+
+        &-box {
+          padding: 6px; // 5 * 1.2
+          border: 1px solid rgba(114, 114, 114, 0.4); // Better contrast
+          border-radius: 6px; // 5 * 1.2
+          margin-left: 3.6px; // 3 * 1.2
+          cursor: pointer;
+          font-size: 14.4px; // 12 * 1.2 (estimated base)
+          transition: all 0.2s ease; // Smooth hover effect
+
+          &:hover {
+            background-color: rgba(255, 80, 0, 0.05);
+            border-color: rgba(255, 80, 0, 0.3);
+          }
+        }
+      }
+    }
+  }
+
+  // Speaker Icon Positioned next to Question ID
+  .section-rich-text-speaker-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+  }
+
+  .section-rich-text-speaker-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    background-color: rgba(0, 205, 210, 0.1);
+    padding: 2px 4px;
+    borderradius: 4px;
+    border: 1px solid #00cdd2;
+    font-size: 18px;
+    transition:
+      transform 0.2s ease,
+      background-color 0.2s ease;
+
+    &:hover {
+      transform: scale(1.15);
+      background-color: rgba(0, 205, 210, 0.2);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+
+    // Active/Speaking state
+    &-speaking {
+      animation: speaker-pulse 1s ease-in-out infinite;
+    }
+  }
+}
+
+// Keyframe animation for speaker icon
+@keyframes speaker-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+// Segment speaker icon styles
+.rich-text-segment-component {
+  position: relative;
+
+  .segment-speaker-icon {
+    position: absolute;
+    top: 0px;
+    right: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 6px;
+    background-color: rgba(0, 205, 210, 0.1);
+    border: 1px solid #00cdd2;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+    z-index: 10;
+    user-select: none;
+
+    &:hover {
+      transform: scale(1.1);
+      background-color: rgba(0, 205, 210, 0.2);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}

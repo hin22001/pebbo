@@ -1,0 +1,19 @@
+.element-date-picker-range{
+  .MuiIconButton-root{
+    z-index: 10;
+    svg{
+      background-color: white;
+    }
+  }
+  &-popover-calendar{
+    .MuiPaper-root{
+      border-radius: 1rem;
+    }
+    .rdrDateDisplayWrapper{
+      display: none;
+    }
+    .rdrMonthAndYearWrapper{
+      padding-top: unset;
+    }
+  }
+}

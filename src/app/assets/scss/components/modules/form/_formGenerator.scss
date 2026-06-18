@@ -1,0 +1,30 @@
+.module-form-generator {
+  .MuiTypography-root {
+    font-weight: 600;
+  }
+
+  &-wrap-button {
+    button {
+      width: 100%;
+    }
+  }
+
+  &-field {
+    &-chip-stack {
+      display: grid;
+
+      &-tags {
+        overflow: auto;
+        @include scroll-custom;
+      }
+
+      .MuiInputBase-root {
+        display: grid;
+      }
+
+      .MuiAutocomplete-input {
+        width: 100% !important;
+      }
+    }
+  }
+}

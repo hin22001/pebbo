@@ -1,0 +1,34 @@
+.template-home-page {
+  align-items: center;
+  display: grid;
+  &-content {
+  }
+
+  &-header{
+  }
+  &-title.MuiTypography-root{
+    font-weight: 700;
+  }
+  
+  &-summary{
+    .element-card{
+      width: 100%;
+      max-width: 400px;
+    }
+    .MuiChip-root{
+      width: fit-content;
+    }
+  }
+  
+  &-charts{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    .module-chart{
+      &:nth-child(3){
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+    }
+  }
+}

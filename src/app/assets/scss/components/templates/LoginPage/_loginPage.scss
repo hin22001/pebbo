@@ -1,0 +1,37 @@
+.template-login-page {
+  display: grid;
+
+  .login-parent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(116.82deg, #FDFCF9 0%, #F6F6FF 48.97%, #EEF8F6 100%);
+  }
+  
+  
+  .login-page-section {
+    align-content: stretch;
+    width: 100%;
+    max-width: 1000px;
+  }
+  .MuiCollapse-root.MuiCollapse-vertical.login-page-section{
+    background: transparent;
+  }
+  .form-label{
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .role-link, .use-link{
+    color: rgba(114, 114, 114, .7);
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .primary-text{
+    color: #f05724;
+  }
+  .text-left{
+    text-align: left;
+  }
+
+}

@@ -1,0 +1,19 @@
+.element-date-picker-range-full {
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  border-radius: 1rem;
+  padding: 1rem 1rem 0.5rem;
+  box-sizing: border-box;
+
+  .rdrDateDisplayWrapper {
+    // border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+
+  &.error {
+    border-color: #d32f2f;
+    .element-date-picker-range-full-header {
+      // background-color: #ffe4e4;
+    }
+
+  }
+}

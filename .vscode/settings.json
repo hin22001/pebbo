@@ -1,0 +1,13 @@
+{
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always"
+  },
+  "editor.formatOnSave": true, 
+  "files.autoSave": "onFocusChange",
+  "eslint.format.enable": false,
+  "prettier.tabWidth": 2,
+  "editor.tabSize": 2,
+  
+}

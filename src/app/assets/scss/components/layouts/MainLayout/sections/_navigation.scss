@@ -1,0 +1,258 @@
+.main-layout-section-navigation {
+  $className: "main-layout-section-navigation";
+  border-right: 1px solid $color-border;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &-logo {
+    padding: 1rem;
+    box-sizing: border-box;
+    max-width: 10rem;
+
+    &-link {
+      max-width: 6rem;
+      width: 6rem;
+    }
+
+    &-link-mini {
+      max-width: 2rem;
+      width: 2rem;
+    }
+
+    &-help {
+      max-width: 17px;
+      width: 17px;
+      margin-left: 20px;
+    }
+
+    &-wrapper-inner {
+      display: flex;
+      align-items: center;
+    }
+
+    &-wrapper {
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &-arrow {
+    &-wrapper {
+      width: 30px;
+      height: 30px;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      border-radius: 15px;
+      border: 1px solid #eff5ff;
+      margin-right: -2rem;
+    }
+  }
+
+  &-content {
+    &-menu {
+      margin-left: -2rem;
+      width: 150px;
+
+      &:hover {
+        background-color: unset;
+      }
+
+      &-wrapper {
+        display: flex;
+        align-items: center;
+        width: 90%;
+
+        &.active,
+        &:hover {
+          border: 1px solid $color-primary;
+          border-radius: 5px;
+          background-color: unset;
+
+          .MuiTypography-root {
+            font-weight: 400;
+            color: $color-primary;
+          }
+        }
+      }
+
+      // == single type navigation ==
+      .MuiTypography-root {
+        font-weight: 400;
+        font-size: 16px;
+        color: #a6a8ab;
+      }
+
+      // width: 115%;
+
+      &:last-child {
+        // margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &-list {
+    &-menu {
+      width: 90%;
+
+      &:hover {
+        background-color: unset;
+      }
+
+      .MuiTypography-root {
+        font-weight: 400;
+        font-size: 16px;
+        color: #a6a8ab;
+      }
+
+      .MuiButtonBase-root {
+        &.active {
+          .MuiTypography-root {
+            font-weight: 400;
+            color: $color-primary;
+            font-size: 16px;
+          }
+        }
+      }
+
+      &.active,
+      &:hover {
+        border: 1px solid $color-primary;
+        border-radius: 5px;
+        background-color: unset;
+
+        .MuiTypography-root {
+          font-weight: 400;
+          color: $color-primary;
+        }
+      }
+    }
+
+    &-sub-menu {
+      &:hover {
+        background-color: unset;
+      }
+
+      &-bullet {
+        &-active {
+          width: 5px;
+          height: 5px;
+          border-radius: 2.5px;
+          background-color: $color-primary;
+        }
+        &-inactive {
+          width: 5px;
+          height: 5px;
+          border-radius: 3px;
+          border: 1px solid #8d8d8d;
+        }
+      }
+
+      &.MuiButtonBase-root {
+        margin-left: 1rem;
+
+        padding-left: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+
+        &.active,
+        &:hover {
+          .MuiTypography-root {
+            font-weight: 400;
+            color: $color-primary;
+          }
+        }
+
+        .MuiTypography-root {
+          font-weight: 400;
+          color: #a6a8ab;
+        }
+      }
+    }
+  }
+
+  &-menu-mini {
+    &-row {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: transform 0.3s cubic-bezier(0.14, 0.61, 0.8, 0.9);
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+
+    &-row-active {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      margin-top: 10px;
+      border: 1px solid #ff5000;
+    }
+  }
+
+  .MuiCollapse-root {
+    margin-bottom: 1.5rem;
+  }
+
+  .MuiListItemButton-root {
+    gap: 1rem;
+
+    .MuiListItemIcon-root {
+      min-width: unset;
+      // width: 3rem;
+    }
+
+    .MuiListItemText-root {
+    }
+  }
+
+  .martop-1-5 {
+    margin-top: 1.5rem;
+  }
+
+  &-nav-action {
+    width: fit-content;
+    position: absolute;
+    right: -2rem;
+    top: 0.5rem;
+  }
+
+  &.minimized {
+    .MuiListItemButton-root {
+      .MuiListItemText-root {
+      }
+    }
+
+    .#{$className} {
+      -list-menu {
+        &-expand {
+        }
+      }
+    }
+  }
+
+  &-subs-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+}

@@ -1,0 +1,46 @@
+.module-upload-file {
+  display: grid;
+  gap: 0.5rem;
+
+  &-dropzone {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #b3b3b3;
+    border-radius: 1rem;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  &-info {
+    color: #ababab;
+  }
+
+  &-accepted-file {
+    @include grid-column(.5rem);
+    justify-content: center;
+    background-color: #bde5c5;
+    border-radius: 1rem;
+    padding: 0rem 1rem;
+  }
+
+  &.multiple{
+    .module-upload-file{
+      &-accepted-file{
+        grid-auto-flow: row;
+        text-align: left;
+        padding: 0.5rem 1rem;
+      }
+      &-wrap-files{
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+
+  }
+}

@@ -1,0 +1,60 @@
+.template-landing-page-section-ambassador {
+  background: $color-mint-light;
+  z-index: 3;
+
+  &-content {
+    position: relative;
+    height: 41rem;
+    display: grid;
+    align-items: center;
+    padding: 5rem 3rem;
+  }
+
+  &-text-wrapper-title {
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    height: fit-content;
+    flex-wrap: wrap;
+
+    color: $color-primary;
+  }
+
+  &-text-subtitle {
+    color: $color-purple;
+  }
+
+  &-image-logo {
+    height: fit-content;
+    float: inline-start;
+  }
+
+  &-list {
+    gap: 1rem;
+    display: grid;
+    max-width: 360px;
+
+    &-wrapper {
+      .element-button {
+        font-size: 1.2rem;
+      }
+    }
+
+    &-item {
+      color: $color-primary;
+
+    }
+  }
+
+  &-main-content {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+
+}

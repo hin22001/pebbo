@@ -1,0 +1,57 @@
+.introduction-modal {
+  &-content {
+    background: linear-gradient(180deg, #e8f9ff 0%, #f0f8ff 100%);
+  }
+
+  &-mascot {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  &-speech-bubble {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 10px 10px 0;
+      border-style: solid;
+      border-color: rgba(255, 255, 255, 0.95) transparent transparent;
+    }
+  }
+
+  &-preview-panel {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  &-nav-button {
+    transition: all 0.2s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .introduction-modal {
+    .MuiBox-root {
+      flex-direction: column;
+    }
+  }
+}

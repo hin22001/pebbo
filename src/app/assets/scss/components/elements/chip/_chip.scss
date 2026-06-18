@@ -1,0 +1,37 @@
+.element-chip.MuiChip-root {
+  justify-content: space-between;
+
+  // Add hover animation similar to language select
+  $enlarge-transition: transform 0.3s cubic-bezier(0.14, 0.61, 0.8, 0.9);
+  $scale: scale(1.05);
+
+  transition: $enlarge-transition;
+  cursor: pointer;
+
+  &:hover {
+    transform: $scale;
+  }
+
+  span {
+    font-family: $font-primary;
+    font-weight: 600;
+    font-size: 0.9rem;
+    line-height: initial;
+  }
+
+  &.MuiChip-colorDefault {
+    svg {
+      filter: brightness(1.9);
+    }
+  }
+
+  &.white {
+    background-color: white;
+    height: fit-content;
+    width: fit-content;
+  }
+  &.primary {
+    background-color: $color-light-accent;
+    width: fit-content;
+  }
+}

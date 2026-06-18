@@ -1,0 +1,213 @@
+.quiz-exercise-page {
+
+  &-card {
+    margin: 1rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    padding: 16px;
+    box-shadow: 2px 10px 14px -4px rgba(0,0,0,0.57);
+    -webkit-box-shadow: 2px 10px 14px -4px rgba(0,0,0,0.57);
+    -moz-box-shadow: 2px 10px 14px -4px rgba(0,0,0,0.57);
+  }
+
+  &-title {
+    font-size: 24px;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    color: #565656;
+  }
+
+  &-subtitle {
+    font-size: 14px;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    color: #565656;
+  }
+
+  &-description {
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+    color: #565656;
+  }
+
+  &-form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &-form-row {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+  }
+
+  &-form-label {
+    width: 10%;
+    text-align: end;
+  }
+
+  &-form-label-start {
+    width: 30%;
+    text-align: start;
+  }
+
+  &-form-text {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 14.52px;
+  }
+
+  &-form-input {
+    display: flex;
+    align-items: flex-end;
+    width: 70%;
+    height: 39px;
+  }
+
+  &-form-input-custom {
+    margin-left: -8%;
+    width: 100%;
+  }
+
+  &-form-input-select {
+    width: 90%;
+    border: none !important;
+    border-width: 0px;
+    height: 1px;
+    margin-top: -10px;
+    z-index: 0;
+  }
+
+  &-form-input-select-front-wrapper {
+    background-color: #fff;
+    width: 90%;
+    z-index: 1;
+  }
+
+  &-form-input-select-front {
+    height: 39px;
+    border: 1px solid #C7C7C7;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    z-index: 1;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+  }
+
+  &-ico-down {
+    width: 27px;
+    height: 27px;
+  }
+
+  &-form-input-select-front-inner-wrapper-start {
+    display: flex;
+    align-items: flex-start;
+    width: 90%;
+  }
+
+  &-form-input-select-front-inner-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &-form-input-select-front-inner {
+    box-shadow: 3px 4px 4px 0px #D9D9D9 inset;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #EBEBEB;
+    padding: 0px 20px 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-form-input-select-front-value {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14.52px;
+    color: #565656;
+  }
+
+  &-form-btn-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  &-form-btn {
+    background: linear-gradient(90deg, #8264FF 0%, #FF64A0 100%);
+    border: 1px solid #FF5000;
+    width: 182px;
+    height: 31px;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-form-btn-txt {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18.15px;
+    text-align: center;
+    color: #fff;
+  }
+
+  &-form-input-text {
+    background-color: #EBEBEB;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    font-size: 12px;
+    width: 177px;
+  
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      font-style: italic; 
+      color: #565656;
+      font-size: 12px;
+    }
+
+  }
+
+  &-modal-close {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #D1CFFF 0%, #FFD5E5 100%);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-size: 6px;
+  }
+
+  &-modal-rich-text {
+    width: 700px;
+    height: 70vh;
+    overflow-y: scroll;
+  }
+
+}

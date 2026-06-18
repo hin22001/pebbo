@@ -1,0 +1,617 @@
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #fff; }
+  #stage { width: 100%; aspect-ratio: 1080/980; background: #fff; position: relative; overflow: hidden; font-family: 'Fredoka One', 'Nunito', sans-serif; border: 0.5px solid var(--color-border-tertiary); border-radius: 8px; }
+  .scene { position: absolute; inset: 0; opacity: 0; pointer-events: none; }
+  .scene.active { pointer-events: auto; }
+  svg.stage-svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  .ui-layer { position: absolute; inset: 0; }
+  #controls { display: flex; align-items: center; gap: 10px; padding: 10px 0 4px; }
+  #playBtn { background: none; border: 0.5px solid var(--color-border-secondary); border-radius: 6px; padding: 6px 16px; cursor: pointer; font-size: 14px; color: var(--color-text-primary); }
+  #playBtn:hover { background: var(--color-background-secondary); }
+  #scrubber { flex: 1; }
+  #timeLabel { font-size: 12px; color: var(--color-text-secondary); min-width: 48px; text-align: right; }
+  #sceneLabel { font-size: 12px; color: var(--color-text-secondary); min-width: 80px; }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+
+<div style="padding: 0.5rem 0;">
+  <div id="stage">
+    <canvas id="c" style="width:100%;height:100%;position:absolute;top:0;left:0;"></canvas>
+  </div>
+  <div id="controls">
+    <button id="playBtn">&#9654; Play</button>
+    <input type="range" id="scrubber" min="0" max="4926" value="0" step="1">
+    <span id="sceneLabel">Intro</span>
+    <span id="timeLabel">0:00</span>
+  </div>
+</div>
+
+<script>
+const FPS = 30;
+const TOTAL = Math.round(164.22 * FPS);
+const W = 1080, H = 980;
+
+function ts(s){ return Math.round(s * FPS); }
+
+const SCENES_DEF = [
+  { name:'Intro',      from:0,           dur:ts(10.06) },
+  { name:'Square',     from:ts(10.06),   dur:ts(7.42)  },
+  { name:'Rectangle',  from:ts(17.48),   dur:ts(7.70)  },
+  { name:'Chorus 1',   from:ts(25.18),   dur:ts(22.58) },
+  { name:'Triangle',   from:ts(47.76),   dur:ts(17.44) },
+  { name:'Chorus 2',   from:ts(65.20),   dur:ts(25.64) },
+  { name:'Circle',     from:ts(90.84),   dur:ts(17.48) },
+  { name:'Lines',      from:ts(108.32),  dur:ts(14.36) },
+  { name:'Angles',     from:ts(122.68),  dur:ts(13.66) },
+  { name:'Chorus 3',   from:ts(136.34),  dur:ts(27.88) },
+];
+
+const LYRICS = [
+  [ts(10.06),ts(12.00),"Four straight equal sides"],
+  [ts(12.00),ts(13.84),"Square's staring back at me"],
+  [ts(13.84),ts(17.48),"Long, long, short, short — rectangle's style"],
+  [ts(17.48),ts(21.92),"Same four corners, just stretched out a while"],
+  [ts(21.92),ts(25.18),"It's a shape party, count it out!"],
+  [ts(25.18),ts(28.84),"Corners, sides, go shout it out!"],
+  [ts(28.84),ts(32.32),"Spin the world like A-B-C"],
+  [ts(32.32),ts(34.68),"We got shapes in geometry"],
+  [ts(34.68),ts(39.02),"Circle, triangle, hexagon (hey!)"],
+  [ts(39.02),ts(42.94),"Name those angles, sing along, measure, count"],
+  [ts(42.94),ts(44.84),"Come learn with me"],
+  [ts(44.84),ts(47.76),"We got shapes in geometry"],
+  [ts(47.76),ts(54.16),"Three sides, three corners, triangle's so neat"],
+  [ts(54.16),ts(57.88),"If one angle's ninety, right triangle's on its feet"],
+  [ts(57.88),ts(61.36),"All sides same length, equilateral crew"],
+  [ts(61.36),ts(65.20),"One side looks different, Scalene's standing with you"],
+  [ts(65.20),ts(68.26),"It's a shape party, count it out!"],
+  [ts(68.26),ts(71.98),"Corners, sides, go shout it out!"],
+  [ts(71.98),ts(75.36),"Spin the world like A-B-C"],
+  [ts(75.36),ts(77.74),"We got shapes in geometry"],
+  [ts(77.74),ts(82.20),"Circle, triangle, hexagon (hey!)"],
+  [ts(82.20),ts(86.04),"Name those angles, sing along, measure, count"],
+  [ts(86.04),ts(87.88),"Come learn with me"],
+  [ts(87.88),ts(90.84),"We got shapes in geometry"],
+  [ts(90.84),ts(96.44),"Circle's got a center, every point same space"],
+  [ts(96.44),ts(100.16),"That distance is the radius from middle to the place"],
+  [ts(100.16),ts(103.78),"Twice that is the diameter, all the way across"],
+  [ts(103.78),ts(106.32),"Round and round the edge we go"],
+  [ts(106.32),ts(108.32),'That edge is called the "circumference" (woah)'],
+  [ts(108.32),ts(114.80),"Lines that never meet — that's parallel"],
+  [ts(114.80),ts(118.92),"Lines that cross each other — intersect!"],
+  [ts(118.92),ts(122.68),"Angle opens wider, we can make a guess"],
+  [ts(122.68),ts(126.80),'Smaller than a right angle — "acute", yes'],
+  [ts(126.80),ts(131.16),'"Obtuse" is the name for bigger than right'],
+  [ts(131.16),ts(136.34),"Exactly ninety degrees — right angle in the game"],
+  [ts(136.34),ts(139.50),"It's a shape party, count it out!"],
+  [ts(139.50),ts(143.26),"Corners, sides, go shout it out!"],
+  [ts(143.26),ts(146.92),"Spin the world like A-B-C"],
+  [ts(146.92),ts(149.40),"We got shapes in geometry"],
+  [ts(149.40),ts(153.28),"Circle, triangle, hexagon (hey!)"],
+  [ts(153.28),ts(157.50),"Name those angles, sing along, measure, count"],
+  [ts(157.50),ts(159.72),"Come learn with me"],
+  [ts(159.72),ts(164.22),"We got shapes in geometry"],
+];
+
+const C = {
+  sq:'#FF6B35', rect:'#4ECDC4', tri:'#FFE66D', triS:'#F7B731',
+  circ:'#A29BFE', hex:'#55EFC4', par:'#FD79A8', ang:'#74B9FF',
+  blk:'#1A1A2E', gry:'#6C757D', prog:'#FF6B35'
+};
+
+let frame = 0, playing = false, raf = null, lastTime = null;
+
+function spr(f, delay=0, cfg={damping:14,stiffness:120,mass:1}){
+  const lf = Math.max(0, f - delay);
+  const {damping=14, stiffness=120, mass=1} = cfg;
+  const omega = Math.sqrt(stiffness/mass);
+  const zeta = damping/(2*Math.sqrt(stiffness*mass));
+  if(zeta < 1){
+    const wd = omega*Math.sqrt(1-zeta*zeta);
+    const val = 1 - Math.exp(-zeta*omega*lf/FPS)*(Math.cos(wd*lf/FPS)+(zeta*omega/wd)*Math.sin(wd*lf/FPS));
+    return Math.min(1, Math.max(0, val));
+  }
+  return Math.min(1, 1 - Math.exp(-omega*lf/FPS));
+}
+
+function lerp(a,b,t){ return a+(b-a)*t; }
+function clamp(v,lo,hi){ return Math.max(lo,Math.min(hi,v)); }
+function interp(f,f0,f1,v0,v1){ return lerp(v0,v1,clamp((f-f0)/(f1-f0),0,1)); }
+function fadeIn(f,start,dur){ return clamp((f-start)/dur,0,1); }
+function sceneFade(gf,from,dur){
+  const fi = clamp((gf-from)/8,0,1);
+  const fo = clamp((gf-(from+dur-8))/8,0,1);
+  return Math.min(fi,1-fo);
+}
+
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+
+function resize(){
+  const stage = document.getElementById('stage');
+  const rect = stage.getBoundingClientRect();
+  canvas.width = rect.width * devicePixelRatio;
+  canvas.height = rect.height * devicePixelRatio;
+  canvas.style.width = rect.width+'px';
+  canvas.style.height = rect.height+'px';
+}
+
+function draw(gf){
+  resize();
+  const dpr = devicePixelRatio;
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.save();
+  ctx.scale(canvas.width/W, canvas.height/H);
+
+  // White bg
+  ctx.fillStyle='#fff';
+  ctx.fillRect(0,0,W,H);
+
+  // Draw active scenes (with overlap for crossfade)
+  for(const sc of SCENES_DEF){
+    const op = sceneFade(gf, sc.from, sc.dur);
+    if(op <= 0) continue;
+    ctx.save();
+    ctx.globalAlpha = op;
+    drawScene(sc.name, gf, sc.from);
+    ctx.restore();
+  }
+
+  // Lyrics always on top
+  drawLyrics(gf);
+  // Progress bar
+  drawProgress(gf);
+
+  ctx.restore();
+}
+
+function pill(cx,cy,txt,color,scale=1){
+  ctx.save();
+  ctx.translate(cx,cy);
+  ctx.scale(scale,scale);
+  const pad=18, h=44;
+  ctx.font='bold 22px "Fredoka One", sans-serif';
+  const tw = ctx.measureText(txt).width;
+  const bw = tw + pad*2;
+  ctx.fillStyle=color;
+  roundRect(ctx,-bw/2,-h/2,bw,h,22);
+  ctx.fill();
+  ctx.fillStyle='#fff';
+  ctx.textAlign='center';
+  ctx.textBaseline='middle';
+  ctx.fillText(txt,0,1);
+  ctx.restore();
+}
+
+function roundRect(ctx,x,y,w,h,r){
+  ctx.beginPath();
+  ctx.moveTo(x+r,y);
+  ctx.lineTo(x+w-r,y);
+  ctx.arcTo(x+w,y,x+w,y+r,r);
+  ctx.lineTo(x+w,y+h-r);
+  ctx.arcTo(x+w,y+h,x+w-r,y+h,r);
+  ctx.lineTo(x+r,y+h);
+  ctx.arcTo(x,y+h,x,y+h-r,r);
+  ctx.lineTo(x,y+r);
+  ctx.arcTo(x,y,x+r,y,r);
+  ctx.closePath();
+}
+
+function header(text, f){
+  const op = fadeIn(f,0,20);
+  const bob = f>20 ? Math.sin(f*0.04)*3 : 0;
+  ctx.save();
+  ctx.globalAlpha = op;
+  ctx.font='700 28px "Fredoka One", sans-serif';
+  ctx.fillStyle=C.blk;
+  ctx.textAlign='center';
+  ctx.textBaseline='middle';
+  ctx.letterSpacing='2px';
+  ctx.fillText(text.toUpperCase(), W/2, 62+bob);
+  ctx.restore();
+}
+
+function conceptName(text, op){
+  ctx.save();
+  ctx.globalAlpha=op;
+  ctx.font='900 52px "Fredoka One", sans-serif';
+  ctx.fillStyle=C.blk;
+  ctx.textAlign='center';
+  ctx.textBaseline='middle';
+  ctx.fillText(text, W/2, 660);
+  ctx.restore();
+}
+
+function supportText(text, op){
+  ctx.save();
+  ctx.globalAlpha=op;
+  ctx.font='400 24px "Nunito", sans-serif';
+  ctx.fillStyle=C.gry;
+  ctx.textAlign='center';
+  ctx.textBaseline='middle';
+  ctx.fillText(text, W/2, 742);
+  ctx.restore();
+}
+
+function drawScene(name, gf, from){
+  const f = gf - from;
+  if(name==='Intro') drawIntro(f);
+  else if(name==='Square') drawSquare(f,gf);
+  else if(name==='Rectangle') drawRect(f,gf);
+  else if(name==='Chorus 1') drawChorus1(f,gf);
+  else if(name==='Triangle') drawTriangle(f,gf);
+  else if(name==='Chorus 2') drawChorus2(f,gf);
+  else if(name==='Circle') drawCircle(f,gf);
+  else if(name==='Lines') drawLines(f,gf);
+  else if(name==='Angles') drawAngles(f,gf);
+  else if(name==='Chorus 3') drawChorus3(f,gf);
+}
+
+function drawIntro(f){
+  const shapes=[
+    {delay:10,dx:-300,dy:0, draw:(x,y)=>{
+      ctx.fillStyle=C.hex;
+      ctx.beginPath(); const p=[[120,360],[160,290],[240,290],[280,360],[240,430],[160,430]];
+      p.forEach(([px,py],i)=>i?ctx.lineTo(px+x,py+y):ctx.moveTo(px+x,py+y));
+      ctx.closePath(); ctx.fill();
+    }},
+    {delay:20,dx:0,dy:-300, draw:(x,y)=>{
+      ctx.fillStyle=C.tri; ctx.strokeStyle=C.triS; ctx.lineWidth=5;
+      ctx.beginPath(); ctx.moveTo(540+x,160+y); ctx.lineTo(440+x,340+y); ctx.lineTo(640+x,340+y); ctx.closePath(); ctx.fill(); ctx.stroke();
+    }},
+    {delay:30,dx:300,dy:0, draw:(x,y)=>{
+      ctx.fillStyle=C.circ; ctx.beginPath(); ctx.arc(840+x,360+y,100,0,Math.PI*2); ctx.fill();
+    }},
+    {delay:40,dx:0,dy:-400, draw:(x,y)=>{
+      ctx.fillStyle=C.sq; roundRect(ctx,200+x,450+y,150,150,10); ctx.fill();
+    }},
+    {delay:50,dx:0,dy:300, draw:(x,y)=>{
+      ctx.fillStyle=C.rect; roundRect(ctx,600+x,470+y,220,120,10); ctx.fill();
+    }},
+  ];
+  for(const sh of shapes){
+    const sp=spr(f,sh.delay,{damping:12,stiffness:100,mass:1});
+    const x = lerp(sh.dx,0,sp), y = lerp(sh.dy,0,sp);
+    sh.draw(x,y);
+  }
+  const tOp=fadeIn(f,60,20), sOp=fadeIn(f,80,20);
+  ctx.save();
+  ctx.globalAlpha=tOp;
+  ctx.font='900 72px "Fredoka One", sans-serif';
+  ctx.fillStyle=C.blk; ctx.textAlign='center'; ctx.textBaseline='middle';
+  ctx.fillText('Shapes in',W/2,270);
+  ctx.fillStyle=C.sq;
+  ctx.fillText('Geometry',W/2,355);
+  ctx.restore();
+  ctx.save();
+  ctx.globalAlpha=sOp;
+  ctx.font='400 24px "Nunito", sans-serif';
+  ctx.fillStyle=C.gry; ctx.textAlign='center'; ctx.textBaseline='middle';
+  ctx.fillText('with Pebbo',W/2,700);
+  ctx.restore();
+}
+
+function drawSquare(f,gf){
+  header('Quadrilaterals',f);
+  const sp=spr(f,0,{damping:18,stiffness:80,mass:1.2});
+  const rot = lerp(180,0,sp);
+  const cx=W/2, cy=360, s=220;
+  ctx.save();
+  ctx.translate(cx,cy);
+  ctx.rotate(rot*Math.PI/180);
+  ctx.scale(sp,sp);
+  ctx.fillStyle=C.sq;
+  roundRect(ctx,-s/2,-s/2,s,s,12); ctx.fill();
+  if(sp>0.6){
+    ctx.strokeStyle='white'; ctx.lineWidth=5;
+    [-1,1].forEach(d=>{ ctx.beginPath(); ctx.moveTo(d*s/2-d*5,0); ctx.lineTo(d*s/2-d*23,0); ctx.stroke(); });
+    [-1,1].forEach(d=>{ ctx.beginPath(); ctx.moveTo(0,d*s/2-d*5); ctx.lineTo(0,d*s/2-d*23); ctx.stroke(); });
+  }
+  ctx.restore();
+  conceptName('Square', fadeIn(f,15,8));
+  supportText('4 equal sides · 4 right angles', fadeIn(f,23,8));
+  const p1s=spr(f,31,{damping:12,stiffness:200}), p2s=spr(f,37,{damping:12,stiffness:200});
+  pill(W/2-110,550,'4 sides',C.sq,p1s);
+  pill(W/2+110,550,'4 corners',C.circ,p2s);
+}
+
+function drawRect(f,gf){
+  header('Quadrilaterals',f);
+  const sp=spr(f,0,{damping:10,stiffness:120,mass:0.9});
+  const slideX=lerp(-W,0,sp);
+  const cx=W/2,cy=360,rw=320,rh=160;
+  ctx.save();
+  ctx.translate(slideX,0);
+  ctx.fillStyle=C.rect;
+  roundRect(ctx,cx-rw/2,cy-rh/2,rw,rh,12); ctx.fill();
+  ctx.font='700 22px "Fredoka One", sans-serif';
+  ctx.fillStyle=C.blk; ctx.textAlign='center'; ctx.textBaseline='middle';
+  ctx.fillText('long',cx,cy-rh/2-22);
+  ctx.fillText('long',cx,cy+rh/2+28);
+  ctx.save(); ctx.translate(cx-rw/2-32,cy); ctx.rotate(-Math.PI/2);
+  ctx.fillText('short',0,0); ctx.restore();
+  ctx.save(); ctx.translate(cx+rw/2+32,cy); ctx.rotate(Math.PI/2);
+  ctx.fillText('short',0,0); ctx.restore();
+  ctx.restore();
+  conceptName('Rectangle', fadeIn(f,15,8));
+  supportText('2 long · 2 short · 4 right angles', fadeIn(f,23,8));
+  const p1s=spr(f,31,{damping:12,stiffness:200}), p2s=spr(f,37,{damping:12,stiffness:200});
+  pill(W/2-130,540,'2 pairs equal',C.rect,p1s);
+  pill(W/2+100,540,'4 corners',C.circ,p2s);
+}
+
+function drawChorus1(f,gf){
+  header('Shapes in Geometry',f);
+  const cSp=spr(f,0,{damping:12,stiffness:90}), tSp=spr(f,15,{damping:12,stiffness:90}), hSp=spr(f,30,{damping:12,stiffness:90});
+  // Circle
+  const cY=lerp(-300,0,cSp);
+  ctx.save(); ctx.translate(0,cY); ctx.fillStyle=C.circ; ctx.beginPath(); ctx.arc(200,360,110,0,Math.PI*2); ctx.fill(); ctx.restore();
+  // Triangle
+  const tY=lerp(-300,0,tSp);
+  ctx.save(); ctx.translate(0,tY);
+  ctx.fillStyle=C.tri; ctx.strokeStyle=C.triS; ctx.lineWidth=5;
+  ctx.beginPath(); ctx.moveTo(W/2,190); ctx.lineTo(W/2-140,430); ctx.lineTo(W/2+140,430); ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.restore();
+  // Hexagon
+  const hY=lerp(-300,0,hSp);
+  ctx.save(); ctx.translate(0,hY);
+  ctx.fillStyle=C.hex;
+  const hx=880,hy=340;
+  ctx.beginPath(); [[hx,hy-110],[hx+95,hy-55],[hx+95,hy+55],[hx,hy+110],[hx-95,hy+55],[hx-95,hy-55]].forEach(([x,y],i)=>i?ctx.lineTo(x,y):ctx.moveTo(x,y));
+  ctx.closePath(); ctx.fill();
+  ctx.restore();
+  // Labels
+  const lOp=fadeIn(f,35,10);
+  ctx.save(); ctx.globalAlpha=lOp;
+  ctx.font='700 28px "Fredoka One", sans-serif'; ctx.fillStyle=C.blk; ctx.textBaseline='middle';
+  ctx.textAlign='center'; ctx.fillText('Circle',200,500);
+  ctx.fillText('Triangle',W/2,500);
+  ctx.fillText('Hexagon',880,500);
+  ctx.restore();
+  ctx.save(); ctx.globalAlpha=fadeIn(f,45,10);
+  ctx.font='900 48px "Fredoka One", sans-serif'; ctx.fillStyle=C.blk; ctx.textAlign='center'; ctx.textBaseline='middle';
+  ctx.fillText('Shapes in Geometry!',W/2,660);
+  ctx.restore();
+}
+
+function drawTriangle(f,gf){
+  header('Triangles',f);
+  const eqSp=spr(f,0,{damping:14,stiffness:100}), rSp=spr(f,ts(6),{damping:14,stiffness:100}), sSp=spr(f,ts(12),{damping:14,stiffness:100});
+  const eqY=lerp(200,0,eqSp), rX=lerp(400,0,rSp), sX=lerp(-400,0,sSp);
+  // Equilateral
+  ctx.save(); ctx.translate(0,eqY); ctx.globalAlpha=fadeIn(f,0,8);
+  ctx.fillStyle=C.tri; ctx.strokeStyle=C.triS; ctx.lineWidth=6;
+  ctx.beginPath(); ctx.moveTo(540,160); ctx.lineTo(380,420); ctx.lineTo(700,420); ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.restore();
+  // Right
+  ctx.save(); ctx.translate(rX,0); ctx.globalAlpha=fadeIn(f,ts(6),8);
+  ctx.fillStyle=C.par; ctx.strokeStyle='#d63031'; ctx.lineWidth=4;
+  ctx.beginPath(); ctx.moveTo(790,220); ctx.lineTo(790,430); ctx.lineTo(930,430); ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.strokeStyle='#d63031'; ctx.strokeRect(790,410,22,22);
+  ctx.restore();
+  // Scalene
+  ctx.save(); ctx.translate(sX,0); ctx.globalAlpha=fadeIn(f,ts(12),8);
+  ctx.fillStyle=C.hex; ctx.strokeStyle='#00b894'; ctx.lineWidth=4;
+  ctx.beginPath(); ctx.moveTo(165,210); ctx.lineTo(100,430); ctx.lineTo(320,430); ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.restore();
+  conceptName('Triangle', fadeIn(f,5,8));
+  supportText('3 sides · 3 corners · angles sum 180°', fadeIn(f,15,8));
+  const p1s=spr(f,25,{damping:12,stiffness:200}), p2s=spr(f,31,{damping:12,stiffness:200});
+  pill(W/2-130,525,'Equilateral',C.tri,p1s);
+  pill(W/2+90,525,'Right',C.par,p2s);
+}
+
+function drawChorus2(f,gf){
+  header('Shapes in Geometry',f);
+  const cSp=spr(f,0,{damping:13,stiffness:110}), tSp=spr(f,10,{damping:13,stiffness:110}), hSp=spr(f,20,{damping:13,stiffness:110});
+  const dOp=fadeIn(f,35,10);
+  // Circle
+  ctx.save(); ctx.translate(200,360); ctx.scale(cSp,cSp);
+  ctx.fillStyle=C.circ; ctx.beginPath(); ctx.arc(0,0,110,0,Math.PI*2); ctx.fill();
+  if(dOp>0.05){ ctx.globalAlpha=dOp; ctx.strokeStyle='white'; ctx.lineWidth=4; ctx.setLineDash([8,4]); ctx.beginPath(); ctx.moveTo(0,0); ctx.lineTo(110,0); ctx.stroke(); ctx.setLineDash([]); ctx.fillStyle='white'; ctx.beginPath(); ctx.arc(0,0,6,0,Math.PI*2); ctx.fill(); ctx.font='700 18px "Fredoka One", sans-serif'; ctx.fillText('radius',55,-14); }
+  ctx.restore();
+  // Triangle
+  ctx.save(); ctx.translate(W/2,360); ctx.scale(tSp,tSp);
+  ctx.fillStyle=C.tri; ctx.strokeStyle=C.triS; ctx.lineWidth=5;
+  ctx.beginPath(); ctx.moveTo(0,-170); ctx.lineTo(-150,100); ctx.lineTo(150,100); ctx.closePath(); ctx.fill(); ctx.stroke();
+  if(dOp>0.05){ ctx.globalAlpha=dOp; ctx.font='700 18px "Fredoka One", sans-serif'; ctx.fillStyle=C.blk; ctx.textAlign='center';
+    ctx.fillText('60°',0,-185); ctx.fillText('60°',-165,118); ctx.fillText('60°',165,118); }
+  ctx.restore();
+  // Hexagon
+  ctx.save(); ctx.translate(880,360); ctx.scale(hSp,hSp);
+  ctx.fillStyle=C.hex;
+  ctx.beginPath(); [[0,-110],[95,-55],[95,55],[0,110],[-95,55],[-95,-55]].forEach(([x,y],i)=>i?ctx.lineTo(x,y):ctx.moveTo(x,y));
+  ctx.closePath(); ctx.fill();
+  if(dOp>0.05){ ctx.globalAlpha=dOp; ctx.font='700 18px "Fredoka One", sans-serif'; ctx.fillStyle=C.blk; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillText('6 sides',0,0); }
+  ctx.restore();
+  const lOp=fadeIn(f,25,10);
+  ctx.save(); ctx.globalAlpha=lOp; ctx.font='700 26px "Fredoka One", sans-serif'; ctx.fillStyle=C.blk; ctx.textBaseline='middle';
+  ctx.textAlign='center'; ctx.fillText('Circle',200,510); ctx.fillText('Triangle',W/2,510); ctx.fillText('Hexagon',880,510); ctx.restore();
+  ctx.save(); ctx.globalAlpha=fadeIn(f,30,10); ctx.font='900 48px "Fredoka One", sans-serif'; ctx.fillStyle=C.blk; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillText('Name those angles!',W/2,660); ctx.restore();
+  const p1s=spr(f,40,{damping:12,stiffness:200}), p2s=spr(f,46,{damping:12,stiffness:200});
+  pill(W/2-100,742,'measure',C.circ,p1s);
+  pill(W/2+100,742,'count',C.tri,p2s);
+}
+
+function drawCircle(f,gf){
+  header('Circles',f);
+  const drawP=clamp(f/40,0,1);
+  const r=170, cx=W/2, cy=360;
+  const circ2=2*Math.PI*r;
+  // bg fill
+  ctx.save(); ctx.globalAlpha=0.15; ctx.fillStyle=C.circ; ctx.beginPath(); ctx.arc(cx,cy,r,0,Math.PI*2); ctx.fill(); ctx.restore();
+  // stroke-draw arc
+  ctx.save(); ctx.strokeStyle=C.circ; ctx.lineWidth=10; ctx.lineCap='round';
+  ctx.setLineDash([circ2*drawP, circ2*(1-drawP)]);
+  ctx.beginPath(); ctx.arc(cx,cy,r,-Math.PI/2,-Math.PI/2+2*Math.PI*drawP); ctx.stroke();
+  ctx.setLineDash([]);
+  // solid fill when complete
+  if(drawP>0.95){ ctx.globalAlpha=interp(f,40,50,0,0.9); ctx.fillStyle=C.circ; ctx.beginPath(); ctx.arc(cx,cy,r,0,Math.PI*2); ctx.fill(); }
+  ctx.restore();
+  // center dot
+  ctx.fillStyle='white'; ctx.beginPath(); ctx.arc(cx,cy,8,0,Math.PI*2); ctx.fill();
+  // radius
+  const rOp=fadeIn(f,20,10);
+  ctx.save(); ctx.globalAlpha=rOp; ctx.strokeStyle='white'; ctx.lineWidth=4; ctx.setLineDash([8,4]);
+  ctx.beginPath(); ctx.moveTo(cx,cy); ctx.lineTo(cx+r,cy); ctx.stroke(); ctx.setLineDash([]);
+  ctx.font='700 20px "Fredoka One", sans-serif'; ctx.fillStyle='white'; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillText('radius',cx+r/2,cy-18); ctx.restore();
+  // diameter
+  const dOp=fadeIn(f,30,10);
+  ctx.save(); ctx.globalAlpha=dOp; ctx.strokeStyle=C.blk; ctx.lineWidth=4;
+  ctx.beginPath(); ctx.moveTo(cx-r,cy+45); ctx.lineTo(cx+r,cy+45); ctx.stroke();
+  ctx.font='700 20px "Fredoka One", sans-serif'; ctx.fillStyle=C.blk; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillText('diameter',cx,cy+72); ctx.restore();
+  // circumference label
+  const cOp=fadeIn(f,40,10);
+  ctx.save(); ctx.globalAlpha=cOp; ctx.font='700 20px "Fredoka One", sans-serif'; ctx.fillStyle=C.blk; ctx.textAlign='left'; ctx.textBaseline='middle'; ctx.fillText('circumference',cx+r+20,cy-60); ctx.restore();
+  conceptName('Circle', fadeIn(f,15,8));
+  supportText('All points equal distance from center', fadeIn(f,23,8));
+  const p1s=spr(f,45,{damping:12,stiffness:200}), p2s=spr(f,51,{damping:12,stiffness:200});
+  pill(W/2-150,570,'radius',C.circ,p1s);
+  pill(W/2+100,570,'diameter = 2r',C.par,p2s);
+}
+
+function drawLines(f,gf){
+  header('Lines',f);
+  const drawP=clamp(f/30,0,1);
+  const sx=200, ex=200+680*drawP;
+  // Parallel lines
+  ctx.strokeStyle=C.par; ctx.lineWidth=10; ctx.lineCap='round';
+  ctx.beginPath(); ctx.moveTo(sx,260); ctx.lineTo(ex,260); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(sx,340); ctx.lineTo(ex,340); ctx.stroke();
+  // Never meet label
+  const nmOp=fadeIn(f,22,8);
+  ctx.save(); ctx.globalAlpha=nmOp; ctx.font='700 22px "Fredoka One", sans-serif'; ctx.fillStyle=C.par; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillText('never meet \u2192  \u2190 never meet',W/2,220); ctx.restore();
+  // arrows
+  if(drawP>0.9){ ctx.fillStyle=C.par; ctx.beginPath(); ctx.moveTo(ex,260); ctx.lineTo(ex-20,248); ctx.lineTo(ex-20,272); ctx.closePath(); ctx.fill(); ctx.beginPath(); ctx.moveTo(ex,340); ctx.lineTo(ex-20,328); ctx.lineTo(ex-20,352); ctx.closePath(); ctx.fill(); }
+  // Intersecting
+  const iOp=fadeIn(f,30,10);
+  ctx.save(); ctx.globalAlpha=iOp; ctx.strokeStyle=C.ang; ctx.lineWidth=8;
+  ctx.beginPath(); ctx.moveTo(200,430); ctx.lineTo(500,530); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(200,530); ctx.lineTo(500,430); ctx.stroke();
+  ctx.fillStyle=C.ang; ctx.beginPath(); ctx.arc(350,480,10,0,Math.PI*2); ctx.fill();
+  ctx.font='700 20px "Fredoka One", sans-serif'; ctx.fillStyle=C.blk; ctx.textAlign='left'; ctx.textBaseline='middle'; ctx.fillText('intersect',365,455); ctx.restore();
+  conceptName('Lines', fadeIn(f,15,8));
+  supportText('Parallel: never meet · Intersecting: cross', fadeIn(f,23,8));
+  const p1s=spr(f,35,{damping:12,stiffness:200}), p2s=spr(f,41,{damping:12,stiffness:200});
+  pill(W/2-130,585,'parallel',C.par,p1s);
+  pill(W/2+90,585,'intersect',C.ang,p2s);
+}
+
+function drawAngles(f,gf){
+  header('Angles',f);
+  const sp=spr(f,0,{damping:10,stiffness:90,mass:1});
+  const slideX=lerp(W,0,sp);
+  ctx.save(); ctx.translate(slideX,0);
+  // Acute
+  const aOp=fadeIn(f,8,8);
+  ctx.save(); ctx.globalAlpha=aOp; ctx.strokeStyle=C.ang; ctx.lineWidth=8; ctx.lineCap='round';
+  ctx.beginPath(); ctx.moveTo(160,435); ctx.lineTo(160,220); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(160,435); ctx.lineTo(295,435); ctx.stroke();
+  ctx.strokeStyle=C.ang; ctx.lineWidth=4; ctx.beginPath(); ctx.arc(160,435,52,-Math.PI/2,-Math.PI/2+0.7,false); ctx.stroke();
+  ctx.font='700 22px "Fredoka One", sans-serif'; ctx.fillStyle=C.ang; ctx.textAlign='left'; ctx.textBaseline='middle'; ctx.fillText('45°',220,405); ctx.restore();
+  // Right
+  const rOp=fadeIn(f,18,8);
+  ctx.save(); ctx.globalAlpha=rOp; ctx.strokeStyle=C.blk; ctx.lineWidth=8; ctx.lineCap='round';
+  ctx.beginPath(); ctx.moveTo(490,435); ctx.lineTo(490,220); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(490,435); ctx.lineTo(645,435); ctx.stroke();
+  ctx.lineWidth=4; ctx.strokeRect(490,415,22,22);
+  ctx.font='700 22px "Fredoka One", sans-serif'; ctx.fillStyle=C.blk; ctx.textAlign='left'; ctx.textBaseline='middle'; ctx.fillText('90°',522,405); ctx.restore();
+  // Obtuse
+  const oOp=fadeIn(f,28,8);
+  ctx.save(); ctx.globalAlpha=oOp; ctx.strokeStyle=C.sq; ctx.lineWidth=8; ctx.lineCap='round';
+  ctx.beginPath(); ctx.moveTo(800,435); ctx.lineTo(800,220); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(800,435); ctx.lineTo(965,395); ctx.stroke();
+  ctx.lineWidth=4; ctx.beginPath(); ctx.arc(800,435,52,-Math.PI/2,-Math.PI/2+2.1,false); ctx.stroke();
+  ctx.font='700 22px "Fredoka One", sans-serif'; ctx.fillStyle=C.sq; ctx.textAlign='left'; ctx.textBaseline='middle'; ctx.fillText('120°',856,408); ctx.restore();
+  const lOp=fadeIn(f,30,8);
+  ctx.save(); ctx.globalAlpha=lOp; ctx.font='700 26px "Fredoka One", sans-serif'; ctx.textBaseline='middle';
+  [[160,'Acute','< 90°',C.ang],[490,'Right','= 90°',C.blk],[800,'Obtuse','> 90°',C.sq]].forEach(([x,lab,sub,col])=>{
+    ctx.fillStyle=col; ctx.textAlign='center'; ctx.fillText(lab,x,495);
+    ctx.font='400 20px "Nunito", sans-serif'; ctx.fillStyle=C.gry; ctx.fillText(sub,x,522);
+    ctx.font='700 26px "Fredoka One", sans-serif';
+  }); ctx.restore();
+  ctx.restore();
+  conceptName('Angles', fadeIn(f,15,8));
+  supportText('Acute · Right (90°) · Obtuse', fadeIn(f,23,8));
+  const p1s=spr(f,35,{damping:12,stiffness:200}), p2s=spr(f,41,{damping:12,stiffness:200});
+  pill(W/2-140,570,'acute < 90°',C.ang,p1s);
+  pill(W/2+110,570,'obtuse > 90°',C.sq,p2s);
+}
+
+function drawChorus3(f,gf){
+  header('Full Review — Shapes in Geometry',f);
+  const items=[
+    {delay:0, cx:180,cy:250, draw:(sp)=>{ ctx.save(); ctx.translate(180,250); ctx.scale(sp,sp); ctx.fillStyle=C.sq; roundRect(ctx,-60,-60,120,120,10); ctx.fill(); ctx.restore(); }, label:'Square'},
+    {delay:6, cx:400,cy:250, draw:(sp)=>{ ctx.save(); ctx.translate(400,250); ctx.scale(sp,sp); ctx.fillStyle=C.rect; roundRect(ctx,-90,-45,180,90,8); ctx.fill(); ctx.restore(); }, label:'Rectangle'},
+    {delay:12,cx:650,cy:250, draw:(sp)=>{ ctx.save(); ctx.translate(650,250); ctx.scale(sp,sp); ctx.fillStyle=C.tri; ctx.strokeStyle=C.triS; ctx.lineWidth=4; ctx.beginPath(); ctx.moveTo(0,-80); ctx.lineTo(-75,55); ctx.lineTo(75,55); ctx.closePath(); ctx.fill(); ctx.stroke(); ctx.restore(); }, label:'Triangle'},
+    {delay:18,cx:880,cy:250, draw:(sp)=>{ ctx.save(); ctx.translate(880,250); ctx.scale(sp,sp); ctx.fillStyle=C.circ; ctx.beginPath(); ctx.arc(0,0,70,0,Math.PI*2); ctx.fill(); ctx.restore(); }, label:'Circle'},
+    {delay:24,cx:310,cy:455, draw:(sp)=>{ ctx.save(); ctx.translate(310,455); ctx.scale(sp,sp); ctx.strokeStyle=C.par; ctx.lineWidth=8; ctx.lineCap='round'; ctx.beginPath(); ctx.moveTo(-90,-18); ctx.lineTo(90,-18); ctx.stroke(); ctx.beginPath(); ctx.moveTo(-90,18); ctx.lineTo(90,18); ctx.stroke(); ctx.restore(); }, label:'Parallel'},
+    {delay:30,cx:790,cy:455, draw:(sp)=>{ ctx.save(); ctx.translate(790,455); ctx.scale(sp,sp); ctx.strokeStyle=C.ang; ctx.lineWidth=8; ctx.lineCap='round'; ctx.beginPath(); ctx.moveTo(-40,60); ctx.lineTo(-40,-60); ctx.stroke(); ctx.beginPath(); ctx.moveTo(-40,60); ctx.lineTo(80,60); ctx.stroke(); ctx.strokeRect(-40,40,20,20); ctx.restore(); }, label:'Angles'},
+  ];
+  const lOp=fadeIn(f,40,12);
+  for(const it of items){
+    const sp=spr(f,it.delay,{damping:13,stiffness:110}); it.draw(sp);
+    ctx.save(); ctx.globalAlpha=lOp*sp; ctx.font='700 22px "Fredoka One", sans-serif'; ctx.fillStyle=C.blk; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillText(it.label,it.cx,it.cy+(it.cy<400?110:90)); ctx.restore();
+  }
+  ctx.save(); ctx.globalAlpha=fadeIn(f,38,10); ctx.font='900 48px "Fredoka One", sans-serif'; ctx.fillStyle=C.blk; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillText('Shapes in Geometry!',W/2,660); ctx.restore();
+  const p1s=spr(f,50,{damping:12,stiffness:200}), p2s=spr(f,56,{damping:12,stiffness:200});
+  pill(W/2-130,742,'measure + count',C.circ,p1s);
+  pill(W/2+130,742,'sing along!',C.sq,p2s);
+  const fOp=fadeIn(f,ts(20),15);
+  ctx.save(); ctx.globalAlpha=fOp; ctx.font='700 34px "Fredoka One", sans-serif'; ctx.fillStyle=C.gry; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillText('Come learn with me!',W/2,790); ctx.restore();
+}
+
+function drawLyrics(gf){
+  const lyric = LYRICS.find(l=>gf>=l[0]&&gf<l[1]);
+  if(!lyric) return;
+  const lf=gf-lyric[0], dur=lyric[1]-lyric[0];
+  const slideY=interp(lf,0,8,20,0);
+  const op=Math.min(clamp(lf/8,0,1), clamp((dur-lf)/6,0,1));
+  ctx.save(); ctx.globalAlpha=op; ctx.translate(0,slideY);
+  ctx.font='700 36px "Fredoka One", sans-serif'; ctx.fillStyle=C.blk; ctx.textAlign='center'; ctx.textBaseline='middle';
+  ctx.fillText(lyric[2],W/2,876); ctx.restore();
+}
+
+function drawProgress(gf){
+  const fill=clamp(gf/TOTAL,0,1);
+  ctx.fillStyle='#E9ECEF'; ctx.fillRect(0,H-8,W,8);
+  ctx.fillStyle=C.prog; ctx.fillRect(0,H-8,W*fill,8);
+}
+
+function render(){
+  draw(frame);
+  // update ui
+  const sc = SCENES_DEF.slice().reverse().find(s=>frame>=s.from);
+  document.getElementById('sceneLabel').textContent = sc ? sc.name : 'Intro';
+  const secs = frame/FPS;
+  const m=Math.floor(secs/60), s=Math.floor(secs%60);
+  document.getElementById('timeLabel').textContent = `${m}:${s.toString().padStart(2,'0')}`;
+  document.getElementById('scrubber').value = frame;
+}
+
+function tick(ts){
+  if(!playing){ lastTime=null; return; }
+  if(lastTime===null){ lastTime=ts; }
+  const dt=(ts-lastTime)/1000;
+  lastTime=ts;
+  frame=Math.min(TOTAL-1,frame+dt*FPS);
+  if(frame>=TOTAL-1){ playing=false; document.getElementById('playBtn').textContent='\u25B6 Play'; frame=TOTAL-1; }
+  render();
+  if(playing) raf=requestAnimationFrame(tick);
+}
+
+document.getElementById('playBtn').addEventListener('click',()=>{
+  playing=!playing;
+  document.getElementById('playBtn').textContent=playing?'\u23F8 Pause':'\u25B6 Play';
+  if(playing){ if(frame>=TOTAL-1) frame=0; lastTime=null; raf=requestAnimationFrame(tick); }
+  else { cancelAnimationFrame(raf); }
+});
+
+document.getElementById('scrubber').addEventListener('input',e=>{
+  frame=parseInt(e.target.value); render();
+});
+
+render();
+window.addEventListener('resize', render);
+</script>

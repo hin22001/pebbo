@@ -1,0 +1,15 @@
+.input-text-area{
+  &.disabled{
+    background-color: $color-grey-light-accent;
+    border: unset !important;
+    .MuiInputBase-root{
+      color: $color-grey-dark ;
+    }
+  }
+  fieldset{
+    border: unset;
+  }
+  .MuiInputBase-root{
+    width: 100%;
+  }
+}

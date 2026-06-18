@@ -1,0 +1,79 @@
+.element-dropdown {
+  height: fit-content;
+  width: fit-content;
+
+  .MuiInput-underline:after,
+  .MuiInput-underline:before {
+    content: unset;
+  }
+
+  .mui-form-control {
+    box-sizing: border-box;
+    width: 100%;
+
+    .MuiMenu-list {
+      background-color: #949494;
+    }
+  }
+
+  .MuiSelect-select {
+    padding: .5rem;
+
+    &:focus {
+      background-color: unset;
+    }
+  }
+
+  &.disabled {
+    .mui-form-control {
+      background-color: $color-grey-light-accent;
+      border: 1px solid $color-grey-light-accent;
+    }
+
+    .MuiSelect-root {
+      color: $color-grey-dark;
+    }
+
+    .MuiSvgIcon-root {
+      display: none;
+    }
+  }
+
+  .placeholder {
+    color: $color-grey-dark;
+  }
+
+  &-with-filter {
+    .MuiInput-root {
+      margin-top: 0;
+      padding: .5rem .5rem .5rem 2rem !important;
+    }
+
+    .MuiTextField-root {
+      border: 1px solid $color-grey;
+      border-radius: 2rem;
+    }
+
+    .MuiOutlinedInput-notchedOutline {
+      border-radius: 2rem;
+    }
+
+    .MuiAutocomplete-endAdornment {
+      top: calc(50% - 1rem);
+      right: 1rem;
+
+      .MuiAutocomplete-clearIndicator {
+        display: none;
+      }
+    }
+
+    .MuiInputLabel-root {
+      transform: translate(30px, 15px) scale(1);
+
+      &.MuiInputLabel-shrink {
+        display: none;
+      }
+    }
+  }
+
+}

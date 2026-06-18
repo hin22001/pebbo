@@ -1,0 +1,11 @@
+export { default as SectionHeader } from "./SectionHeader";
+export { default as SectionBanner } from "./SectionBanner";
+export { default as SectionInstagram } from "./SectionInstagram";
+export { default as SectionPartners } from "./SectionPartners";
+export { default as SectionAbout } from "./SectionAbout";
+export { default as SectionVideo } from "./SectionVideo";
+export { default as SectionFeature } from "./SectionFeature";
+export { default as SectionGuide } from "./SectionGuide";
+export { default as SectionAmbassador } from "./SectionAmbassador";
+export { default as SectionFooter } from "./SectionFooter";
+export { default as SectionPlan } from "./SectionPlan";

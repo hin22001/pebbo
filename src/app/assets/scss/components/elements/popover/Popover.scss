@@ -1,0 +1,23 @@
+.popover-mobile {
+	display: flex;
+	font-family: $font-primary;
+
+	.MuiPopover-paper {
+		width: 200px;
+		right: 65px !important;
+		display: flex;
+		flex-direction: column;
+		left: unset !important;
+		border-radius: 10px;
+		box-shadow: 0px 0px 8px rgb(64 72 83 / 20%);
+	}
+
+	.MuiPopover-paper > .icons {
+		display: flex;
+		flex-direction: row;
+		padding: 1rem;
+		span {
+			margin: auto 0.5rem;
+		}
+	}
+}

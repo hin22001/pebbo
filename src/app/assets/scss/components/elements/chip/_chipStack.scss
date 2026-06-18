@@ -1,0 +1,21 @@
+.elements-chip-stack {
+
+  &.yellow {
+    .MuiChip-root {
+      background-color: unset;
+      border: 1px solid #ddd;
+      @include font-subtitle;
+
+      &:hover {
+        background-color: #ddd;
+
+      }
+
+      &.active {
+        background-color: $color-yellow;
+        border: 1px solid $color-yellow;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,49 @@
+.leaderboard-page {
+  $primary-color: #8264ff;
+  $secondary-color: #ff5000;
+  $gold-color: #ffd700;
+  $silver-color: #c0c0c0;
+  $bronze-color: #cd7f32;
+  $card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  &-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  &-top-champions {
+    margin-bottom: 3rem;
+
+    .MuiCard-root {
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+
+  &-list-view {
+    .MuiTableContainer-root {
+      overflow-x: auto;
+    }
+
+    .MuiTableRow-root {
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: #f9f9f9;
+      }
+    }
+  }
+}
+
+.leaderboard-page-wrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem;
+}

@@ -1,0 +1,79 @@
+.elements-icon-button{
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+
+  &.MuiButtonBase-root.MuiIconButton-root{
+    padding: 0.2rem;
+
+  }
+
+  &-label{
+    @include font-subtitle;
+
+  }
+
+  &-link-wrapper{
+    width: fit-content;
+
+  }
+
+  &.use-label{
+    display: grid;
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    gap: 0.5rem;
+
+    .label{
+      width: 100%;
+      @include font-subtitle;
+      font-size: 1rem;
+    }
+
+  }
+
+  &.theme{
+    &-red{
+      color: red;
+    }
+    &-orange{
+      background-color: $color-orange;
+    }
+    &-yellow{
+      background-color: $color-yellow;
+    }
+    
+  }
+  &.color{
+    &-primary{
+      color: $color-primary;
+      .label{
+        color: $color-primary;
+      }
+
+    }
+    &-secondary{
+      color: $color-secondary;
+      .label{
+        color: $color-secondary;
+      }
+
+    }
+  }
+  &.size{
+    &-large{
+      .elements-icon-custom{
+        font-size: 3rem;
+      }
+    }
+  }
+  &.disabled{
+    .icon-custom-image{
+      opacity: .3;
+    }
+  }
+}

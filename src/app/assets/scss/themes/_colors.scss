@@ -1,0 +1,108 @@
+// =================================
+// ========== MAIN COLOR ===========
+// =================================
+:root {
+  --color-primary: #f05724;
+  --color-secondary: #d14b1e;
+  --color-link: #f05724;
+  --color-light-accent: #fff6eb;
+}
+$color-primary: #f05724;
+$color-secondary: #d14b1e;
+$color-secondary-accent: #f0572449;
+$color-purple: #8264FF;
+
+$color-background-hover: #f0572449;
+$color-light-accent: #fff6eb;
+$color-light-accent-2: #fcf9f8;
+$purple-light-accent: #e8e2ff;
+
+
+
+// ======================================
+// ========== COMPONENT BASED ===========
+// ======================================
+
+$color-border: #e2e8f0;
+$color-background-content: white;
+
+
+
+
+// ============================
+// ========== OTHER ===========
+// ============================
+$color-purple: #8264FF;
+
+$color-neutral-900: #171717;
+
+$color-black: black;
+$color-grey: #f3f4f6;
+$color-grey-dark: #404853;
+$color-grey-dark-2: #766F6F;
+
+
+$color-gold: #B78316;
+$color-gold-dark: #5E420D;
+$color-mint: #02cdd2;
+$color-mint-light: #E4FEFF;
+
+
+$color-primary-gradient: linear-gradient(270deg, #f8efe5, #f1ebff 65%);
+$color-secondary-gradient: linear-gradient(90deg, #8264FF 0%, #FF64A0 100%);
+$color-secondary-gradient-2: linear-gradient(270deg, #8264FF 0%, #FF64A0 100%);
+
+$color-lilac-gradient: linear-gradient(90deg, #f7f5ff 4.76%, #c8bafd 140.48%);
+$color-orange-gradient: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(254,142,0,1) 20%, rgba(254,142,0,1) 80%, rgba(255,255,255,0) 100%);
+$color-orange-gradient-2: linear-gradient(90deg, #FF5000 0%, #FF8F00 100%);
+$color-orange-gradient-2b: linear-gradient(270deg, #FF5000 0%, #FF8F00 100%);
+$color-bronze-gradient: linear-gradient(90deg, #846F67 4.76%, #371507 140.48%);
+$color-white-gradient: linear-gradient(180deg, #ffffff 90%, #ffffff00 100%);
+$color-mint-gradient: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(2,205,210,1) 20%, rgba(2,205,210,1) 80%, rgba(255,255,255,0) 100%);
+
+$color-black-transparent: rgb(0 0 0 / 54%);
+
+$color-blue-dark: #203452;
+$color-blue-dark-2: #1B2636;
+$color-blue-light: #1aaed4;
+
+$color-grey-light: #DADADA;
+$color-grey-light-accent: #ededed;
+$color-grey-light-2: #ECECEC;
+$color-grey-2: #C4C4C4;
+$color-grey-3: #a2a2a2;
+$color-grey-4: #8F8F8F;
+$color-grey-dark-3: #727272;
+$color-grey-dark-4: #6A6A6A;
+$color-grey-dark-5: #454545;
+
+$color-yellow: $color-primary;
+$color-yellow-secondary: #FFDA27;
+$color-yellow-light: #FFFAEF;
+$color-yellow-light-2: #FFF1B3;
+$color-yellow-light-3: #FBE27E;
+$color-yellow-light-4: #FFF1AD;
+$color-yellow-dark: #C6A512;
+
+$color-orange: #fe8e00;
+$color-orange-2: #FC8211;
+$color-orange-3: #FCBB13;
+$color-orange-light: #f9e8a0;
+$color-orange-light-2: #F9E89F;
+$color-orange-light-3: #FFDCC3;
+
+$color-green: #359b4b;
+$color-green-light: #def9d0;
+$color-green-light-2: #00BE2A;
+$color-green-dark: #A1B796;
+
+$color-red: #D41C02;
+$color-red-2: #FC2C29;
+$color-red-dark: #AA1602;
+$color-red-light: #FA9C5E;
+$color-red-light-2: rgba(252, 44, 41, 0.3);
+$color-red-light-3: #ffe7e7;
+$color-red-light-4: #F26E56;
+
+$color-pink: #FD7080;
+$color-light-pink: #ffdce0;

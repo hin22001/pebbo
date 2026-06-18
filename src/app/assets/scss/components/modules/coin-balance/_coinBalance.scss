@@ -1,0 +1,23 @@
+.coin-balance-hover {
+  // Add hover animation similar to language select
+  $enlarge-transition: transform 0.3s cubic-bezier(0.14, 0.61, 0.8, 0.9);
+  $scale: scale(1.05);
+
+  cursor: pointer;
+  transition: $enlarge-transition;
+
+  &:hover {
+    transform: $scale;
+  }
+
+  // Animation states for coin increment
+  &.coin-animation-number-pop {
+    transform: scale(1.05);
+    transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  &.coin-animation-final-pop {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+}

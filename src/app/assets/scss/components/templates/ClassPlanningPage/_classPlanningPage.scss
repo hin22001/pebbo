@@ -1,0 +1,13 @@
+.class-planning-page {
+
+  &-title {
+    font-size: 24px;
+  }
+
+  @media (max-width: 800px) {
+    &-title {
+      font-size: 17px;
+    }
+  }
+
+}

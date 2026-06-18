@@ -1,0 +1,62 @@
+.stepper{
+  $circleSize: 50px;
+
+  .MuiStepper{
+    &-root{
+    }
+  }
+
+  .MuiStepLabel{
+    &-root{
+      .MuiStepLabel-label{
+        margin-top: unset;
+        margin-bottom: 1rem;
+        // white-space: nowrap;
+      }
+      &.MuiStepLabel-alternativeLabel{
+        flex-direction: column-reverse;
+      }
+    }
+  }
+  .MuiStepIcon{
+    &-root{
+      width: $circleSize;
+      height: $circleSize;
+      color: $color-grey-light-accent;
+      z-index: 5;
+    }
+    &-active{
+      color: $color-green !important;
+      .MuiStepIcon-text{
+        fill: white;
+      }
+    }
+    &-completed{
+      color: $color-green !important;
+    }
+    &-text{
+      fill: $color-grey-dark;
+    }
+  }
+
+  .MuiStepConnector{
+    &-root{
+    }
+    &-completed,
+    &-active{
+      background-color: $color-green;
+      .MuiStepConnector-line{
+        background-color: $color-green;
+      }
+    }
+    &-line{
+      height: 5px;
+      border: unset;
+      background-color: #eaeaf0;
+    }
+    &-alternativeLabel{
+      top: 59px;
+    }
+  }
+  
+}

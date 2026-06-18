@@ -1,0 +1,95 @@
+{
+    "type": "doc",
+    "content": [
+        {
+            "type": "SegmentReactComponent",
+            "content": [
+                {
+                    "type": "heading",
+                    "attrs": {
+                        "level": 3
+                    },
+                    "content": [
+                        {
+                            "text": "There are 48 members in the choir, of which",
+                            "type": "text"
+                        },
+                        {
+                            "type": "KatexReactComponent",
+                            "attrs": {
+                                "originalString": "\\frac{7}{12}"
+                            }
+                        },
+                        {
+                            "text": "are girls.",
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "type": "heading",
+                    "attrs": {
+                        "level": 3
+                    },
+                    "content": [
+                        {
+                            "text": "Among the girls, only",
+                            "type": "text"
+                        },
+                        {
+                            "type": "KatexReactComponent",
+                            "attrs": {
+                                "originalString": "\\frac{5}{14}"
+                            }
+                        },
+                        {
+                            "text": "wear glasses.",
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "type": "heading",
+                    "attrs": {
+                        "level": 3
+                    },
+                    "content": [
+                        {
+                            "text": "In the choir, there are ___ girls who wear glasses.",
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "content": [
+                        {
+                            "type": "TextFieldReactComponent",
+                            "attrs": {
+                                "unit": "girls",
+                                "label": "",
+                                "value": null,
+                                "answer": "\"10\"",
+                                "isCorrect": null,
+                                "explanation": "",
+                                "placeholder": "Please fill your answer..."
+                            }
+                        },
+                        {
+                            "type": "FractionReactComponent",
+                            "attrs": {
+                                "unit": null,
+                                "label": null,
+                                "value": null,
+                                "answer": "\"10\\\\frac{null}{null}\"",
+                                "isCorrect": null,
+                                "explanation": "{\"type\":\"doc\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"48\"},{\"type\":\"KatexReactComponent\",\"attrs\":{\"originalString\":\"\\\\times\"}},{\"type\":\"KatexReactComponent\",\"attrs\":{\"originalString\":\"\\\\frac{7}{12}\"}},{\"type\":\"KatexReactComponent\",\"attrs\":{\"originalString\":\"\\\\times\"}},{\"type\":\"KatexReactComponent\",\"attrs\":{\"originalString\":\"\\\\frac{5}{14}\"}},{\"type\":\"KatexReactComponent\",\"attrs\":{\"originalString\":\"=\"}},{\"type\":\"text\",\"text\":\"10\"}]}]}",
+                                "placeholder": null
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

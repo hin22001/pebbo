@@ -1,0 +1,27 @@
+.module-chart {
+  padding-top: 1.5rem;
+
+  .element-loader-skeleton {
+    height: 100%;
+  }
+
+  &-echart {
+    height: 100% !important;
+  }
+
+  &-chart {
+    position: relative;
+    height: 100%;
+
+    &-custom-pie-custom {
+      position: absolute;
+      top: calc(50% - 3rem);
+      z-index: 1;
+      width: 100%;
+      text-align: center;
+
+      &-label {}
+    }
+  }
+
+}

@@ -1,0 +1,93 @@
+.module-modal-drawer {
+  &-content {
+    padding: 1rem;
+    box-sizing: border-box;
+    @include grid-gap(2rem);
+    min-width: 500px;
+    max-width: 95vw;
+    align-self: center;
+
+    &.use-image {
+
+      display: grid;
+      grid-template-areas: '_image _header' '_image _body';
+      align-items: center;
+      row-gap: 1rem;
+
+      .module-modal-drawer {
+        &-content {
+          &-image {
+            grid-area: _image;
+          }
+          &-header {
+            grid-area: _header;
+            align-self: flex-end;
+          }
+          &-body {
+            grid-area: _body;
+            // align-self: flex-start;
+          }
+        }
+      }
+    }
+
+    &-image {}
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center
+    }
+
+    &-body {
+      @include grid-gap;
+
+    }
+
+    .text {
+      &-title {
+        @include font-title;
+        font-size: 1.5rem
+      }
+
+      &-subtitle {
+        @include font-subtitle;
+        font-size: 1.2rem
+      }
+
+      &-description {
+        @include font-subtitle;
+        font-size: 1.1rem
+      }
+    }
+
+
+
+  }
+
+  .MuiBackdrop-root {
+    // background-color: rgba(0, 0, 0, 0.7);
+    background-color: #ebebebb3;
+    backdrop-filter: blur(2px);
+  }
+
+  &.anchor {
+    &-right {
+      .MuiDrawer-paper {
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+
+      }
+
+    }
+  }
+
+  &.disable-backdrop {
+    height: fit-content;
+
+    .MuiBackdrop-root {
+      display: none;
+      // opacity: 0;
+    }
+  }
+}

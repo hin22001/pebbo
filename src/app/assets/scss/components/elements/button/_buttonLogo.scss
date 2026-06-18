@@ -1,0 +1,44 @@
+.elements-button.logo {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  border-radius: 1rem;
+
+  img{
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  p {
+
+    line-height: initial;
+
+  }
+
+  &.white {
+    border: 1px solid #ddd;
+
+    p {
+      color: black;
+
+    }
+
+  }
+
+  &.blue {
+    background-color: rgba(0, 86, 179, 1);
+
+    p {
+      color: white;
+    }
+
+  }
+
+  &.disabled {
+    cursor: context-menu;
+  }
+
+}

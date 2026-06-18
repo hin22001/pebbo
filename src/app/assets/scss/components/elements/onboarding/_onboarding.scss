@@ -1,0 +1,239 @@
+// Onboarding Tour Animations and Styles
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes progressShine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// Onboarding tooltip enhancements
+.onboarding-tooltip {
+  animation: fadeInScale 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s ease;
+}
+
+// Progress bar enhancements
+.onboarding-progress-bar {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    );
+    animation: progressShine 2s ease-in-out infinite;
+  }
+}
+
+// Mascot glow effect
+.onboarding-mascot-glow {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border-radius: 50%;
+    background: linear-gradient(
+      135deg,
+      rgba(130, 100, 255, 0.2),
+      rgba(160, 132, 255, 0.1)
+    );
+    z-index: 0;
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+}
+
+// Button enhancements
+.onboarding-button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// Ensure overlay doesn't visually dim target elements
+.react-joyride__overlay {
+  // Allow clip-path to create holes
+  will-change: clip-path;
+  transition: clip-path 0.3s ease;
+}
+
+// Ensure spotlight doesn't hide target elements
+.react-joyride__spotlight {
+  background-color: transparent !important;
+  background: transparent !important;
+  pointer-events: none !important;
+  z-index: 9998 !important;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+}
+
+// Ensure target elements stay visible with original colors (0 dim) - same brightness as modal
+// Use most aggressive selectors to override any dimming
+// BUT preserve original button styles (background-color, padding, etc.)
+[data-joyride-highlighted="true"],
+.react-joyride__spotlight ~ .dashboard-page-profile-stats-wrapper,
+.react-joyride__spotlight ~ .dashboard-page-section2-activity-btn2,
+.react-joyride__spotlight ~ .dashboard-page-profile-ava-wrapper,
+.dashboard-page-profile-stats-wrapper[data-joyride-highlighted],
+.dashboard-page-section2-activity-btn2[data-joyride-highlighted],
+.dashboard-page-profile-ava-wrapper[data-joyride-highlighted],
+[data-joyride-step],
+.react-joyride__overlay ~ .dashboard-page-profile-stats-wrapper,
+.react-joyride__overlay ~ .dashboard-page-section2-activity-btn2,
+.react-joyride__overlay ~ .dashboard-page-profile-ava-wrapper {
+  position: relative !important;
+  z-index: 10001 !important;
+  opacity: 1 !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  isolation: isolate !important;
+  will-change: transform !important;
+  transform: translateZ(0) !important;
+  backdrop-filter: none !important;
+  // DON'T override background - preserve original button styles
+  // background: inherit !important;
+  // color: inherit !important;
+  
+  // Ensure all child elements also stay at normal opacity and brightness
+  &,
+  & *,
+  & *::before,
+  & *::after {
+    opacity: 1 !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+    isolation: isolate !important;
+    backdrop-filter: none !important;
+    // DON'T override background/color - preserve original styles
+    // background: inherit !important;
+    // color: inherit !important;
+  }
+}
+
+// Specifically preserve button styling
+.dashboard-page-section2-activity-btn2[data-joyride-highlighted] {
+  background-color: #ff5000 !important; // Orange button color
+  border-radius: 8px !important;
+  padding: 8px 0px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  cursor: pointer !important;
+  width: 100% !important;
+  
+  & * {
+    color: #fff !important; // White text
+  }
+}
+
+// Global override for any element during joyride tour
+body:has(.react-joyride__overlay) {
+  [data-joyride-highlighted="true"] {
+    z-index: 10001 !important;
+    opacity: 1 !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+    isolation: isolate !important;
+    backdrop-filter: none !important;
+    
+    & * {
+      opacity: 1 !important;
+      filter: none !important;
+      mix-blend-mode: normal !important;
+      backdrop-filter: none !important;
+    }
+  }
+}
+
+// Ensure spotlight doesn't visually affect target
+.react-joyride__spotlight {
+  background-color: transparent !important;
+  background: transparent !important;
+  pointer-events: none !important;
+  z-index: 9998 !important;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+  
+  // Remove any visual effects that might dim
+  &::before,
+  &::after {
+    display: none !important;
+  }
+}
+

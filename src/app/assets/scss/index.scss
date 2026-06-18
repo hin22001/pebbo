@@ -1,0 +1,389 @@
+// Tailwind CSS
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Typhographys
+@import "typographys";
+
+// Themes
+@import "themes";
+
+// Helpers
+@import "helpers";
+
+// Base
+@import "bases";
+
+// Components
+body {
+  @import "components";
+
+  .fc-theme-standard .fc-daygrid-day-frame {
+    border: #fff;
+  }
+
+  .fc-daygrid-day {
+    border-width: 0;
+  }
+
+  .fc-theme-standard .fc-col-header-cell {
+    border: none;
+  }
+
+  .fc-theme-standard th {
+    border: none;
+  }
+
+  .fc-theme-standard table,
+  .fc-theme-standard .fc-scrollgrid {
+    border: none;
+  }
+
+  .fc .fc-toolbar-title {
+    font-size: 1.5rem;
+  }
+
+  .fc .fc-button-primary {
+    background-color: #f05724;
+    border-color: #f05724;
+    width: 50px;
+    height: 50px;
+    font-size: 14px;
+  }
+
+  .fc .fc-button-primary:hover {
+    background-color: #f05724;
+    border-color: #f05724;
+  }
+
+  .fc .fc-col-header-cell-cushion {
+    font-size: 1.2rem;
+  }
+
+  .fc .fc-daygrid-day-number {
+    font-size: 1.2rem;
+  }
+
+  .fc-direction-ltr .fc-daygrid-more-link {
+    font-size: 1.2rem;
+  }
+
+  .fc-h-event .fc-event-title {
+    font-size: 1rem;
+  }
+
+  .fc-scroller-harness {
+    overflow: hidden !important;
+  }
+
+  .fc-daygrid-day-frame {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .fc .fc-toolbar.fc-header-toolbar {
+    margin-bottom: 0rem;
+  }
+}
+
+:root {
+  /* Existing — DO NOT REMOVE */
+  --fc-border-color: #fff;
+
+  /* shadcn semantic vars (light theme; teacher portal is light-only in v1) */
+  --background: 0 0% 100%;
+  --foreground: 30 10% 10%;
+
+  --card: 30 20% 98%;
+  --card-foreground: 30 10% 10%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 30 10% 10%;
+
+  --primary: 18 100% 50%;        /* #FF5000 — brand orange */
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 30 30% 96%;
+  --secondary-foreground: 30 10% 20%;
+
+  --muted: 30 10% 95%;
+  --muted-foreground: 30 5% 40%;
+
+  --accent: 30 80% 96%;
+  --accent-foreground: 30 10% 20%;
+
+  --destructive: 5 96% 42%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 30 5% 85%;
+  --input: 30 5% 85%;
+  --ring: 18 100% 50%;
+
+  --radius: 0.375rem;
+
+  /* Chrome dimensions — must match student portal */
+  --teacher-header-h: 5rem;
+  --teacher-nav-w: 15rem;
+  --teacher-nav-collapsed-w: 60px;
+}
+
+// UI Integration Animations
+@keyframes coin-jump {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-12px);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-8px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes streak-wiggle {
+  0% {
+    transform: translateZ(0) scale(1) rotate(0deg);
+  }
+  20% {
+    transform: translateZ(0) scale(1.05) rotate(-4deg);
+  }
+  50% {
+    transform: translateZ(0) scale(1.05) rotate(4deg);
+  }
+  80% {
+    transform: translateZ(0) scale(1.03) rotate(-2deg);
+  }
+  100% {
+    transform: translateZ(0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes restore-color {
+  from {
+    filter: grayscale(100%);
+  }
+  to {
+    filter: grayscale(0%);
+  }
+}
+
+@keyframes metal-sheen {
+  0% {
+    transform: translateX(-100%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-20deg);
+  }
+}
+
+@keyframes card-pop {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.07);
+  }
+}
+
+@keyframes card-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  50% {
+    box-shadow: 0 0 20px 8px var(--glow-color, rgba(255, 193, 7, 0.7));
+  }
+}
+
+@keyframes number-pop-effect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes final-pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes break-bend {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-2px) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-1px) rotate(1deg);
+  }
+}
+
+@keyframes break-arm-left {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+}
+
+@keyframes break-arm-right {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes break-leg-left {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-1deg);
+  }
+}
+
+@keyframes break-leg-right {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(1deg);
+  }
+}
+
+// Animation Classes
+.animate-coin-jump {
+  animation: coin-jump 450ms ease-out 0s 3;
+}
+
+.animate-streak-wiggle {
+  animation: streak-wiggle 600ms ease-in-out both;
+}
+
+.animate-restore-color {
+  animation: restore-color 0.5s ease-in forwards;
+}
+
+.animate-metal-sheen::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: metal-sheen 0.7s ease-in-out;
+  opacity: 0.8;
+}
+
+.animate-card-pop {
+  animation: card-pop 0.5s ease-out;
+}
+
+.animate-card-glow {
+  animation: card-glow 1s ease-in-out forwards;
+}
+
+.animate-number-pop-effect {
+  animation: number-pop-effect 300ms ease-out;
+}
+
+.animate-final-pop {
+  animation: final-pop 400ms ease-out;
+}
+
+.animate-break-bend {
+  animation: break-bend 0.6s ease-in-out infinite;
+}
+
+.animate-break-arm-left {
+  animation: break-arm-left 0.6s ease-in-out infinite;
+}
+
+.animate-break-arm-right {
+  animation: break-arm-right 0.6s ease-in-out infinite;
+}
+
+.animate-break-leg-left {
+  animation: break-leg-left 0.6s ease-in-out infinite;
+}
+
+.animate-break-leg-right {
+  animation: break-leg-right 0.6s ease-in-out infinite;
+}
+
+.day-streak {
+  color: #8d8d8d;
+  text-align: center;
+  font-family: "Advercase", serif;
+  font-size: 20px;
+  line-height: 36.26px;
+  font-weight: 400 !important;
+}

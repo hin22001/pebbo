@@ -1,0 +1,22 @@
+.element-badge {
+	&-content {
+		background-color: $color-red;
+		border-radius: 1rem;
+		padding: 0.2rem 0.3rem;
+		@include box-shadow;
+
+		&-icon {}
+
+		&-label {
+			color: white;
+
+		}
+	}
+
+	.MuiBadge-badge {
+		top: 0.2rem;
+		right: 0.2rem;
+
+	}
+
+}

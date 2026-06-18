@@ -1,0 +1,103 @@
+.template-landing-page-section-feature {
+  // background: $color-lilac-gradient;
+
+
+  &-content {
+    position: relative;
+    min-height: 50rem;
+    display: grid;
+    align-items: center;
+    align-content: center;
+    padding: 0rem 3rem;
+    gap: 3rem;
+
+  }
+
+  &-text-wrapper-title {
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    height: fit-content;
+    flex-wrap: wrap;
+
+    color: $color-primary;
+  }
+
+  &-text-subtitle {
+    color: $color-purple;
+  }
+
+  &-image-logo {
+    height: fit-content;
+    float: inline-start;
+  }
+
+  &-list {
+
+    &-wrapper {}
+
+    &-item {
+      gap: 1rem;
+      transition: all 0.5s;
+      cursor: pointer;
+
+      &:hover {
+        color: $color-primary;
+        transform: translateY(-0.5rem);
+
+      }
+
+      &-card {
+        position: relative;
+        box-sizing: border-box;
+        height: fit-content;
+        @include box-shadow;
+        border-radius: 1.5rem;
+
+      }
+
+      &-wrap-text {
+        padding: 1rem;
+        position: absolute;
+
+      }
+
+      &-text {
+        color: white;
+        z-index: 1;
+        font-size: 2.1rem;
+        font-weight: 700;
+
+        &.subtitle {
+          font-size: 1.6rem;
+
+        }
+
+        &-link {
+          &-label{
+            color: $color-purple;
+            text-align: center;
+            cursor: pointer;
+
+          }
+
+        }
+      }
+    }
+  }
+
+  &-image-decor {
+    position: absolute;
+    left: 1rem;
+
+    &.right {
+      left: unset;
+      right: 1rem;
+    }
+
+  }
+
+
+
+}

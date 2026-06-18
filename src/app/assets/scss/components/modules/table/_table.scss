@@ -1,0 +1,134 @@
+.module-table {
+
+  overflow: auto;
+  height: 100%;
+
+  &-row{
+    &-bg-color {
+      &-red{
+        background-color: $color-red-light-3;
+      }
+    }
+
+    &-disabled {
+      background-color: #f0f0f0 !important;
+    }
+
+  }
+
+  .MuiDataGrid {
+    &-withBorderColor{
+      border-color: $color-border;
+
+    }
+    &-root {
+      border-color: $color-border;
+      border-radius: 0.55rem;
+    }
+
+    &-row {
+      position: relative;
+      border-color: $color-border;
+
+      td,
+      th,
+      tr {
+        border-color: $color-border !important;
+      }
+      
+    }
+    &-virtualScroller {
+      @include scroll-custom(blue, 0.7rem);
+    }
+
+    &-footerContainer {
+      min-height: unset;
+    }
+    &-columnHeader{
+      &Title{
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+    &-cellContent{
+      font-size: 1rem;
+      font-weight: 400;
+      color: $color-neutral-900;
+    }
+  }
+
+  .MuiOutlinedInput-notchedOutline {
+    border: unset;
+  }
+
+  .elements-chip-stack{
+    overflow: auto;
+    padding-bottom: 0.1rem;
+    @include scroll-custom;
+  }
+
+
+
+
+  &.use-bulk-edit {}
+
+  &.disable-action {
+    &-edit {}
+  }
+
+  &.show-editable-cell {
+
+    &:not(.disable-action-edit) {
+
+      .module-table {
+        &-cell {
+          &-editable {
+            cursor: pointer;
+            display: grid;
+            width: 100%;
+            height: 90%;
+            align-items: center;
+
+            padding: 0rem 1rem;
+            background-color: white;
+            @include card(0.5rem);
+          }
+        }
+
+        &-row {
+          &-edited {
+            background-color: antiquewhite;
+          }
+          &-disabled {
+            background-color: red !important;
+          }
+        }
+      }
+    }
+
+  }
+
+  &-action-cell {}
+
+  &-tr-child {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(224, 224, 224, 1);
+    box-sizing: border-box;
+    background-color: $color-grey;
+  }
+
+  &-cell-xp {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #FAEAE5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+  }
+}
+

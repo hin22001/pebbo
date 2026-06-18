@@ -1,0 +1,189 @@
+.modules-notice-card {
+
+  .MuiCard-root {
+    border-radius: 1rem;
+    box-shadow: unset;
+    background-color: #f7f7f7;
+
+    .MuiCardContent-root {
+      text-align: center;
+      padding: 16px;
+      @include grid-gap(.5rem);
+
+      .wrap {
+        &-text {
+          gap: 1rem;
+
+          p {
+            font-family: $font-primary;
+            margin-bottom: unset;
+            font-weight: 600;
+            color: #a3a2a2;
+          }
+
+          p.text-1 {
+            color: #868686;
+
+          }
+
+        }
+
+        &-button {
+          font-size: 1rem;
+          padding: 0.5rem 2rem;
+          box-sizing: border-box;
+          display: flex;
+          gap: 1rem;
+          justify-content: center;
+        }
+      }
+
+    }
+  }
+
+  &.dark-gray {
+    .MuiCard-root {
+      background-color: $color-grey-light-accent;
+
+      .MuiCardContent-root {
+        // color: $color-grey-light;
+      }
+
+    }
+  }
+
+  &.white {
+    .MuiCard-root {
+      background-color: white;
+    }
+
+  }
+
+  &.with-image {
+
+    .MuiCard-root {
+      background-color: white;
+
+      .MuiCardContent-root {
+        gap: 1rem;
+        padding: 3rem 4.5rem;
+
+        .wrap {
+
+          &-image {
+            max-width: 500px;
+            margin: auto;
+
+            img {
+              height: fit-content;
+              width: 100%;
+              object-fit: contain;
+            }
+
+          }
+
+          &-text {
+            @include grid-gap(.5rem);
+
+            .text {
+              &-1 {
+                font-weight: 700;
+                color: $color-grey-dark;
+              }
+
+              &-2 {
+                color: $color-grey-dark-3;
+                max-width: 400px;
+                margin: auto;
+              }
+            }
+
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+  &.image-small {
+    .MuiCard-root {
+      .MuiCardContent-root {
+        .wrap {
+          &-image {
+            max-width: 300px;
+
+            img {}
+          }
+        }
+      }
+    }
+  }
+
+  &.list-like {
+    padding: 1rem;
+
+    .MuiCardContent-root {
+      padding: unset !important;
+      grid-auto-flow: column;
+      align-items: center;
+
+      .wrap {
+        &-image {
+          max-width: 10rem !important;
+
+          img {}
+        }
+
+        &-text {
+          text-align: left;
+          justify-content: flex-start;
+        }
+      }
+    }
+
+    
+  }
+  &.button-on-description {
+    .MuiCardContent-root {
+      grid-template-areas: '_image _text' '_image _button';
+      row-gap: unset !important;
+      .wrap {
+        &-image {
+          grid-area: _image;
+        }
+        
+        &-text {
+          grid-area: _text;
+
+        }
+        &-button {
+          grid-area: _button;
+          padding: unset;
+
+          button{
+            width: 100%;
+          }
+
+        }
+      }
+    }
+
+  }
+
+  &.title-lg {
+    .text-1 {
+      font-size: 2rem;
+
+    }
+  }
+}
+
+.teacher-notice-card {
+  margin: 0rem;
+  border-radius: 1rem;
+  box-shadow: unset;
+  background-color: #fff;
+  padding: 16px;
+}

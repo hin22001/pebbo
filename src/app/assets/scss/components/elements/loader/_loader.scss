@@ -1,0 +1,36 @@
+.elements-custom-loader {
+  z-index: 100000 !important;
+
+  &-content {
+    @include card;
+    @include box-shadow;
+    border: 1px solid #ddd;
+
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: space-evenly;
+    gap: 2rem;
+    padding: 2rem;
+    box-sizing: border-box;
+    text-align: center;
+
+    &-title {
+      .text-title {
+        @include font-subtitle;
+      }
+    }
+    &-wrap-loader{
+      img{
+        max-width: 10rem;
+        max-height: 10rem;
+        object-fit: contain;
+      }
+    }
+
+  }
+
+
+
+}

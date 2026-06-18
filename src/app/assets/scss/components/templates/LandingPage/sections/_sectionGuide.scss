@@ -1,0 +1,128 @@
+.template-landing-page-section-guide {
+  // background: $color-lilac-gradient;
+  $size-number: 2rem;
+  background-color: white;
+
+  .container {}
+
+  &-content {
+    min-height: 52rem;
+    display: grid;
+    align-items: center;
+    padding: 9rem 0rem;
+    box-sizing: border-box;
+    gap: 4rem;
+  }
+
+
+
+  &-list {
+    &-item {
+      &-text {
+        &.title {
+          color: $color-mint;
+          font-size: 1.7rem;
+          font-weight: 600;
+          line-height: 1.2;
+        }
+
+        &.subtitle {
+          font-weight: 500;
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    &-number {
+      z-index: 1;
+      width: $size-number;
+      height: $size-number;
+      text-align: center;
+      font-weight: 600;
+      color: white;
+      display: grid;
+      align-items: center;
+
+      &-wrapper {
+        position: relative;
+
+      }
+
+      &-icon {
+        position: absolute;
+        width: $size-number;
+        height: $size-number;
+
+      }
+    }
+  }
+
+  
+  &-text{
+    &-subtitle,
+    &-title {
+      color: white !important;
+    }
+    &-wrapper-title{
+      background:  $color-mint-gradient;
+      padding: 1rem 0rem;
+      box-sizing: border-box;
+      gap: 1rem;
+    }
+  }
+
+  &.orange {
+    .template-landing-page-section-guide {
+      &-text{
+        &-wrapper-title{
+          background:  $color-orange-gradient;
+        }
+      }
+      &-list {
+        &-item-text.title {
+          color: $color-orange;
+        }
+
+        &-number {
+          &-wrapper {}
+
+          &-icon {
+            filter: hue-rotate(216deg);
+
+          }
+        }
+      }
+    }
+  }
+
+  &-main-content {
+    display: grid;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  &.type {
+    &-student {
+      .template-landing-page-section-guide {
+        &-main-content {
+          grid-template-columns: 1fr 2fr;
+        }
+      }
+    }
+
+    &-parent {
+      .template-landing-page-section-guide {
+        &-main-content {
+          grid-template-columns: 2fr 1fr;
+
+        }
+
+        &-illustration {
+          grid-row-start: 1;
+        }
+      }
+
+    }
+  }
+
+}

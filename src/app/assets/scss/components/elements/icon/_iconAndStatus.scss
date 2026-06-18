@@ -1,0 +1,143 @@
+.elements-icon-and-status {
+  @include grid-gap(1rem);
+  grid-auto-flow: column;
+  justify-content: flex-start;
+
+
+  &-item {
+    @include grid-gap(.5rem);
+
+
+    &:not(:last-child) {
+      border-right: 1px solid $color-grey-light-2;
+      padding-right: 1rem;
+    }
+
+    p {
+      font-family: $font-primary;
+      margin: unset;
+      line-height: normal;
+    }
+
+  }
+
+  &-wrap {
+
+    &-icon {
+      display: flex;
+      align-items: center;
+    }
+
+    &-icon-status {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      justify-content: center;
+
+    }
+
+    &-status {
+
+      // font-weight: 700;
+
+    }
+
+    &-subtitle {
+
+      font-weight: 400;
+      font-size: .9rem;
+
+    }
+
+  }
+
+  &.no-divider {
+    .elements-icon-and-status {
+      &-item {
+        &:not(:last-child) {
+          border-right: unset;
+          padding-right: unset;
+        }
+      }
+    }
+  }
+
+  &.border {
+    border: 1px solid $color-grey-light-2;
+    border-radius: 1rem;
+    background-color: white;
+    padding: 1.5rem 2rem;
+    box-sizing: border-box;
+  }
+
+  &.green {
+    color: $color-green;
+  }
+
+  &.orange {
+    color: $color-orange;
+  }
+
+  &.yellow {
+    color: $color-orange;
+
+    &.chip{
+      background-color: $color-yellow-light-4;
+    }
+    
+  }
+
+  &.chip {
+    width: fit-content;
+    padding: .2rem 1rem;
+    border-radius: 10rem;
+    align-items: center;
+    line-height: normal;
+    font-weight: 700;
+  }
+  
+
+  &.icon-description {
+    $size-icon: 4rem;
+
+    .elements-icon-and-status {
+
+      &-wrap {
+        &-icon-status {
+          display: grid;
+          grid-template-areas:
+            '_icon _subtitle'
+            '_icon _title';
+          grid-template-columns: $size-icon auto;
+          gap: unset;
+        }
+
+        &-icon {
+          grid-area: _icon;
+          height: 100%;
+          width: 100%;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+
+        }
+
+        &-status {
+          grid-area: _title;
+
+        }
+
+        &-subtitle {
+          grid-area: _subtitle;
+          font-size: .7rem;
+
+        }
+      }
+
+    }
+  }
+
+}

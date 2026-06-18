@@ -1,0 +1,30 @@
+.elements-slider-number-step {
+  background-color: #ddd;
+  display: grid;
+  padding: 0rem 1rem;
+  border-radius: 20rem;
+
+  &-slider {
+
+    &.MuiSlider-root {
+      margin-bottom: unset;
+
+      .MuiSlider {
+        &-markLabel {
+          @include font-title;
+          color: white;
+
+          position: absolute;
+          top: .9rem;
+          z-index: 1;
+        }
+
+        &-thumb {
+          width: 3rem;
+        }
+      }
+    }
+
+  }
+
+}

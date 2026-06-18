@@ -1,0 +1,24 @@
+.elements-link-header{
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  
+  &-block-title{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+  }
+
+  &-title{
+    line-height: 1;
+  }
+
+  &-subtitle {
+    @include font-title;
+    display: flex;
+    align-items: center;
+    color: $color-secondary;
+    text-align: end;
+  }
+}

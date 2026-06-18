@@ -1,0 +1,78 @@
+.collapse-with-label {
+	background-color: #fff;
+	border-radius: 10px;
+	border: 1px solid #C4C4C4;
+	margin-bottom: 1rem;
+
+	.collapse-head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1rem;
+		border-bottom: none;
+	}
+	.collapse-head.collapse {
+		border-bottom: 1px solid  #FED000; 
+	}
+	.collapse-head.with-label {
+		padding: .7rem 1rem;
+	}
+	.collapse-body {
+		display: none;
+		max-height: 0;
+		transition: max-height 0.2s ease-out;
+		padding: 0;
+		overflow: hidden;
+	}
+	.collapse-body.collapse {
+		display: block;
+		max-height: 100% !important;
+		padding: 1rem;
+	}
+	.collapse-title {
+		display: flex;
+		align-items: center;
+	}
+	.collapse-title span {
+		margin-right: 1rem;
+		font-weight: bold;
+		color: #2E2E2E;
+	}
+
+	.button-expand {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 35px;
+		width: 35px;
+		border-radius: 35px;
+		border: inherit;
+		background-color: #fff;
+		outline: none !important;
+		box-shadow: none !important;
+	}
+	.button-expand:hover {
+		background-color: #efefef;
+	}
+	.button-expand .MuiSvgIcon-root {
+		transform: rotate(0deg);
+	    transition: all 80ms ease;
+	}
+	.button-expand.collapse {
+		background-color: #fff;
+	}
+	.button-expand.collapse .MuiSvgIcon-root {
+		transform: rotate(180deg);
+	    transition: all 80ms ease;
+	}
+
+	/*Custom*/
+	.green-light {
+		background-color: #DEF9D0;
+		color: #00BE2A !important;
+	}
+}
+.collapse-with-label.collapse {
+	border-color: #FED000;
+	box-shadow: 0 4px 20px 0 rgb(254 208 0 / 8%);
+}

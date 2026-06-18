@@ -1,0 +1,8 @@
+.element-switch {
+
+	.MuiSwitch-track{
+		@include box-shadow('inset-primary');
+		background-color: white !important;
+
+	}
+}
