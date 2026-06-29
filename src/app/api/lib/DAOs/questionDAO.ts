@@ -23,7 +23,7 @@ export class QuestionDAO {
     year: string,
   ) {
     const { data, error } = await this.server.rpc(
-      "get_questionobj_for_investor_demo",
+      "get_questionobj_bycategoryregion_optimized",
       {
         categories: categories,
         difficulties: difficulties,
