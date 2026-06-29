@@ -14,7 +14,12 @@ export default function StudentCard(props) {
       if (dataUser === null) {
         router.push("/login");
       }
-      setUserRoleValid(dataUser?.role?.name === "Student");
+      // role can be the canonical object {id, name} OR the raw string "student"
+      // (older/corrupted localStorage). Accept both so a bad-shaped role doesn't
+      // false-render the 404 instead of redirecting.
+      const role = dataUser?.role;
+      const roleName = typeof role === "string" ? role : role?.name;
+      setUserRoleValid(String(roleName).toLowerCase() === "student");
     };
     validateAndRedirect();
   }, []);

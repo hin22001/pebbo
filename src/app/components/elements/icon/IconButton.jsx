@@ -19,6 +19,7 @@ function index(props) {
     color,
     sx,
     children,
+    onClick,
   } = props;
 
   const mainClassName = classnames(
@@ -34,24 +35,29 @@ function index(props) {
     <LinkWrapper
       className={"elements-icon-button-link-wrapper " + (className || "")}
       href={href}
-      handleClick={(event) => {
-        if (!href && handleClick) {
-          event?.preventDefault();
+      handleClick={
+        handleClick
+          ? (event) => {
+              if (!href) {
+                event?.preventDefault();
 
-          handleClick({
-            target: {
-              value: value,
-            },
-            event,
-          });
-        }
-      }}
+                handleClick({
+                  target: {
+                    value: value,
+                  },
+                  event,
+                });
+              }
+            }
+          : undefined
+      }
     >
       <IconButton
         className={mainClassName}
         value={value || ""}
         size={size}
         disabled={disabled}
+        onClick={onClick}
         // disableRipple={true}
         sx={sx}
       >

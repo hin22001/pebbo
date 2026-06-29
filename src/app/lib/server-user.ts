@@ -28,7 +28,12 @@ export function shapeProfileToDataUser(
   const profileName = [firstName, lastName].filter(Boolean).join(" ");
   const name =
     profileName.length > 1 ? profileName : (email.split("@")[0] || "Student");
+  // Spread raw `...data` FIRST so the normalized fields below win. Raw profile
+  // carries role as the string "student"; the app expects role: {id, name}.
+  // Letting ...data come last clobbered the canonical role (and name/year),
+  // making StudentCard's `role?.name === "Student"` check fail → false 404.
   return {
+    ...data,
     name,
     year: typeof data.year !== "undefined" ? Number(data.year) || 2 : 2,
     role: { id: "student", name: "Student" },
@@ -38,7 +43,6 @@ export function shapeProfileToDataUser(
     stars: (data.stars as string) || "0",
     education_level: (data.education_level as string) || undefined,
     email: email || undefined,
-    ...data,
   };
 }
 

@@ -8,7 +8,7 @@ interface CoinBalanceModuleProps {
 }
 
 export function CoinBalanceModule({
-  initialCoins = 218,
+  initialCoins = 0,
 }: CoinBalanceModuleProps) {
   // Use localStorage to persist coin balance
   const [coins, setCoins] = useState<number>(() => {
@@ -89,30 +89,41 @@ export function CoinBalanceModule({
     };
   }, [coins]);
 
-  function addCoins(amount: number) {
-    setCoins((v) => {
-      const newValue = v + amount;
-      // Save to localStorage
-      if (typeof window !== "undefined") {
-        localStorage.setItem("coinBalance", newValue.toString());
-      }
-      return newValue;
-    });
+  function persistAndPlay(newValue: number) {
+    setCoins(newValue);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("coinBalance", newValue.toString());
+    }
     if (!audioRef.current)
       audioRef.current = new Audio("/game-bonus-02-294436.mp3");
     audioRef.current.currentTime = 0;
     audioRef.current.play().catch(() => {});
   }
 
-  function triggerIncrement(amount: number) {
-    // Get current value from localStorage to ensure we have the latest
+  // amount = coins to count up; absoluteTarget (optional) = the authoritative DB
+  // total the chip must LAND on. When provided, we animate from
+  // (target - amount) up to target so the chip always ends exactly on the DB
+  // value — self-healing any prior localStorage drift. Without it we fall back
+  // to the legacy additive behaviour.
+  function triggerIncrement(amount: number, absoluteTarget?: number) {
+    const hasTarget =
+      typeof absoluteTarget === "number" && Number.isFinite(absoluteTarget);
+
+    // Current localStorage value (legacy additive base)
     const currentValue =
       typeof window !== "undefined"
         ? parseInt(localStorage.getItem("coinBalance") || "0")
         : coins;
 
-    // Update coins state
-    addCoins(amount);
+    const targetValue = hasTarget
+      ? (absoluteTarget as number)
+      : currentValue + amount;
+    const startValue = hasTarget
+      ? Math.max(0, (absoluteTarget as number) - amount)
+      : currentValue;
+
+    // Persist the authoritative end value immediately + play the coin sound.
+    persistAndPlay(targetValue);
 
     if (animationFrameRef.current)
       cancelAnimationFrame(animationFrameRef.current);
@@ -124,8 +135,6 @@ export function CoinBalanceModule({
     setIsFinalPop(false);
     setIsFinalPopTwo(false);
 
-    const startValue = currentValue; // Use the current localStorage value
-    const targetValue = startValue + amount;
     let startTime: number | null = null;
 
     const animate = (timestamp: number) => {

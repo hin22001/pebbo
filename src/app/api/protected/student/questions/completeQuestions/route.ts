@@ -90,12 +90,26 @@ export async function POST(req: Request) {
       };
     });
 
+    // Stars are updated inside the RPC above (students.stars). Read the fresh
+    // value so the client can update the navbar star chip instantly, the same
+    // way it does for coins.
+    const { data: starRow } = await supabaseService
+      .from("students")
+      .select("stars")
+      .eq("user_id", auth.getUserId())
+      .single();
+    const totalStarsAfter = Number(starRow?.stars ?? 0);
+
     return NextResponse.json(
       {
         success: true,
         status: 200,
         message: `Success completeQuestions`,
         coins_awarded: coinsAwarded,
+        // Authoritative DB balances AFTER this submission. Clients reconcile the
+        // coin/star chips to these absolute values rather than adding locally.
+        total_coins: totalCoinsAfter,
+        total_stars: totalStarsAfter,
         data: questionsWithAccuracy,
       },
       { status: 200 }

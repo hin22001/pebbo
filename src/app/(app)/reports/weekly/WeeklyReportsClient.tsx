@@ -11,6 +11,7 @@ import { ConfigComponents } from "@/app/constant";
 import { ReportAPI } from "@/app/data/api";
 import nProgress from "nprogress";
 import dayjs from "dayjs";
+import _ from "lodash";
 import { StudentCard } from "@/src/app/components";
 import { Stack } from "@mui/material";
 
@@ -124,7 +125,7 @@ export default function WeeklyReportsClient({
 
               return {
                 ...(value || {}),
-                id: "weekly-report-row-id-" + item?.id,
+                id: "weekly-report-row-id-" + _.uniqueId(),
                 originalData: item,
               };
             }) || [];
@@ -157,7 +158,7 @@ export default function WeeklyReportsClient({
 
               return {
                 ...(value || {}),
-                id: "weekly-report-row-id-" + item?.id,
+                id: "weekly-report-row-id-" + _.uniqueId(),
                 originalData: item,
               };
             }) || [];

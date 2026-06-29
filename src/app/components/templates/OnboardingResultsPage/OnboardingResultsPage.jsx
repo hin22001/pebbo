@@ -14,6 +14,7 @@ import Loader from "@/elements/loader/Loader";
 import ContentLayout from "@/components/layouts/ContentLayout/ContentLayout";
 import { withAppRouter } from "@/app/utils/withAppRouter";
 import PaymentAPI from "@/app/data/api/PaymentAPI";
+import { Auth } from "@/app/data/local";
 
 class OnboardingResultsPage extends Component {
   constructor(props) {
@@ -59,6 +60,16 @@ class OnboardingResultsPage extends Component {
   handleSubscribe = async () => {
     this.setState({ isLoadingCheckout: true, checkoutError: null });
     try {
+      // If the user has already completed the placement test (even once) and is
+      // a paying subscriber, there's nothing left to unlock — send them straight
+      // to the dashboard instead of starting another checkout. Force-refresh so
+      // we decide on authoritative state, not a stale localStorage cache.
+      const dataUser = await Auth.refreshCurrentUser({ force: true });
+      if (dataUser?.onboarding_completed && dataUser?.paying) {
+        this.props.router.push("/dashboard");
+        return;
+      }
+
       const response = await PaymentAPI.createCheckoutSession(
         {},
         { type: "monthly" },

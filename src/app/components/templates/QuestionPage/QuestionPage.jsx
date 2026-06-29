@@ -934,12 +934,22 @@ class QuestionPage extends Component {
                     ),
                 };
 
-                // Trigger coin animation AFTER successful API call
+                // Trigger coin animation AFTER successful API call.
+                // Pass the authoritative DB total (already includes the award)
+                // so the chip lands exactly on the DB value, never drifting.
                 if (window.triggerCoinIncrement) {
                   const coinsAwarded = apiResponse?.coins_awarded || 0;
                   if (coinsAwarded > 0) {
-                    window.triggerCoinIncrement(coinsAwarded);
+                    window.triggerCoinIncrement(
+                      coinsAwarded,
+                      apiResponse?.total_coins,
+                    );
                   }
+                }
+
+                // Update the star chip instantly to the authoritative DB total.
+                if (apiResponse?.total_stars != null) {
+                  Auth.syncStars(apiResponse.total_stars);
                 }
 
                 // Persistent Todo: Mark Daily Exercise ("exercise") as complete

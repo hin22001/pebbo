@@ -72,7 +72,7 @@ class LoginContainer extends Component<any, any> {
       let refactorDataUser: any = {
         name: profileName?.length > 1 ? profileName : email?.split("@")[0],
         education_level: response?.payload?.data?.education_level,
-        year: parseInt(response?.payload?.data?.year) || 2,
+        year: 2, // App rule: every logged-in user defaults to grade 2 (DB left unchanged)
         role: {
           id: role,
           name: role_,

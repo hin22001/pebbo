@@ -351,9 +351,21 @@ export function useQuestionResults(
 
       if (typeof window !== "undefined" && (window as Record<string, unknown>).triggerCoinIncrement) {
         const coinsAwarded = (apiResponse.coins_awarded as number) || 0;
+        // Land the chip on the authoritative DB total (already includes the
+        // award) instead of blindly adding — keeps it in sync, no drift.
+        const totalCoins = apiResponse.total_coins as number | undefined;
         if (coinsAwarded > 0) {
-          ((window as Record<string, unknown>).triggerCoinIncrement as (n: number) => void)(coinsAwarded);
+          ((window as Record<string, unknown>).triggerCoinIncrement as (
+            n: number,
+            target?: number,
+          ) => void)(coinsAwarded, totalCoins);
         }
+      }
+
+      // Update the star chip instantly to the authoritative DB total.
+      const totalStars = apiResponse.total_stars as number | undefined;
+      if (totalStars != null) {
+        Auth.syncStars(totalStars);
       }
 
       const todayStr = new Date().toISOString().split("T")[0];

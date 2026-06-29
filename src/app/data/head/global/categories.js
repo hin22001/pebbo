@@ -611,24 +611,24 @@ export default Object.assign({
         zh: "製作及繪畫正方形和長方形",
       },
     },
-    // 19: {
-    //   2.19: {
-    //     en: "Pictograms",
-    //     zh: "象形圖",
-    //   },
-    //   "2.19.1": {
-    //     en: "Reading pictographs",
-    //     zh: "閱讀象形圖",
-    //   },
-    //   "2.19.2": {
-    //     en: "Different types of pictographs",
-    //     zh: "不同類型的象形圖",
-    //   },
-    //   "2.19.3": {
-    //     en: "Creating pictographs",
-    //     zh: "製作象形圖",
-    //   },
-    // },
+    19: {
+      2.19: {
+        en: "Pictograms",
+        zh: "象形圖",
+      },
+      "2.19.1": {
+        en: "Reading pictographs",
+        zh: "閱讀象形圖",
+      },
+      "2.19.2": {
+        en: "Different types of pictographs",
+        zh: "不同類型的象形圖",
+      },
+      "2.19.3": {
+        en: "Creating pictographs",
+        zh: "製作象形圖",
+      },
+    },
   },
   3: {
     1: {

@@ -144,7 +144,7 @@ export default function ClasRoom(props) {
 
   const triggerStreakCeremony = (streakData) => {
     if (!streakData) return;
-    const { new_streak, coins_awarded } = streakData;
+    const { new_streak, coins_awarded, total_coins } = streakData;
 
     setConsecutiveDays(new_streak);
 
@@ -157,8 +157,15 @@ export default function ClasRoom(props) {
       );
     }
 
+    // The dashboard payload's total_coins ALREADY includes today's streak
+    // reward (the RPC inserts the coin row before reading the total), so we
+    // animate UP TO that authoritative total rather than adding on top —
+    // otherwise the reward would be double-counted.
+    const coinTarget = Auth.computeDisplayCoins(total_coins);
     if (window.triggerCoinIncrement && coins_awarded > 0) {
-      window.triggerCoinIncrement(coins_awarded);
+      window.triggerCoinIncrement(coins_awarded, coinTarget ?? undefined);
+    } else if (coinTarget != null) {
+      Auth.syncCoinBalance(coinTarget);
     }
 
     playStreakSound();
@@ -479,6 +486,14 @@ export default function ClasRoom(props) {
 
     setLoader(false);
 
+    // Authoritative coin total from the dashboard payload (DB source of truth).
+    const dbTotalCoins = dashData?.profile?.total_coins;
+
+    // Reconcile the navbar star chip to the authoritative DB stars on every
+    // load (stars are a stored column; no ceremony/animation to coordinate).
+    const dbStars = dashData?.profile?.stars;
+    if (dbStars != null) Auth.syncStars(dbStars);
+
     const streakData = dashData.streak;
     if (streakData) {
       const { new_streak, is_new_checkin } = streakData;
@@ -490,8 +505,18 @@ export default function ClasRoom(props) {
         console.log(
           "⏳ Streak popup needed - queuing ceremony until loading/onboarding finished",
         );
-        setPendingStreakData(streakData);
+        // Carry the authoritative total so the ceremony lands the coin chip on
+        // the DB value instead of blindly adding the reward.
+        setPendingStreakData({ ...streakData, total_coins: dbTotalCoins });
+      } else {
+        // No ceremony will run — reconcile the chip to the DB total directly so
+        // it never lags behind (this is what fixes the 579-vs-586 drift).
+        const coinTarget = Auth.computeDisplayCoins(dbTotalCoins);
+        if (coinTarget != null) Auth.syncCoinBalance(coinTarget);
       }
+    } else {
+      const coinTarget = Auth.computeDisplayCoins(dbTotalCoins);
+      if (coinTarget != null) Auth.syncCoinBalance(coinTarget);
     }
 
     let dataSummary = reduxDataSummary || dashData.summary || null;

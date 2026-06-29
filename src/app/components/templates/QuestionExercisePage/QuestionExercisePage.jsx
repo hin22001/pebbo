@@ -126,6 +126,10 @@ export default class QuestionExercisePage extends Component {
           message: response?.message,
           coins_awarded:
             response?.coins_awarded || response?.payload?.coins_awarded,
+          // Pass the authoritative DB totals through so QuestionPage can land
+          // the coin/star chips on the exact DB value (?? keeps a valid 0).
+          total_coins: response?.total_coins ?? response?.payload?.total_coins,
+          total_stars: response?.total_stars ?? response?.payload?.total_stars,
           overallScore,
           totalQuestion,
           percentage,
