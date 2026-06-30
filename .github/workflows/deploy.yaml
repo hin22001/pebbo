@@ -23,7 +23,6 @@ jobs:
         run: |
           mkdir -p ~/.ssh
           ssh-keyscan -H ${{ secrets.JUMP_HOST_IP }} >> ~/.ssh/known_hosts
-          ssh-keyscan -H ${{ secrets.TARGET_SERVER_IP }} >> ~/.ssh/known_hosts
 
       - name: Deploy via rsync through Jump Host using Password
         env:
@@ -32,7 +31,7 @@ jobs:
           # The destination is explicitly set to ~/abc
           # The trailing slash on ./ ensures the contents are copied directly into ~/abc
           sshpass -e rsync -avz \
-            -e "ssh -o ProxyCommand='ssh -W %h:%p ${{ secrets.JUMP_HOST_USER }}@${{ secrets.JUMP_HOST_IP }}'" \
+            -e "ssh -o ProxyCommand='ssh -W %h:%p ${{ secrets.JUMP_HOST_USER }}@${{ secrets.JUMP_HOST_IP }}' -o StrictHostKeyChecking=no" \
             --exclude='node_modules' \
             --exclude='.next' \
             --exclude='.git' \
@@ -44,6 +43,7 @@ jobs:
           SSHPASS: ${{ secrets.TARGET_SERVER_PASSWORD }}
         run: |
           sshpass -e ssh -o ProxyCommand="ssh -W %h:%p ${{ secrets.JUMP_HOST_USER }}@${{ secrets.JUMP_HOST_IP }}" \
+            -o StrictHostKeyChecking=no \
             ${{ secrets.TARGET_SERVER_USER }}@${{ secrets.TARGET_SERVER_IP }} << 'EOF'
               # Navigate into the deployment path
               cd ~/abc
