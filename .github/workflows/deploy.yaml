@@ -1,0 +1,63 @@
+name: Deploy Pebbo
+
+on:
+  workflow_dispatch: # Manual trigger
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Install sshpass
+        run: sudo apt-get update && sudo apt-get install -y sshpass
+
+      - name: Set up SSH Agent (For Jump Host Authentication)
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Add SSH Known Hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H ${{ secrets.JUMP_HOST_IP }} >> ~/.ssh/known_hosts
+          ssh-keyscan -H ${{ secrets.TARGET_SERVER_IP }} >> ~/.ssh/known_hosts
+
+      - name: Deploy via rsync through Jump Host using Password
+        env:
+          SSHPASS: ${{ secrets.TARGET_SERVER_PASSWORD }}
+        run: |
+          # The destination is explicitly set to ~/abc
+          # The trailing slash on ./ ensures the contents are copied directly into ~/abc
+          sshpass -e rsync -avz \
+            -e "ssh -o ProxyCommand='ssh -W %h:%p ${{ secrets.JUMP_HOST_USER }}@${{ secrets.JUMP_HOST_IP }}'" \
+            --exclude='node_modules' \
+            --exclude='.next' \
+            --exclude='.git' \
+            --exclude='.github' \
+            ./ ${{ secrets.TARGET_SERVER_USER }}@${{ secrets.TARGET_SERVER_IP }}:~/abc
+
+      - name: Install Dependencies and Build on Target Server
+        env:
+          SSHPASS: ${{ secrets.TARGET_SERVER_PASSWORD }}
+        run: |
+          sshpass -e ssh -o ProxyCommand="ssh -W %h:%p ${{ secrets.JUMP_HOST_USER }}@${{ secrets.JUMP_HOST_IP }}" \
+            ${{ secrets.TARGET_SERVER_USER }}@${{ secrets.TARGET_SERVER_IP }} << 'EOF'
+              # Navigate into the deployment path
+              cd ~/abc
+              
+              # Load NVM / Node.js environment if needed
+              export NVM_DIR="$HOME/.nvm"
+              [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+              
+              # Install dependencies on the target server
+              npm install
+              
+              # Build the Next.js application
+              npm run build
+              
+              # Restart the application using PM2
+              pm2 restart next-app || pm2 start npm --name "next-app" -- start
+            EOF
