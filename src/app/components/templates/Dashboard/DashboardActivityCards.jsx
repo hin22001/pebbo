@@ -2,6 +2,8 @@ import React, { useCallback, useEffect, useRef } from "react";
 import { Stack, Typography } from "@mui/material";
 import { ImageHandler } from "../../elements";
 import { locale } from "@/src/app/data/locale";
+import LinkWrapper from "@/modules/link/LinkWrapper";
+import Link from "next/link";
 
 export default function DashboardActivityCards({
   mainClassName,
@@ -78,25 +80,25 @@ export default function DashboardActivityCards({
         <Stack alignItems="center" maxWidth={"150px"} width={"100%"}>
           <Stack
             onClick={() =>
-              handleButtonClick("newReport", () =>
-                router.push("/reports/daily"),
-              )
+              handleButtonClick("newReport")
             }
             className={mainClassName + "-section2-activity-btn1"}
             ref={(el) => (buttonRefs.current.newReport = el)}
-          >
-            <Typography
-              fontSize={16}
-              fontWeight={500}
-              color="#fff"
-              textAlign="center"
-              sx={{
-                fontFamily: "'Advercase', serif !important",
-                letterSpacing: "0.07rem",
-              }}
-            >
-              {locale(head?.newReport)}
-            </Typography>
+          > 
+            <LinkWrapper href="/reports/daily">
+              <Typography
+                fontSize={16}
+                fontWeight={500}
+                color="#fff"
+                textAlign="center"
+                sx={{
+                  fontFamily: "'Advercase', serif !important",
+                  letterSpacing: "0.07rem",
+                }}
+              >
+                {locale(head?.newReport)}
+              </Typography>
+            </LinkWrapper>
           </Stack>
         </Stack>
       </Stack>
@@ -126,26 +128,26 @@ export default function DashboardActivityCards({
         <Stack alignItems="center" maxWidth={"150px"} width={"100%"}>
           <Stack
             onClick={() =>
-              handleButtonClick("startExercise", () =>
-                router.push("/question/exercise"),
-              )
+              handleButtonClick("startExercise")
             }
             onMouseEnter={prefetchExercise}
             className={mainClassName + "-section2-activity-btn2"}
             ref={(el) => (buttonRefs.current.startExercise = el)}
           >
-            <Typography
-              fontSize={16}
-              fontWeight={500}
-              color="#fff"
-              textAlign="center"
-              sx={{
-                fontFamily: "'Advercase', serif !important",
-                letterSpacing: "0.07rem",
-              }}
-            >
-              {locale(head?.startExercise)}
-            </Typography>
+            <LinkWrapper href="/question/exercise">
+              <Typography
+                fontSize={16}
+                fontWeight={500}
+                color="#fff"
+                textAlign="center"
+                sx={{
+                  fontFamily: "'Advercase', serif !important",
+                  letterSpacing: "0.07rem",
+                }}
+              >
+                {locale(head?.startExercise)}
+              </Typography>
+            </LinkWrapper>
           </Stack>
         </Stack>
       </Stack>
