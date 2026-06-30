@@ -31,7 +31,7 @@ jobs:
           # Create the target directory first over the tunnel, as scp can fail if it doesn't exist
           sshpass -e ssh -o ProxyCommand="ssh -W %h:%p ${{ secrets.JUMP_HOST_USER }}@${{ secrets.JUMP_HOST_IP }}" \
             -o StrictHostKeyChecking=no \
-            ${{ secrets.TARGET_SERVER_USER }}@${{ secrets.TARGET_SERVER_IP }} "mkdir -p ~/abc"
+            ${{ secrets.TARGET_SERVER_USER }}@${{ secrets.TARGET_SERVER_IP }} "mkdir -p ~/Pebbo"
 
           # Use scp -r (recursive) with ProxyCommand to copy everything.
           # Note: scp doesn't have a native --exclude flag, so we use a temporary directory or standard globbing.
@@ -40,7 +40,7 @@ jobs:
           tar --exclude='node_modules' --exclude='.next' --exclude='.git' --exclude='.github' -czf - . | \
           sshpass -e ssh -o ProxyCommand="ssh -W %h:%p ${{ secrets.JUMP_HOST_USER }}@${{ secrets.JUMP_HOST_IP }}" \
             -o StrictHostKeyChecking=no \
-            ${{ secrets.TARGET_SERVER_USER }}@${{ secrets.TARGET_SERVER_IP }} "tar -xzf - -C ~/abc"
+            ${{ secrets.TARGET_SERVER_USER }}@${{ secrets.TARGET_SERVER_IP }} "tar -xzf - -C ~/Pebbo"
 
       - name: Install Dependencies and Build on Target Server
         env:
@@ -50,18 +50,14 @@ jobs:
             -o StrictHostKeyChecking=no \
             ${{ secrets.TARGET_SERVER_USER }}@${{ secrets.TARGET_SERVER_IP }} << 'EOF'
               # Navigate into the deployment path
-              cd ~/abc
-              
-              # Load NVM / Node.js environment if needed
-              export NVM_DIR="$HOME/.nvm"
-              [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+              cd ~/Pebbo
               
               # Install dependencies on the target server
               npm install
               
               # Build the Next.js application
-              npm run build
+              rm -rf .next/ & NODE_OPTIONS="--max-old-space-size=12288" npm run build
               
               # Restart the application using PM2
-              pm2 restart next-app || pm2 start npm --name "next-app" -- start
+              npx pm2 restart pebbo-app || npx pm2 start npm --name "pebbo-app" -- start
             EOF
