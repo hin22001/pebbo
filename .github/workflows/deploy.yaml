@@ -49,4 +49,4 @@ jobs:
           sshpass -e ssh -o ProxyCommand="ssh -W %h:%p ${{ secrets.JUMP_HOST_USER }}@${{ secrets.JUMP_HOST_IP }}" \
             -o StrictHostKeyChecking=no \
             ${{ secrets.TARGET_SERVER_USER }}@${{ secrets.TARGET_SERVER_IP }} \
-            "cd ~/Pebbo && npm install && rm -rf .next/ && NODE_OPTIONS='--max-old-space-size=12288' npm run build && (npx pm2 restart pebbo-app || npx pm2 start npm --name 'pebbo-app' -- start)"
+            "cd ~/Pebbo && npm install && rm -rf .next/ && NODE_OPTIONS='--max-old-space-size=12288' npm run build && (npx pm2 restart pebbo-server || npx pm2 start npm --name 'pebbo-server' -- start)"
