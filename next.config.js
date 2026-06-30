@@ -9,6 +9,7 @@ const nextConfig = {
   //   removeConsole: isProd,
   // },
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
