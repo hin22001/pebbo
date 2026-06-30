@@ -2,7 +2,7 @@ import { SystemAdmin } from "@/src/app/api/lib/utils/systemAdmin";
 
 export class ModelDirectory {
   private static bucketPath: string =
-    "https://qvervegypimlrnjdsnrk.supabase.co/storage/v1/object/authenticated/torchModels";
+    `${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/authenticated/torchModels`;
   private static headers = {
     method: "GET",
     headers: {
