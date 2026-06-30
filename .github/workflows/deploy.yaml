@@ -24,19 +24,23 @@ jobs:
           mkdir -p ~/.ssh
           ssh-keyscan -H ${{ secrets.JUMP_HOST_IP }} >> ~/.ssh/known_hosts
 
-      - name: Deploy via rsync through Jump Host using Password
+      - name: Deploy via scp through Jump Host using Password
         env:
           SSHPASS: ${{ secrets.TARGET_SERVER_PASSWORD }}
         run: |
-          # The destination is explicitly set to ~/abc
-          # The trailing slash on ./ ensures the contents are copied directly into ~/abc
-          sshpass -e rsync -avz \
-            -e "ssh -o ProxyCommand='ssh -W %h:%p ${{ secrets.JUMP_HOST_USER }}@${{ secrets.JUMP_HOST_IP }}' -o StrictHostKeyChecking=no" \
-            --exclude='node_modules' \
-            --exclude='.next' \
-            --exclude='.git' \
-            --exclude='.github' \
-            ./ ${{ secrets.TARGET_SERVER_USER }}@${{ secrets.TARGET_SERVER_IP }}:~/abc
+          # Create the target directory first over the tunnel, as scp can fail if it doesn't exist
+          sshpass -e ssh -o ProxyCommand="ssh -W %h:%p ${{ secrets.JUMP_HOST_USER }}@${{ secrets.JUMP_HOST_IP }}" \
+            -o StrictHostKeyChecking=no \
+            ${{ secrets.TARGET_SERVER_USER }}@${{ secrets.TARGET_SERVER_IP }} "mkdir -p ~/abc"
+
+          # Use scp -r (recursive) with ProxyCommand to copy everything.
+          # Note: scp doesn't have a native --exclude flag, so we use a temporary directory or standard globbing.
+          # To keep it completely free of node_modules, we tar the local folder excluding node_modules, stream it, and unpack it.
+          
+          tar --exclude='node_modules' --exclude='.next' --exclude='.git' --exclude='.github' -czf - . | \
+          sshpass -e ssh -o ProxyCommand="ssh -W %h:%p ${{ secrets.JUMP_HOST_USER }}@${{ secrets.JUMP_HOST_IP }}" \
+            -o StrictHostKeyChecking=no \
+            ${{ secrets.TARGET_SERVER_USER }}@${{ secrets.TARGET_SERVER_IP }} "tar -xzf - -C ~/abc"
 
       - name: Install Dependencies and Build on Target Server
         env:
