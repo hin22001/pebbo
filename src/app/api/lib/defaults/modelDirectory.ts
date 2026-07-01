@@ -6,7 +6,7 @@ export class ModelDirectory {
   private static headers = {
     method: "GET",
     headers: {
-      Authorization: `Bearer ${SystemAdmin.getSupabaseServiceKey()}`,
+      "apiKey": `${SystemAdmin.getSupabaseServiceKey()}`,
     },
   };
 
